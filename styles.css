@@ -279,21 +279,15 @@ h1, h2, h3 {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(140deg,
-    #0d0e1a 0%,
-    #13142a 28%,
-    #1a1a2e 55%,
-    #1f1f3a 80%,
-    #252545 100%
-  );
+  background: url('images/tokyo-tower.jpg') center/cover no-repeat;
 }
 
-/* Decorative organic light blobs */
+/* Colour-wash blobs on top of photo */
 .hero-shape {
   position: absolute;
   border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.22;
+  filter: blur(90px);
+  opacity: 0.14;
   pointer-events: none;
 }
 .hero-shape--1 {
@@ -305,23 +299,23 @@ h1, h2, h3 {
   width: 400px; height: 400px;
   background: radial-gradient(circle, #C0392B 0%, transparent 70%);
   bottom: 60px; left: -80px;
-  opacity: 0.3;
+  opacity: 0.18;
 }
 .hero-shape--3 {
   width: 300px; height: 300px;
   background: radial-gradient(circle, #F5E6D3 0%, transparent 70%);
   top: 40%; right: 25%;
-  opacity: 0.06;
+  opacity: 0.04;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(to bottom,
-    rgba(0,0,0,0.12) 0%,
-    transparent 35%,
-    transparent 65%,
-    rgba(0,0,0,0.22) 100%
+    rgba(10, 10, 25, 0.52) 0%,
+    rgba(10, 10, 25, 0.38) 40%,
+    rgba(10, 10, 25, 0.48) 70%,
+    rgba(10, 10, 25, 0.72) 100%
   );
 }
 
@@ -446,48 +440,21 @@ h1, h2, h3 {
 }
 
 .tour-img--tokyo {
-  background: linear-gradient(145deg, #10131f 0%, #1a1f35 45%, #252d50 100%);
-}
-.tour-img--tokyo::after {
-  content: '都市';
-  position: absolute;
-  bottom: -12px;
-  right: 16px;
-  font-family: var(--font-heading);
-  font-size: 6rem;
-  color: rgba(255, 255, 255, 0.06);
-  line-height: 1;
-  pointer-events: none;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,0.28) 0%, rgba(0,0,0,0.52) 100%),
+    url('images/asakusa.jpg') center top / cover no-repeat;
 }
 
 .tour-img--kamakura {
-  background: linear-gradient(145deg, #1a0a08 0%, #2e1009 50%, #4a1a12 100%);
-}
-.tour-img--kamakura::after {
-  content: '鎌倉';
-  position: absolute;
-  bottom: -12px;
-  right: 16px;
-  font-family: var(--font-heading);
-  font-size: 6rem;
-  color: rgba(255, 255, 255, 0.06);
-  line-height: 1;
-  pointer-events: none;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,0.22) 0%, rgba(0,0,0,0.46) 100%),
+    url('images/kamakura-buddha.jpg') center / cover no-repeat;
 }
 
 .tour-img--mountains {
-  background: linear-gradient(145deg, #0d0e1a 0%, #131422 50%, #1a1a2e 100%);
-}
-.tour-img--mountains::after {
-  content: '山';
-  position: absolute;
-  bottom: -16px;
-  right: 24px;
-  font-family: var(--font-heading);
-  font-size: 8rem;
-  color: rgba(255, 255, 255, 0.06);
-  line-height: 1;
-  pointer-events: none;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,0.28) 0%, rgba(0,0,0,0.50) 100%),
+    url('images/enoden.jpg') center / cover no-repeat;
 }
 
 /* Decorative horizontal line accent */
@@ -593,11 +560,9 @@ h1, h2, h3 {
   height: 500px;
   border-radius: var(--radius);
   overflow: hidden;
-  background: linear-gradient(160deg,
-    #0d0e1a 0%,
-    #1a1a2e 60%,
-    #252545 100%
-  );
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.38) 100%),
+    url('images/guide-shibuya.jpg') center / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -608,11 +573,12 @@ h1, h2, h3 {
   font-family: var(--font-heading);
   font-size: 9rem;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.18);
   letter-spacing: -4px;
   user-select: none;
   position: relative;
   z-index: 0;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.4);
 }
 
 .about-img::before {
