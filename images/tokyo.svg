@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440">
+<defs>
+  <linearGradient id="tsky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#060810"/>
+    <stop offset="55%" stop-color="#0d1224"/>
+    <stop offset="100%" stop-color="#131828"/>
+  </linearGradient>
+  <radialGradient id="tglow" cx="42%" cy="58%" r="22%">
+    <stop offset="0%" stop-color="#C0392B" stop-opacity="0.32"/>
+    <stop offset="100%" stop-color="#C0392B" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="thoriz" cx="50%" cy="100%" r="55%">
+    <stop offset="0%" stop-color="#1a0a06" stop-opacity="0.7"/>
+    <stop offset="100%" stop-color="#1a0a06" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+<rect width="800" height="440" fill="url(#tsky)"/>
+<rect width="800" height="440" fill="url(#tglow)"/>
+<rect width="800" height="440" fill="url(#thoriz)"/>
+<!-- Far buildings -->
+<rect x="0"   y="285" width="75"  height="155" fill="#0a0f1e"/>
+<rect x="80"  y="262" width="52"  height="178" fill="#0a0f1e"/>
+<rect x="137" y="272" width="42"  height="168" fill="#0a0f1e"/>
+<rect x="622" y="274" width="58"  height="166" fill="#0a0f1e"/>
+<rect x="685" y="258" width="48"  height="182" fill="#0a0f1e"/>
+<rect x="738" y="268" width="62"  height="172" fill="#0a0f1e"/>
+<!-- Mid-ground buildings -->
+<rect x="490" y="198" width="52"  height="242" fill="#0d1325"/>
+<rect x="547" y="183" width="62"  height="257" fill="#0c1222"/>
+<rect x="614" y="172" width="52"  height="268" fill="#0d1325"/>
+<!-- Windows — right cluster -->
+<rect x="498" y="208" width="7" height="5" fill="#f5e6d3" opacity="0.6"/>
+<rect x="511" y="208" width="7" height="5" fill="#f5e6d3" opacity="0.38"/>
+<rect x="524" y="208" width="7" height="5" fill="#f4a7b9" opacity="0.5"/>
+<rect x="498" y="223" width="7" height="5" fill="#f5e6d3" opacity="0.7"/>
+<rect x="511" y="223" width="7" height="5" fill="#f5e6d3" opacity="0.28"/>
+<rect x="498" y="238" width="7" height="5" fill="#f4a7b9" opacity="0.45"/>
+<rect x="524" y="238" width="7" height="5" fill="#f5e6d3" opacity="0.55"/>
+<rect x="498" y="253" width="7" height="5" fill="#f5e6d3" opacity="0.62"/>
+<rect x="511" y="253" width="7" height="5" fill="#f4a7b9" opacity="0.38"/>
+<rect x="524" y="253" width="7" height="5" fill="#f5e6d3" opacity="0.48"/>
+<rect x="555" y="192" width="8" height="5" fill="#f5e6d3" opacity="0.55"/>
+<rect x="569" y="192" width="8" height="5" fill="#f4a7b9" opacity="0.45"/>
+<rect x="583" y="192" width="8" height="5" fill="#f5e6d3" opacity="0.38"/>
+<rect x="597" y="192" width="8" height="5" fill="#f5e6d3" opacity="0.55"/>
+<rect x="555" y="207" width="8" height="5" fill="#f5e6d3" opacity="0.65"/>
+<rect x="569" y="207" width="8" height="5" fill="#f5e6d3" opacity="0.32"/>
+<rect x="583" y="207" width="8" height="5" fill="#f4a7b9" opacity="0.5"/>
+<rect x="555" y="222" width="8" height="5" fill="#f5e6d3" opacity="0.38"/>
+<rect x="597" y="222" width="8" height="5" fill="#f5e6d3" opacity="0.6"/>
+<rect x="555" y="237" width="8" height="5" fill="#f4a7b9" opacity="0.45"/>
+<rect x="569" y="237" width="8" height="5" fill="#f5e6d3" opacity="0.5"/>
+<rect x="622" y="180" width="7" height="5" fill="#f5e6d3" opacity="0.5"/>
+<rect x="634" y="180" width="7" height="5" fill="#f4a7b9" opacity="0.55"/>
+<rect x="646" y="180" width="7" height="5" fill="#f5e6d3" opacity="0.38"/>
+<rect x="622" y="195" width="7" height="5" fill="#f5e6d3" opacity="0.6"/>
+<rect x="646" y="195" width="7" height="5" fill="#f4a7b9" opacity="0.45"/>
+<rect x="622" y="210" width="7" height="5" fill="#f5e6d3" opacity="0.45"/>
+<rect x="634" y="210" width="7" height="5" fill="#f5e6d3" opacity="0.55"/>
+<!-- TOKYO TOWER -->
+<!-- Glow behind tower -->
+<ellipse cx="350" cy="300" rx="90" ry="200" fill="#C0392B" opacity="0.06"/>
+<!-- Tower outer shadow -->
+<polygon points="290,440 328,168 372,168 410,440" fill="#150806"/>
+<!-- Tower body -->
+<polygon points="298,440 330,173 370,173 402,440" fill="#5a1208" opacity="0.95"/>
+<!-- Tower upper section -->
+<polygon points="316,232 334,172 366,172 384,232" fill="#7a1a10"/>
+<!-- Observation deck -->
+<rect x="326" y="164" width="48" height="12" fill="#7a1a10" rx="2"/>
+<!-- Second platform -->
+<rect x="333" y="232" width="34" height="9" fill="#6a1510" rx="1"/>
+<!-- Upper spire -->
+<rect x="346" y="98"  width="8" height="68" fill="#7a1a10"/>
+<rect x="338" y="128" width="24" height="5" fill="#6a1510" opacity="0.9"/>
+<rect x="341" y="116" width="18" height="4" fill="#6a1510" opacity="0.85"/>
+<!-- Tip light -->
+<circle cx="350" cy="95" r="6"  fill="#ff5533" opacity="0.95"/>
+<circle cx="350" cy="95" r="18" fill="#ff4422" opacity="0.18"/>
+<!-- Structural bands -->
+<rect x="300" y="272" width="100" height="4" fill="#3a0a07" opacity="0.9"/>
+<rect x="306" y="318" width="88"  height="4" fill="#3a0a07" opacity="0.9"/>
+<rect x="312" y="358" width="76"  height="4" fill="#3a0a07" opacity="0.9"/>
+<rect x="318" y="393" width="64"  height="4" fill="#3a0a07" opacity="0.9"/>
+<rect x="324" y="420" width="52"  height="4" fill="#3a0a07" opacity="0.9"/>
+<!-- Inner diagonals -->
+<line x1="320" y1="175" x2="350" y2="440" stroke="#2a0a06" stroke-width="1.5" opacity="0.65"/>
+<line x1="380" y1="175" x2="350" y2="440" stroke="#2a0a06" stroke-width="1.5" opacity="0.65"/>
+<!-- Ground glow -->
+<ellipse cx="350" cy="440" rx="160" ry="16" fill="#C0392B" opacity="0.14"/>
+<rect x="0" y="432" width="800" height="8" fill="#050810"/>
+<!-- Kanji watermark -->
+<text x="650" y="420" font-size="140" fill="white" fill-opacity="0.028" font-family="serif" text-anchor="middle">都</text>
+</svg>

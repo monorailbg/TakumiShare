@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440">
+<defs>
+  <linearGradient id="msky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%"   stop-color="#07081a"/>
+    <stop offset="38%"  stop-color="#0d0e2a"/>
+    <stop offset="68%"  stop-color="#14103a"/>
+    <stop offset="100%" stop-color="#1a1035"/>
+  </linearGradient>
+  <radialGradient id="mmoon" cx="74%" cy="18%" r="14%">
+    <stop offset="0%"   stop-color="#F5E6D3" stop-opacity="0.18"/>
+    <stop offset="100%" stop-color="#F5E6D3" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+<rect width="800" height="440" fill="url(#msky)"/>
+<rect width="800" height="440" fill="url(#mmoon)"/>
+<!-- Moon -->
+<circle cx="592" cy="76" r="28" fill="#F5E6D3" opacity="0.18"/>
+<circle cx="592" cy="76" r="20" fill="#F5E6D3" opacity="0.12"/>
+<circle cx="592" cy="76" r="13" fill="#F5E6D3" opacity="0.14"/>
+<!-- Stars -->
+<circle cx="118" cy="58"  r="1.5" fill="#F5E6D3" opacity="0.42"/>
+<circle cx="198" cy="38"  r="1"   fill="#F5E6D3" opacity="0.36"/>
+<circle cx="348" cy="68"  r="1.5" fill="#F5E6D3" opacity="0.32"/>
+<circle cx="448" cy="28"  r="1"   fill="#F5E6D3" opacity="0.42"/>
+<circle cx="518" cy="52"  r="1.5" fill="#F5E6D3" opacity="0.32"/>
+<circle cx="698" cy="42"  r="1"   fill="#F5E6D3" opacity="0.36"/>
+<circle cx="778" cy="78"  r="1.5" fill="#F5E6D3" opacity="0.32"/>
+<circle cx="78"  cy="118" r="1"   fill="#F5E6D3" opacity="0.26"/>
+<circle cx="728" cy="138" r="1"   fill="#F5E6D3" opacity="0.26"/>
+<circle cx="268" cy="48"  r="1"   fill="#F5E6D3" opacity="0.32"/>
+<!-- Far mountains -->
+<polygon points="0,345 75,222 175,282 275,182 375,262 475,192 575,252 675,172 775,232 800,222 800,345" fill="#252755"/>
+<!-- Mid mountains -->
+<polygon points="0,385 55,272 145,315 248,222 355,295 458,214 555,284 658,202 758,258 800,244 800,385" fill="#181930"/>
+<!-- Near mountains -->
+<polygon points="0,440 0,355 65,315 158,365 228,294 318,350 400,282 482,342 558,298 648,360 718,308 800,354 800,440" fill="#0e0f22"/>
+<!-- Forest treeline -->
+<polygon points="0,432 0,412 14,402 26,412 37,400 52,410 63,398 78,408 90,396 106,406 118,394 130,404 145,396 158,406 168,394 180,404 192,396 206,408 218,396 232,406 248,394 262,404 274,397 290,407 305,395 320,405 335,396 350,407 365,396 380,406 396,395 412,406 428,397 444,407 460,395 476,406 492,397 508,407 522,396 538,406 554,397 570,407 585,395 600,405 616,397 632,407 648,396 663,406 678,397 694,407 709,395 724,405 740,397 755,407 770,396 785,406 800,397 800,432" fill="#090a1a"/>
+<!-- Torii gate -->
+<rect x="384" y="354" width="8"  height="62" fill="#1e0c08" opacity="0.85" rx="2"/>
+<rect x="408" y="354" width="8"  height="62" fill="#1e0c08" opacity="0.85" rx="2"/>
+<path d="M376,366 Q400,356 424,366" stroke="#1e0c08" stroke-width="9" fill="none" opacity="0.85" stroke-linecap="round"/>
+<rect x="380" y="379" width="40" height="6" fill="#1e0c08" opacity="0.85" rx="2"/>
+<!-- Torii glow -->
+<rect x="374" y="354" width="52" height="68" fill="#C0392B" opacity="0.05"/>
+<!-- Ground -->
+<rect x="0" y="433" width="800" height="7" fill="#070819"/>
+<!-- Kanji -->
+<text x="162" y="388" font-size="95" fill="white" fill-opacity="0.042" font-family="serif" text-anchor="middle">山</text>
+</svg>
