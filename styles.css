@@ -1,19 +1,19 @@
 /* ============================================================
-   Design tokens
+   Design tokens — Traditional Japan palette
    ============================================================ */
 :root {
-  --cream:        #FDFAF5;
-  --beige:        #F2EAD3;
-  --beige-dark:   #E0CFA8;
-  --stone:        #B8976A;
-  --stone-light:  #D4B896;
-  --brown:        #7D6144;
-  --forest:       #3B5E2B;
-  --forest-dark:  #2A4320;
-  --forest-light: #527A3C;
-  --dark:         #1E1A12;
-  --text:         #3D3426;
-  --text-muted:   #7D6144;
+  --cream:        #F5E6D3;   /* washi cream — page background */
+  --beige:        #EDD9C0;   /* alternate section background */
+  --beige-dark:   #C8A882;   /* borders */
+  --stone:        #F4A7B9;   /* sakura pink — tags, highlights */
+  --stone-light:  #F8C5D1;   /* lighter sakura */
+  --brown:        #5D4037;   /* chestnut */
+  --forest:       #C0392B;   /* vermilion — all CTAs / active */
+  --forest-dark:  #A93226;   /* dark vermilion — hover */
+  --forest-light: #E74C3C;   /* light vermilion */
+  --dark:         #1A1A2E;   /* midnight ink — nav, hero, footer */
+  --text:         #5D4037;   /* chestnut body text */
+  --text-muted:   #8D6E63;   /* muted chestnut */
   --white:        #FFFFFF;
 
   --font-heading: 'Playfair Display', Georgia, serif;
@@ -118,7 +118,7 @@ h1, h2, h3 {
   background: var(--forest-dark);
   border-color: var(--forest-dark);
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(59, 94, 43, 0.28);
+  box-shadow: 0 8px 28px rgba(192, 57, 43, 0.28);
 }
 
 .btn-secondary {
@@ -155,7 +155,7 @@ h1, h2, h3 {
 }
 
 .header.scrolled {
-  background: rgba(253, 250, 245, 0.95);
+  background: rgba(245, 230, 211, 0.95);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.07);
@@ -280,11 +280,11 @@ h1, h2, h3 {
   position: absolute;
   inset: 0;
   background: linear-gradient(140deg,
-    #141f0c 0%,
-    #1e3212 28%,
-    #2a4320 55%,
-    #3b5e2b 80%,
-    #4a7535 100%
+    #0d0e1a 0%,
+    #13142a 28%,
+    #1a1a2e 55%,
+    #1f1f3a 80%,
+    #252545 100%
   );
 }
 
@@ -298,18 +298,18 @@ h1, h2, h3 {
 }
 .hero-shape--1 {
   width: 600px; height: 600px;
-  background: radial-gradient(circle, #B8976A 0%, transparent 70%);
+  background: radial-gradient(circle, #F4A7B9 0%, transparent 70%);
   top: -120px; right: -80px;
 }
 .hero-shape--2 {
   width: 400px; height: 400px;
-  background: radial-gradient(circle, #527A3C 0%, transparent 70%);
+  background: radial-gradient(circle, #C0392B 0%, transparent 70%);
   bottom: 60px; left: -80px;
   opacity: 0.3;
 }
 .hero-shape--3 {
   width: 300px; height: 300px;
-  background: radial-gradient(circle, #FDFAF5 0%, transparent 70%);
+  background: radial-gradient(circle, #F5E6D3 0%, transparent 70%);
   top: 40%; right: 25%;
   opacity: 0.06;
 }
@@ -349,7 +349,7 @@ h1, h2, h3 {
 }
 .hero-title em {
   font-style: italic;
-  color: var(--stone-light);
+  color: var(--stone);
 }
 
 .hero-sub {
@@ -381,7 +381,7 @@ h1, h2, h3 {
    Stats bar
    ============================================================ */
 .stats {
-  background: var(--forest);
+  background: var(--dark);
   padding: 44px 0;
 }
 
@@ -461,7 +461,7 @@ h1, h2, h3 {
 }
 
 .tour-img--kamakura {
-  background: linear-gradient(145deg, #1a2e10 0%, #2a4320 50%, #3b5e2b 100%);
+  background: linear-gradient(145deg, #1a0a08 0%, #2e1009 50%, #4a1a12 100%);
 }
 .tour-img--kamakura::after {
   content: '鎌倉';
@@ -476,7 +476,7 @@ h1, h2, h3 {
 }
 
 .tour-img--mountains {
-  background: linear-gradient(145deg, #0d1a12 0%, #1a3020 50%, #2d5035 100%);
+  background: linear-gradient(145deg, #0d0e1a 0%, #131422 50%, #1a1a2e 100%);
 }
 .tour-img--mountains::after {
   content: '山';
@@ -525,7 +525,7 @@ h1, h2, h3 {
   right: 16px;
   z-index: 1;
   background: var(--stone);
-  color: var(--white);
+  color: var(--text);
   font-size: 0.7rem;
   font-weight: 700;
   padding: 4px 13px;
@@ -594,9 +594,9 @@ h1, h2, h3 {
   border-radius: var(--radius);
   overflow: hidden;
   background: linear-gradient(160deg,
-    var(--forest-dark) 0%,
-    var(--forest)      60%,
-    var(--forest-light) 100%
+    #0d0e1a 0%,
+    #1a1a2e 60%,
+    #252545 100%
   );
   display: flex;
   align-items: center;
@@ -620,8 +620,8 @@ h1, h2, h3 {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 30% 70%, rgba(184, 151, 106, 0.18) 0%, transparent 55%),
-    radial-gradient(ellipse at 70% 20%, rgba(253, 250, 245, 0.06) 0%, transparent 45%);
+    radial-gradient(ellipse at 30% 70%, rgba(244, 167, 185, 0.18) 0%, transparent 55%),
+    radial-gradient(ellipse at 70% 20%, rgba(245, 230, 211, 0.06) 0%, transparent 45%);
 }
 
 .about-img-accent {
@@ -730,7 +730,7 @@ h1, h2, h3 {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: var(--forest);
+  background: var(--dark);
   color: var(--white);
   display: flex;
   align-items: center;
@@ -858,11 +858,11 @@ h1, h2, h3 {
 .form-group select:focus,
 .form-group textarea:focus {
   border-color: var(--forest);
-  box-shadow: 0 0 0 3px rgba(59, 94, 43, 0.12);
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.12);
 }
 
 .form-group select {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237D6144' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235D4037' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 14px center;
   padding-right: 38px;
@@ -896,7 +896,7 @@ h1, h2, h3 {
 
 .footer-brand .nav-logo { margin-bottom: 10px; }
 .footer-logo-text .logo-main { color: var(--white); }
-.footer-logo-text .logo-sub  { color: var(--stone-light); }
+.footer-logo-text .logo-sub  { color: var(--stone); }
 
 .footer-tagline {
   font-size: 0.83rem;
