@@ -692,6 +692,11 @@ h1, h2, h3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
+  justify-items: stretch;
+}
+.testimonials-grid .testimonial-card:nth-child(4):last-child,
+.testimonials-grid .testimonial-card:nth-child(4):nth-last-child(2) {
+  /* last row of 2: keep natural flow */
 }
 
 .testimonial-card {
@@ -948,6 +953,8 @@ h1, h2, h3 {
 .why-grid .why-card:nth-child(4)          { transition-delay: 0.3s; }
 .testimonials-grid .testimonial-card:nth-child(2) { transition-delay: 0.12s; }
 .testimonials-grid .testimonial-card:nth-child(3) { transition-delay: 0.24s; }
+.testimonials-grid .testimonial-card:nth-child(4) { transition-delay: 0.1s; }
+.testimonials-grid .testimonial-card:nth-child(5) { transition-delay: 0.2s; }
 
 /* ============================================================
    Responsive — tablet
