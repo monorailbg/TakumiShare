@@ -1118,8 +1118,7 @@ h1, h2, h3 {
   padding-bottom: 1px;
 }
 
-/* i18n rich blocks */
-.i18n-en { display: none; }
+/* i18n rich blocks — visibility controlled by [hidden] attribute via JS */
 [hidden] { display: none !important; }
 
 /* ============================================================

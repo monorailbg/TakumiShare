@@ -36,6 +36,13 @@
       el.hidden = !el.classList.contains('i18n-' + lang);
     });
 
+    // Force select elements to re-render their displayed value after option text updates
+    document.querySelectorAll('select').forEach(sel => {
+      const v = sel.value;
+      sel.value = '';
+      sel.value = v;
+    });
+
     document.querySelectorAll('.i18n-placeholder').forEach(el => {
       const ph = el.dataset['placeholder' + lang.charAt(0).toUpperCase() + lang.slice(1)];
       if (ph) el.placeholder = ph;
