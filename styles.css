@@ -46,7 +46,7 @@
 [data-theme="dark"] .section-eyebrow { color: var(--forest-light); }
 [data-theme="dark"] .tour-title,
 [data-theme="dark"] .blog-card-body h3,
-[data-theme="dark"] .testimonial-author strong { color: #7BA3E0; }
+[data-theme="dark"] .testimonial-author strong { color: var(--cream); }
 
 /* ============================================================
    Reset & base
