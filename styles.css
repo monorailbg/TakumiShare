@@ -44,12 +44,6 @@
   --nav-scrolled: rgba(28, 24, 20, 0.97);
 }
 [data-theme="dark"] .section-eyebrow { color: var(--forest-light); }
-[data-theme="dark"] .tour-title,
-[data-theme="dark"] .blog-card-body h3,
-[data-theme="dark"] .testimonial-author strong,
-[data-theme="dark"] .why-card h3,
-[data-theme="dark"] .contact-method strong { color: var(--cream); }
-
 /* Slightly lighter blue for secondary buttons on dark cards */
 [data-theme="dark"] .btn-secondary { color: #5B82C7; border-color: #5B82C7; }
 [data-theme="dark"] .btn-secondary:hover { background: #5B82C7; border-color: #5B82C7; color: var(--white); }
@@ -607,7 +601,7 @@ h1, h2, h3 {
 .tour-title {
   font-size: 1.15rem;
   margin-bottom: 12px;
-  color: var(--dark);
+  color: var(--heading);
 }
 
 .tour-desc {
@@ -805,7 +799,7 @@ h1, h2, h3 {
   font-family: var(--font-heading);
   font-size: 1.1rem;
   margin-bottom: 14px;
-  color: var(--dark);
+  color: var(--heading);
 }
 .why-card p {
   font-size: 0.88rem;
@@ -877,7 +871,7 @@ h1, h2, h3 {
 .testimonial-author strong {
   display: block;
   font-size: 0.88rem;
-  color: var(--dark);
+  color: var(--heading);
   margin-bottom: 2px;
 }
 .testimonial-author span {
@@ -947,7 +941,7 @@ h1, h2, h3 {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--dark);
+  color: var(--heading);
   margin-bottom: 3px;
 }
 .contact-method span {
@@ -1275,7 +1269,7 @@ h1, h2, h3 {
 .blog-card-body h3 {
   font-size: 1rem;
   line-height: 1.4;
-  color: var(--dark);
+  color: var(--heading);
 }
 .blog-card--featured .blog-card-body h3 {
   font-size: 1.2rem;
