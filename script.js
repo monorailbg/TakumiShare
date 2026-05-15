@@ -5,6 +5,23 @@
 (function () {
   'use strict';
 
+  // ── Theme toggle ──────────────────────────────────────────────
+  const themeToggle = document.getElementById('theme-toggle');
+  const savedTheme  = localStorage.getItem('ut-theme') || 'light';
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('ut-theme', theme);
+    themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+  }
+
+  themeToggle.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme') || 'light';
+    applyTheme(current === 'dark' ? 'light' : 'dark');
+  });
+
+  applyTheme(savedTheme);
+
   // ── Language toggle ──────────────────────────────────────────
   let currentLang = 'de';
 
