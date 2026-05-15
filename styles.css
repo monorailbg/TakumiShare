@@ -2,18 +2,18 @@
    Design tokens — Traditional Japan palette
    ============================================================ */
 :root {
-  --cream:        #F5E6D3;   /* washi cream — page background */
+  --cream:        #F5E6D3;   /* main background, card surfaces */
   --beige:        #EDD9C0;   /* alternate section background */
   --beige-dark:   #C8A882;   /* borders */
-  --stone:        #F4A7B9;   /* sakura pink — tags, highlights */
-  --stone-light:  #F8C5D1;   /* lighter sakura */
+  --stone:        #264E8C;   /* accent blue — tags, borders, icon accents */
+  --stone-light:  rgba(38, 78, 140, 0.12);   /* light blue tint */
   --brown:        #5D4037;   /* chestnut */
   --forest:       #C0392B;   /* vermilion — all CTAs / active */
   --forest-dark:  #A93226;   /* dark vermilion — hover */
   --forest-light: #E74C3C;   /* light vermilion */
   --dark:         #1A1A2E;   /* midnight ink — nav, hero, footer */
-  --text:         #5D4037;   /* chestnut body text */
-  --text-muted:   #8D6E63;   /* muted chestnut */
+  --text:         #5D4037;   /* body copy, secondary text */
+  --text-muted:   #8D6E63;   /* muted text */
   --white:        #FFFFFF;
 
   --font-heading: 'Playfair Display', Georgia, serif;
@@ -298,7 +298,7 @@ h1, h2, h3 {
 }
 .hero-shape--1 {
   width: 600px; height: 600px;
-  background: radial-gradient(circle, #F4A7B9 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(38, 78, 140, 0.3) 0%, transparent 70%);
   top: -120px; right: -80px;
 }
 .hero-shape--2 {
@@ -337,7 +337,7 @@ h1, h2, h3 {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: var(--stone-light);
+  color: rgba(245, 230, 211, 0.7);
   margin-bottom: 22px;
 }
 
@@ -498,7 +498,7 @@ h1, h2, h3 {
   right: 16px;
   z-index: 1;
   background: var(--stone);
-  color: var(--text);
+  color: var(--cream);
   font-size: 0.7rem;
   font-weight: 700;
   padding: 4px 13px;
@@ -682,23 +682,24 @@ h1, h2, h3 {
   width: 76px;
   height: 76px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--stone-light) 0%, var(--stone) 100%);
+  background: var(--stone-light);
+  border: 1.5px solid rgba(38, 78, 140, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 24px;
-  box-shadow: 0 6px 20px rgba(192, 57, 43, 0.18);
+  box-shadow: 0 6px 20px rgba(38, 78, 140, 0.15);
   transition: transform var(--ease), box-shadow var(--ease);
-  color: var(--forest);
+  color: var(--stone);
 }
 .why-card:hover .why-icon {
   transform: scale(1.08);
-  box-shadow: 0 8px 28px rgba(192, 57, 43, 0.28);
+  box-shadow: 0 8px 28px rgba(38, 78, 140, 0.25);
 }
 .why-icon svg {
   width: 34px;
   height: 34px;
-  stroke: var(--forest);
+  stroke: var(--stone);
   fill: none;
   stroke-width: 1.7;
   stroke-linecap: round;
@@ -1087,7 +1088,7 @@ h1, h2, h3 {
 
 /* Highlight spans — highlighter-pen effect */
 .hl {
-  background: linear-gradient(180deg, transparent 55%, rgba(244, 167, 185, 0.45) 55%);
+  background: linear-gradient(180deg, transparent 55%, rgba(38, 78, 140, 0.2) 55%);
   font-weight: 600;
   padding-bottom: 1px;
 }
@@ -1169,8 +1170,8 @@ h1, h2, h3 {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--forest);
-  background: rgba(192, 57, 43, 0.1);
+  color: var(--cream);
+  background: var(--stone);
   padding: 4px 12px;
   border-radius: 50px;
   align-self: flex-start;
