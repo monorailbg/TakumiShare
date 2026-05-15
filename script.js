@@ -31,6 +31,10 @@
         el.textContent = text;
       }
     });
+
+    document.querySelectorAll('.i18n-de, .i18n-en').forEach(el => {
+      el.hidden = !el.classList.contains('i18n-' + lang);
+    });
   }
 
   langButtons.forEach(btn =>
