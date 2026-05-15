@@ -837,6 +837,11 @@ h1, h2, h3 {
   font-size: 1.4rem;
   flex-shrink: 0;
 }
+.contact-method-icon--ig {
+  background: rgba(225, 48, 108, 0.08);
+  border-color: rgba(225, 48, 108, 0.2);
+}
+
 .contact-method-icon--wa {
   background: #e8faf0;
 }
@@ -1134,7 +1139,7 @@ h1, h2, h3 {
   background-image: url('https://images.pexels.com/photos/3532924/pexels-photo-3532924.jpeg?auto=compress&cs=tinysrgb&w=900');
 }
 .blog-card-img--2 {
-  background-image: url('https://images.unsplash.com/photo-w19uQvjfvA0?auto=format&fit=crop&w=800&q=80');
+  background-image: url('https://source.unsplash.com/w19uQvjfvA0/800x500');
 }
 .blog-card-img--3 {
   background-image: url('https://images.pexels.com/photos/1108701/pexels-photo-1108701.jpeg?auto=compress&cs=tinysrgb&w=700');
@@ -1143,7 +1148,7 @@ h1, h2, h3 {
   background-image: url('https://images.pexels.com/photos/30936434/pexels-photo-30936434.jpeg?auto=compress&cs=tinysrgb&w=700');
 }
 .blog-card-img--5 {
-  background-image: url('https://images.unsplash.com/photo-64ajtpEzlYc?auto=format&fit=crop&w=800&q=80');
+  background-image: url('https://source.unsplash.com/64ajtpEzlYc/800x500');
 }
 
 .blog-card-body {
