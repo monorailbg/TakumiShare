@@ -1,50 +1,90 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440">
 <defs>
   <linearGradient id="msky" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%"   stop-color="#07081a"/>
-    <stop offset="38%"  stop-color="#0d0e2a"/>
-    <stop offset="68%"  stop-color="#14103a"/>
-    <stop offset="100%" stop-color="#1a1035"/>
+    <stop offset="0%"   stop-color="#03040e"/>
+    <stop offset="35%"  stop-color="#080a20"/>
+    <stop offset="65%"  stop-color="#0e0820"/>
+    <stop offset="100%" stop-color="#180c28"/>
   </linearGradient>
-  <radialGradient id="mmoon" cx="74%" cy="18%" r="14%">
-    <stop offset="0%"   stop-color="#F5E6D3" stop-opacity="0.18"/>
+  <radialGradient id="moonhalo" cx="72%" cy="16%" r="16%">
+    <stop offset="0%"   stop-color="#F5E6D3" stop-opacity="0.22"/>
     <stop offset="100%" stop-color="#F5E6D3" stop-opacity="0"/>
   </radialGradient>
+  <radialGradient id="sunrise" cx="50%" cy="100%" r="42%">
+    <stop offset="0%"   stop-color="#C0392B" stop-opacity="0.15"/>
+    <stop offset="60%"  stop-color="#8b1a10" stop-opacity="0.06"/>
+    <stop offset="100%" stop-color="#8b1a10" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="lake" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%"   stop-color="#06081a"/>
+    <stop offset="100%" stop-color="#03040e"/>
+  </linearGradient>
 </defs>
+
 <rect width="800" height="440" fill="url(#msky)"/>
-<rect width="800" height="440" fill="url(#mmoon)"/>
+<rect width="800" height="440" fill="url(#moonhalo)"/>
+<rect width="800" height="440" fill="url(#sunrise)"/>
+
 <!-- Moon -->
-<circle cx="592" cy="76" r="28" fill="#F5E6D3" opacity="0.18"/>
-<circle cx="592" cy="76" r="20" fill="#F5E6D3" opacity="0.12"/>
-<circle cx="592" cy="76" r="13" fill="#F5E6D3" opacity="0.14"/>
+<circle cx="576" cy="64"  r="26" fill="#F5E6D3" opacity="0.16"/>
+<circle cx="576" cy="64"  r="19" fill="#F5E6D3" opacity="0.13"/>
+<circle cx="576" cy="64"  r="12" fill="#F5E6D3" opacity="0.15"/>
+
 <!-- Stars -->
-<circle cx="118" cy="58"  r="1.5" fill="#F5E6D3" opacity="0.42"/>
-<circle cx="198" cy="38"  r="1"   fill="#F5E6D3" opacity="0.36"/>
-<circle cx="348" cy="68"  r="1.5" fill="#F5E6D3" opacity="0.32"/>
-<circle cx="448" cy="28"  r="1"   fill="#F5E6D3" opacity="0.42"/>
-<circle cx="518" cy="52"  r="1.5" fill="#F5E6D3" opacity="0.32"/>
-<circle cx="698" cy="42"  r="1"   fill="#F5E6D3" opacity="0.36"/>
-<circle cx="778" cy="78"  r="1.5" fill="#F5E6D3" opacity="0.32"/>
-<circle cx="78"  cy="118" r="1"   fill="#F5E6D3" opacity="0.26"/>
-<circle cx="728" cy="138" r="1"   fill="#F5E6D3" opacity="0.26"/>
-<circle cx="268" cy="48"  r="1"   fill="#F5E6D3" opacity="0.32"/>
-<!-- Far mountains -->
-<polygon points="0,345 75,222 175,282 275,182 375,262 475,192 575,252 675,172 775,232 800,222 800,345" fill="#252755"/>
-<!-- Mid mountains -->
-<polygon points="0,385 55,272 145,315 248,222 355,295 458,214 555,284 658,202 758,258 800,244 800,385" fill="#181930"/>
-<!-- Near mountains -->
-<polygon points="0,440 0,355 65,315 158,365 228,294 318,350 400,282 482,342 558,298 648,360 718,308 800,354 800,440" fill="#0e0f22"/>
-<!-- Forest treeline -->
-<polygon points="0,432 0,412 14,402 26,412 37,400 52,410 63,398 78,408 90,396 106,406 118,394 130,404 145,396 158,406 168,394 180,404 192,396 206,408 218,396 232,406 248,394 262,404 274,397 290,407 305,395 320,405 335,396 350,407 365,396 380,406 396,395 412,406 428,397 444,407 460,395 476,406 492,397 508,407 522,396 538,406 554,397 570,407 585,395 600,405 616,397 632,407 648,396 663,406 678,397 694,407 709,395 724,405 740,397 755,407 770,396 785,406 800,397 800,432" fill="#090a1a"/>
-<!-- Torii gate -->
-<rect x="384" y="354" width="8"  height="62" fill="#1e0c08" opacity="0.85" rx="2"/>
-<rect x="408" y="354" width="8"  height="62" fill="#1e0c08" opacity="0.85" rx="2"/>
-<path d="M376,366 Q400,356 424,366" stroke="#1e0c08" stroke-width="9" fill="none" opacity="0.85" stroke-linecap="round"/>
-<rect x="380" y="379" width="40" height="6" fill="#1e0c08" opacity="0.85" rx="2"/>
-<!-- Torii glow -->
-<rect x="374" y="354" width="52" height="68" fill="#C0392B" opacity="0.05"/>
-<!-- Ground -->
-<rect x="0" y="433" width="800" height="7" fill="#070819"/>
-<!-- Kanji -->
-<text x="162" y="388" font-size="95" fill="white" fill-opacity="0.042" font-family="serif" text-anchor="middle">山</text>
+<circle cx="42"  cy="45"  r="1.5" fill="#e8dcc8" opacity="0.55"/>
+<circle cx="118" cy="28"  r="1"   fill="#e8dcc8" opacity="0.48"/>
+<circle cx="220" cy="52"  r="1.5" fill="#e8dcc8" opacity="0.42"/>
+<circle cx="312" cy="22"  r="1"   fill="#e8dcc8" opacity="0.5"/>
+<circle cx="415" cy="48"  r="1.2" fill="#e8dcc8" opacity="0.38"/>
+<circle cx="488" cy="18"  r="1"   fill="#e8dcc8" opacity="0.48"/>
+<circle cx="658" cy="38"  r="1.5" fill="#e8dcc8" opacity="0.42"/>
+<circle cx="738" cy="55"  r="1"   fill="#e8dcc8" opacity="0.45"/>
+<circle cx="80"  cy="100" r="1"   fill="#e8dcc8" opacity="0.32"/>
+<circle cx="350" cy="82"  r="1"   fill="#e8dcc8" opacity="0.35"/>
+<circle cx="700" cy="92"  r="1.2" fill="#e8dcc8" opacity="0.32"/>
+
+<!-- Far mountains (lighter silhouette) -->
+<polygon points="0,310 60,208 130,252 210,172 290,228 370,162 450,210 530,172 610,218 680,175 750,215 800,198 800,310" fill="#1e2250"/>
+
+<!-- ===== MOUNT FUJI (iconic symmetrical cone) ===== -->
+<!-- Fuji base -->
+<polygon points="160,310 400,72 640,310" fill="#141830"/>
+<!-- Fuji main body (slightly lighter) -->
+<polygon points="175,310 400,78 625,310" fill="#181e3a"/>
+<!-- Snow cap -->
+<polygon points="355,165 400,78 445,165 432,158 420,172 400,155 380,172 368,158" fill="#e8dcc8" opacity="0.82"/>
+<!-- Snow cap shadow/depth -->
+<polygon points="400,78 430,150 400,140 370,150" fill="#d8ccb8" opacity="0.65"/>
+<!-- Snow streaks down upper slope -->
+<polygon points="400,140 395,175 398,178 404,175 406,140" fill="#e8dcc8" opacity="0.3"/>
+<polygon points="380,158 374,188 377,190 382,188 385,160" fill="#e8dcc8" opacity="0.22"/>
+<polygon points="420,158 415,188 418,190 423,188 426,160" fill="#e8dcc8" opacity="0.22"/>
+
+<!-- Mid-range hills flanking Fuji -->
+<polygon points="0,310 0,270 100,230 200,268 300,242 380,270 400,285 420,270 500,238 600,265 700,232 800,268 800,310" fill="#10132a"/>
+
+<!-- Lake Kawaguchiko (foreground) -->
+<rect x="0" y="308" width="800" height="68" fill="url(#lake)"/>
+<!-- Lake shoreline edge -->
+<path d="M0,308 Q100,303 200,308 Q300,313 400,308 Q500,303 600,308 Q700,313 800,308" fill="#06081a"/>
+
+<!-- Fuji reflection in lake (upside down, distorted) -->
+<polygon points="280,375 400,308 520,375 510,368 498,378 470,358 450,372 430,360 400,372 370,360 350,372 330,358 310,372 302,368" fill="#1a1e3a" opacity="0.6"/>
+<!-- Snow cap reflection -->
+<polygon points="380,310 400,320 420,310 415,315 400,322 385,315" fill="#e8dcc8" opacity="0.18"/>
+<!-- Moon reflection in lake -->
+<ellipse cx="576" cy="345" rx="14" ry="4" fill="#F5E6D3" opacity="0.1"/>
+
+<!-- Treeline foreground -->
+<polygon points="0,308 0,295 12,285 22,295 34,282 48,292 60,280 74,290 86,278 100,288 114,279 128,289 142,280 156,290 168,281 182,291 194,282 208,292 222,283 236,293 250,280 264,290 278,283 292,293 305,281 318,291 332,283 346,293 360,281 374,291 388,283 400,293 412,283 426,293 440,281 454,291 468,283 482,293 494,281 508,291 522,283 536,293 550,281 564,291 578,283 592,293 606,281 618,291 632,283 646,293 660,281 674,291 688,283 700,293 714,281 728,291 742,283 756,293 768,281 782,291 800,283 800,308" fill="#080a1c"/>
+
+<!-- ===== TORII GATE at lake edge ===== -->
+<rect x="376" y="258" width="8"  height="52" fill="#1e0c08" opacity="0.85" rx="2"/>
+<rect x="416" y="258" width="8"  height="52" fill="#1e0c08" opacity="0.85" rx="2"/>
+<path d="M368,270 Q400,260 432,270" stroke="#1e0c08" stroke-width="9" fill="none" opacity="0.85" stroke-linecap="round"/>
+<rect x="372" y="283" width="56" height="6" fill="#1e0c08" opacity="0.85" rx="2"/>
+<!-- Torii reflection in lake -->
+<rect x="376" y="308" width="8"  height="22" fill="#1e0c08" opacity="0.25" rx="1"/>
+<rect x="416" y="308" width="8"  height="22" fill="#1e0c08" opacity="0.25" rx="1"/>
+
 </svg>
