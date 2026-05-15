@@ -93,7 +93,7 @@ h1, h2, h3 {
 .section-header .section-sub { margin: 0 auto; }
 
 /* ============================================================
-   Buttons
+   Buttons — iOS 26 Liquid Glass
    ============================================================ */
 .btn {
   display: inline-block;
@@ -103,43 +103,96 @@ h1, h2, h3 {
   font-size: 0.92rem;
   font-weight: 600;
   cursor: pointer;
-  border: 2px solid transparent;
-  transition: background var(--ease), border-color var(--ease),
-              color var(--ease), transform var(--ease), box-shadow var(--ease);
+  border: 1px solid transparent;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition: transform 0.22s ease, box-shadow 0.22s ease,
+              background 0.22s ease, border-color 0.22s ease;
   white-space: nowrap;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Specular highlight — top-edge glow */
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 4%; right: 4%;
+  height: 48%;
+  background: linear-gradient(to bottom,
+    rgba(255,255,255,0.26) 0%,
+    rgba(255,255,255,0.06) 65%,
+    transparent 100%);
+  border-radius: 50px 50px 0 0;
+  pointer-events: none;
 }
 
 .btn-primary {
-  background: var(--forest);
+  background: linear-gradient(160deg, #d8432e 0%, #C0392B 52%, #8e1c12 100%);
   color: var(--white);
-  border-color: var(--forest);
+  border-color: rgba(218, 88, 65, 0.65);
+  box-shadow:
+    0 1px 0 rgba(255, 175, 145, 0.42) inset,
+    0 -3px 6px rgba(70, 5, 0, 0.22) inset,
+    0 8px 28px rgba(192, 57, 43, 0.38),
+    0 3px 8px rgba(0, 0, 0, 0.16);
 }
 .btn-primary:hover {
-  background: var(--forest-dark);
-  border-color: var(--forest-dark);
+  background: linear-gradient(160deg, #e2482f 0%, #cc3c2d 52%, #9b2018 100%);
+  border-color: rgba(230, 100, 75, 0.7);
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(192, 57, 43, 0.28);
+  box-shadow:
+    0 1px 0 rgba(255, 175, 145, 0.52) inset,
+    0 -3px 6px rgba(70, 5, 0, 0.28) inset,
+    0 14px 38px rgba(192, 57, 43, 0.48),
+    0 5px 12px rgba(0, 0, 0, 0.2);
 }
 
 .btn-secondary {
-  background: transparent;
+  background: linear-gradient(160deg,
+    rgba(192, 57, 43, 0.13) 0%,
+    rgba(192, 57, 43, 0.05) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   color: var(--forest);
-  border-color: var(--forest);
+  border-color: rgba(192, 57, 43, 0.45);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.2) inset,
+    0 2px 8px rgba(0, 0, 0, 0.06);
 }
 .btn-secondary:hover {
-  background: var(--forest);
-  color: var(--white);
+  background: linear-gradient(160deg,
+    rgba(192, 57, 43, 0.22) 0%,
+    rgba(192, 57, 43, 0.1) 100%);
+  border-color: rgba(192, 57, 43, 0.68);
+  color: var(--forest-dark);
   transform: translateY(-2px);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.25) inset,
+    0 4px 14px rgba(0, 0, 0, 0.1);
 }
 
 .btn-outline {
-  background: transparent;
+  background: linear-gradient(160deg,
+    rgba(255, 255, 255, 0.16) 0%,
+    rgba(255, 255, 255, 0.06) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   color: var(--white);
-  border-color: rgba(255, 255, 255, 0.65);
+  border-color: rgba(255, 255, 255, 0.48);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.28) inset,
+    0 2px 10px rgba(0, 0, 0, 0.12);
 }
 .btn-outline:hover {
-  background: rgba(255, 255, 255, 0.14);
-  border-color: var(--white);
+  background: linear-gradient(160deg,
+    rgba(255, 255, 255, 0.24) 0%,
+    rgba(255, 255, 255, 0.12) 100%);
+  border-color: rgba(255, 255, 255, 0.72);
+  transform: translateY(-2px);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.38) inset,
+    0 4px 18px rgba(0, 0, 0, 0.18);
 }
 
 .btn-full { width: 100%; text-align: center; }
@@ -206,12 +259,17 @@ h1, h2, h3 {
 .nav-link:hover { background: var(--beige); color: var(--forest); }
 
 .btn-nav {
-  background: var(--forest) !important;
+  background: linear-gradient(160deg, #d8432e 0%, #C0392B 52%, #8e1c12 100%) !important;
   color: var(--white) !important;
   border-radius: 50px;
+  border: 1px solid rgba(218, 88, 65, 0.6) !important;
   padding: 7px 20px !important;
+  box-shadow: 0 4px 14px rgba(192,57,43,0.32), 0 1px 0 rgba(255,175,145,0.38) inset !important;
 }
-.btn-nav:hover { background: var(--forest-dark) !important; }
+.btn-nav:hover {
+  background: linear-gradient(160deg, #e2482f 0%, #cc3c2d 52%, #9b2018 100%) !important;
+  box-shadow: 0 6px 20px rgba(192,57,43,0.42), 0 1px 0 rgba(255,175,145,0.45) inset !important;
+}
 
 /* Right side */
 .nav-right { display: flex; align-items: center; gap: 14px; }
@@ -667,7 +725,7 @@ h1, h2, h3 {
 
 .testimonial-card {
   background: var(--white);
-  border-radius: var(--radius);
+  border-radius: 22px;
   padding: 34px;
   box-shadow: var(--shadow);
   border-top: 3px solid var(--forest);
@@ -769,6 +827,9 @@ h1, h2, h3 {
   font-size: 1.4rem;
   flex-shrink: 0;
 }
+.contact-method-icon--wa {
+  background: #e8faf0;
+}
 .contact-method strong {
   display: block;
   font-size: 0.75rem;
@@ -815,7 +876,7 @@ h1, h2, h3 {
   width: 100%;
   padding: 11px 15px;
   border: 1.5px solid var(--beige-dark);
-  border-radius: var(--radius-sm);
+  border-radius: 18px;
   font-family: var(--font-body);
   font-size: 0.93rem;
   color: var(--text);

@@ -35,6 +35,11 @@
     document.querySelectorAll('.i18n-de, .i18n-en').forEach(el => {
       el.hidden = !el.classList.contains('i18n-' + lang);
     });
+
+    document.querySelectorAll('.i18n-placeholder').forEach(el => {
+      const ph = el.dataset['placeholder' + lang.charAt(0).toUpperCase() + lang.slice(1)];
+      if (ph) el.placeholder = ph;
+    });
   }
 
   langButtons.forEach(btn =>
