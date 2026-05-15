@@ -32,8 +32,26 @@
       </ul>
       <div class="nav-right">
         <div class="lang-toggle">
-          <button class="lang-btn active" data-lang="de"><span class="lang-flag">🇩🇪</span> DE</button>
-          <button class="lang-btn" data-lang="en"><span class="lang-flag">🇬🇧</span> EN</button>
+          <button class="lang-btn active" data-lang="de">
+            <svg class="lang-flag" viewBox="0 0 16 12" width="16" height="12" aria-hidden="true">
+              <rect width="16" height="4" fill="#000"/>
+              <rect y="4" width="16" height="4" fill="#CC0000"/>
+              <rect y="8" width="16" height="4" fill="#FFCE00"/>
+            </svg>
+            DE
+          </button>
+          <button class="lang-btn" data-lang="en">
+            <svg class="lang-flag" viewBox="0 0 16 12" width="16" height="12" aria-hidden="true">
+              <rect width="16" height="12" fill="#012169"/>
+              <path d="M0,0 L16,12 M16,0 L0,12" stroke="#fff" stroke-width="3"/>
+              <path d="M0,0 L16,12 M16,0 L0,12" stroke="#C8102E" stroke-width="1.5"/>
+              <rect x="6" width="4" height="12" fill="#fff"/>
+              <rect y="4" width="16" height="4" fill="#fff"/>
+              <rect x="7" width="2" height="12" fill="#C8102E"/>
+              <rect y="5" width="16" height="2" fill="#C8102E"/>
+            </svg>
+            EN
+          </button>
         </div>
         <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
           <span></span><span></span><span></span>
