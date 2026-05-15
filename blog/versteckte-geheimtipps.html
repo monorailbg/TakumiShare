@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Die 10 versteckten Geheimtipps Tokios – von Yanaka bis Todoroki. Orte abseits der Touristenpfade, die das echte Tokyo zeigen.">
+  <title>Tokios versteckte Geheimtipps – Weg von den Massen | Unentdecktes Tokio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <style>
+    .blog-post-hero {
+      background: linear-gradient(135deg, #1a2340 0%, #2d7057 100%);
+      padding: 140px 0 80px;
+      text-align: center;
+    }
+    .blog-post-hero .blog-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--stone-light);
+      background: rgba(244, 167, 185, 0.2);
+      padding: 6px 16px;
+      border-radius: 50px;
+      margin-bottom: 24px;
+    }
+    .blog-post-hero h1 {
+      color: var(--white);
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      max-width: 820px;
+      margin: 0 auto 24px;
+      line-height: 1.2;
+    }
+    .blog-post-hero .post-meta {
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 0.85rem;
+    }
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.5);
+      justify-content: center;
+      margin-bottom: 28px;
+    }
+    .breadcrumb a { color: rgba(255, 255, 255, 0.6); transition: color var(--ease); }
+    .breadcrumb a:hover { color: var(--stone-light); }
+    .breadcrumb span { color: rgba(255, 255, 255, 0.3); }
+    .blog-post-body {
+      background: var(--cream);
+      padding: 80px 0 100px;
+    }
+    .blog-post-content {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+    .blog-post-content h2 {
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      color: var(--dark);
+      margin: 52px 0 20px;
+      line-height: 1.25;
+    }
+    .blog-post-content h2:first-child { margin-top: 0; }
+    .blog-post-content h3 {
+      font-size: 1.15rem;
+      color: var(--dark);
+      margin: 36px 0 12px;
+    }
+    .blog-post-content p {
+      font-size: 1.05rem;
+      color: var(--text);
+      line-height: 1.9;
+      margin-bottom: 22px;
+    }
+    .blog-post-content .tip-box {
+      background: var(--white);
+      border-left: 4px solid var(--forest);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 18px 24px;
+      margin: 24px 0;
+      box-shadow: var(--shadow);
+    }
+    .blog-post-content .tip-box p {
+      margin-bottom: 0;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+    .blog-post-content .tip-box strong {
+      color: var(--forest);
+    }
+    .place-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: var(--forest);
+      color: var(--white);
+      border-radius: 50%;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-right: 12px;
+      flex-shrink: 0;
+    }
+    .place-heading {
+      display: flex;
+      align-items: center;
+      margin: 48px 0 16px;
+    }
+    .place-heading h2 {
+      margin: 0;
+    }
+    .blog-cta-box {
+      background: var(--dark);
+      border-radius: var(--radius);
+      padding: 52px 44px;
+      text-align: center;
+      margin-top: 64px;
+    }
+    .blog-cta-box h2 {
+      color: var(--white);
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      margin-bottom: 16px;
+    }
+    .blog-cta-box p {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 1rem;
+      margin-bottom: 32px;
+      line-height: 1.75;
+    }
+    @media (max-width: 600px) {
+      .blog-cta-box { padding: 36px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="../" class="nav-logo">
+        <span class="logo-main">Unentdecktes</span>
+        <span class="logo-sub">Tokio</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../#touren" class="nav-link" data-de="Touren" data-en="Tours">Touren</a></li>
+        <li><a href="../#ueber-mich" class="nav-link" data-de="Über mich" data-en="About">Über mich</a></li>
+        <li><a href="../#warum-ich" class="nav-link" data-de="Warum ich?" data-en="Why me?">Warum ich?</a></li>
+        <li><a href="../#blog" class="nav-link" data-de="Blog" data-en="Blog">Blog</a></li>
+        <li><a href="../#kontakt" class="nav-link btn-nav" data-de="Kontakt" data-en="Contact">Kontakt</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="lang-toggle">
+          <button class="lang-btn active" data-lang="de">DE</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== BLOG POST HERO ===== -->
+  <section class="blog-post-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../" data-de="Startseite" data-en="Home">Startseite</a>
+        <span>›</span>
+        <a href="../#blog" data-de="Blog" data-en="Blog">Blog</a>
+        <span>›</span>
+        <span class="i18n-de">Geheimtipps Tokios</span>
+        <span class="i18n-en" hidden>Tokyo Hidden Gems</span>
+      </nav>
+      <span class="blog-tag" data-de="Geheimtipps" data-en="Hidden Gems">Geheimtipps</span>
+      <h1 class="i18n-de">Weg von den Massen: Die 10 versteckten Geheimtipps Tokios</h1>
+      <h1 class="i18n-en" hidden>Off the Beaten Path: Tokyo's 10 Hidden Gems</h1>
+      <p class="post-meta i18n-de">Von Immanuel · Mai 2026 · 8 Minuten Lesezeit</p>
+      <p class="post-meta i18n-en" hidden>By Immanuel · May 2026 · 8 min read</p>
+    </div>
+  </section>
+
+  <!-- ===== BLOG POST BODY ===== -->
+  <article class="blog-post-body">
+    <div class="blog-post-content">
+
+      <!-- GERMAN VERSION -->
+      <div class="i18n-de">
+
+        <p>Tokio. Allein das Wort lässt einen an Shibuya-Kreuzung, den Senso-ji-Tempel und Harajuku denken – Orte, die auf jeder Reiseliste stehen und zu bestimmten Zeiten geradezu überquellen. Aber weißt du was? Das ist nur die Oberfläche dieser unfassbar vielschichtigen Stadt. Als jemand, der schon oft in Tokio war, möchte ich dir die Seiten zeigen, die die meisten Touristen komplett verpassen.</p>
+
+        <div class="place-heading">
+          <span class="place-number">1</span>
+          <h2>Yanaka – das alte Tokio, das den Krieg überlebt hat</h2>
+        </div>
+        <p>Yanaka liegt im Norden der Stadt und fühlt sich an, als wäre man in einer Zeitkapsel gelandet. Hier wurden die alten Holzhäuser und engen Gassen nicht durch Bombenangriffe oder Nachkriegsbebauung zerstört. Das Ergebnis: ein authentisches, fast nostalgisches Stadtbild, das du sonst nirgends in Tokio findest.</p>
+        <p>Schlendere durch die <span class="hl">Yanaka Ginza</span> – eine alte Shōtengai (Einkaufsstraße), in der Omas Tofu verkaufen und Katzen auf den Dächern schlafen. Kein Kitsch, keine Touristenfallen. Einfach echtes Leben.</p>
+        <div class="tip-box"><p><strong>Tipp:</strong> Besuche den Yanaka-Friedhof – das klingt erstmal seltsam, ist aber wunderschön. Zwischen alten Gräbern wachsen riesige Kirschblüten, und Einheimische picknicken hier.</p></div>
+
+        <div class="place-heading">
+          <span class="place-number">2</span>
+          <h2>Koenji – Tokios Alternativszene</h2>
+        </div>
+        <p>Wenn du wissen willst, wo die Kreativen, Musiker und Individualisten Tokios wohnen, dann fahr nach Koenji. Dieser Stadtteil ist das Herz der Vintage- und Untergrundkultur. Die Straßen sind vollgepackt mit Secondhand-Läden, Plattengeschäften und kleinen Live-Musikkneipen.</p>
+        <p>Hier findest du keine teuren Designerläden. Stattdessen: handgemachte Schmuckstücke, <span class="hl">Vintage-Klamotten aus den 80ern</span> und Kaffeebars, in denen man stundenlang sitzen kann.</p>
+        <div class="tip-box"><p><strong>Tipp:</strong> Komm an einem Wochenende – dann gibt es oft spontane Flohmärkte direkt vor dem Bahnhof.</p></div>
+
+        <div class="place-heading">
+          <span class="place-number">3</span>
+          <h2>Shimokitazawa – Für die Bohème-Seele</h2>
+        </div>
+        <p>Shimokitazawa ist so klein, dass man es fast übersieht – aber genau das macht es so besonders. Diese lebhafte Gegend ist bekannt für ihre Theaterszene, unzählige Vintage-Shops und gemütliche Cafés, in denen Baristas ihren Kaffee mit derselben Ernsthaftigkeit zubereiten wie Chirurgen operieren.</p>
+        <p>Hier ist der Rhythmus langsamer als im Rest der Stadt. Kein Hochhaus, keine Wolkenkratzer. Nur Menschen, Musik und guter Kaffee.</p>
+        <div class="tip-box"><p><strong>Tipp:</strong> Geh nach Sonnenuntergang – die kleinen Bars und Restaurants füllen sich dann mit jungen Tokyotern, und die Energie ist einfach magisch.</p></div>
+
+        <div class="place-heading">
+          <span class="place-number">4</span>
+          <h2>Nezu-Jinja – der kleinere Bruder von Fushimi Inari</h2>
+        </div>
+        <p>Du kennst sicher die berühmten roten Torii-Tore von Fushimi Inari in Kyoto. Was viele nicht wissen: Tokio hat sein eigenes, viel ruhigeres Äquivalent. Der <span class="hl">Nezu-Jinja-Schrein</span> liegt mitten im Viertel Yanaka und beherbergt ebenfalls hunderte von roten Toren, die sich einen Hügel hochschlängeln.</p>
+        <p>Und das Beste: Du wirst hier fast niemanden aus dem Ausland treffen. Nur Einheimische, ein bisschen Räucherduft und das Rauschen der Blätter.</p>
+        <div class="tip-box"><p><strong>Tipp:</strong> Im April ist es hier besonders schön – dann blühen Azaleen in leuchtendem Pink und Rot rund um den Schrein.</p></div>
+
+        <div class="place-heading">
+          <span class="place-number">5</span>
+          <h2>Kagurazaka – Klein-Paris in Tokio</h2>
+        </div>
+        <p>Kagurazaka hat eine interessante Geschichte: Das Viertel war früher das Epizentrum des französischen Exils in Tokio, und diesen Charme hat es bis heute bewahrt. Enge Kopfsteinpflastergassen (die sogenannten <em>yokochō</em>), versteckte Restaurants und eine einzigartige Mischung aus japanischer und europäischer Architektur machen dieses Viertel zu einem echten Geheimtipp.</p>
+        <div class="tip-box"><p><strong>Tipp:</strong> Verliere dich absichtlich in den kleinen Seitengassen hinter der Hauptstraße. Dort stößt du auf winzige Restaurants ohne englische Speisekarten – und genau da ist das Essen am besten.</p></div>
+
+        <div class="place-heading">
+          <span class="place-number">6</span>
+          <h2>Toden Arakawa Linie – die letzte Straßenbahn Tokios</h2>
+        </div>
+        <p>Tokio ist bekannt für sein perfektes U-Bahn-Netz. Aber wusstest du, dass es noch eine einzige Straßenbahn gibt? Die <span class="hl">Toden Arakawa Linie</span> (auch Sakura Tram genannt) rattert auf alten Gleisen durch Wohnviertel, die Touristen nie zu Gesicht bekommen.</p>
+        <p>Eine Fahrt mit dieser Bahn ist keine touristische Attraktion – sie ist einfach der Alltag der Tokioter. Du siehst Schulkinder, die aussteigen, Omis mit Einkaufstaschen und Gärten hinter Holzzäunen.</p>
+        <div class="tip-box"><p><strong>Tipp:</strong> Die Fahrt kostet nur 170 Yen. Kauf dir ein Ticket und fahr einfach die gesamte Strecke durch – das dauert ungefähr 45 Minuten und ist eines der authentischsten Erlebnisse, die Tokio zu bieten hat.</p></div>
+
+        <div class="place-heading">
+          <span class="place-number">7</span>
+          <h2>Musashi-Koyama – Das Einkaufszentrum, das nie endet</h2>
+        </div>
+        <p>Unter diesem ruhigen Stadtteil im Westen Tokios versteckt sich die längste überdachte Einkaufspassage Tokios: die <span class="hl">Musashi-Koyama Shopping Street Palm</span> – 800 Meter lang, vollgepackt mit kleinen Läden, frischen Gemüsehändlern, Bäckereien und Ramen-Restaurants.</p>
+        <p>Hier kaufen die Locals ein. Keine Touristensouvenirs, keine überhöhten Preise. Einfach das tägliche Leben in einer japanischen Nachbarschaft.</p>
+        <div class="tip-box"><p><strong>Tipp:</strong> Komm mittags – dann zieht der Geruch frisch zubereiteter Mahlzeiten durch die Passage und die Auswahl an Mittagsmenüs (Teishoku) ist riesig und günstig.</p></div>
+
+        <div class="place-heading">
+          <span class="place-number">8</span>
+          <h2>Hamarikyu Gardens – Ruhe inmitten des Wahnsinns</h2>
+        </div>
+        <p>Ja, die Hamarikyu Gardens sind auf Touristenkarten verzeichnet – aber die meisten fahren trotzdem daran vorbei. Das ist ein Fehler. Dieser traditionelle Garten liegt direkt neben dem Teamlab Borderless Museum und dem Hochhausviertel Shiodome. Der <span class="hl">Kontrast ist atemberaubend</span>.</p>
+        <p>Hier kannst du Matcha-Tee in einem traditionellen Teehaus trinken, das auf einer kleinen Insel im Mitten eines Salzweiher-Sees steht, während du auf Tokios Skyline blickst.</p>
+        <div class="tip-box"><p><strong>Tipp:</strong> Früh morgens ist der Garten fast leer. Dann gehört dir diese grüne Oase für eine Stunde ganz alleine.</p></div>
+
+        <div class="place-heading">
+          <span class="place-number">9</span>
+          <h2>Todoroki Ravine – ein Dschungel in der Stadt</h2>
+        </div>
+        <p>Kaum zu glauben, aber wahr: In Tokio gibt es eine echte Schlucht. Das <span class="hl">Todoroki Ravine</span> im Westen der Stadt ist das einzige natürliche Tal innerhalb der Stadtgrenzen. Ein kleiner Fluss schlängelt sich durch dichten Bambus und alte Bäume – und du bist nur wenige U-Bahn-Stationen vom Stadtgetümmel entfernt.</p>
+        <p>Der Spaziergang durch die Schlucht dauert etwa 30–40 Minuten und endet an einem kleinen, versteckten Shinto-Schrein.</p>
+        <div class="tip-box"><p><strong>Tipp:</strong> Danach liegt das Café Setagaya direkt am Ausgang der Schlucht – perfekt für einen Eiskaffee nach dem Spaziergang.</p></div>
+
+        <div class="place-heading">
+          <span class="place-number">10</span>
+          <h2>Ebisu und Daikanyama – die schicke Alternative zu Harajuku</h2>
+        </div>
+        <p>Ebisu und Daikanyama liegen nur einen kurzen Fußweg voneinander entfernt und bilden zusammen das vielleicht entspannteste, designaffine Viertel Tokios. Hier findest du Boutiquen, die wie Kunstgalerien aussehen, Buchläden, in denen man bis Mitternacht stöbern kann (schau dir die <span class="hl">Daikanyama T-Site</span> an), und Restaurants mit Innenhöfen, in denen Zeit keine Rolle spielt.</p>
+        <div class="tip-box"><p><strong>Tipp:</strong> Der Nakameguro-Kanal verbindet Daikanyama mit dem benachbarten Nakameguro. Ein Spaziergang entlang dieses Kanals – besonders abends, wenn die kleinen Bars ihr warmes Licht über das Wasser werfen – gehört zu den schönsten Momenten, die Tokio zu bieten hat.</p></div>
+
+        <h2>Fazit</h2>
+        <p>Tokio ist so groß, dass selbst Menschen, die jahrelang dort leben, immer wieder neue Orte entdecken. Lass dich nicht von den Touristenströmen in die immer gleichen Orte treiben. Schnapp dir eine Suica-Karte, spring in die Bahn und folge einfach deiner Neugier. Die besten Erlebnisse warten genau dort, wo kein Reiseführer hinzeigt.</p>
+
+      </div>
+
+      <!-- ENGLISH VERSION -->
+      <div class="i18n-en" hidden>
+
+        <p>Tokyo. The word alone conjures up Shibuya Crossing, Senso-ji temple and Harajuku – places on every travel list that overflow with visitors at peak times. But here's the thing: that's just the surface of this incredibly layered city. As someone who has spent a lot of time in Tokyo, I want to show you the sides that most tourists miss entirely.</p>
+
+        <div class="place-heading">
+          <span class="place-number">1</span>
+          <h2>Yanaka – the old Tokyo that survived the war</h2>
+        </div>
+        <p>Yanaka sits in the north of the city and feels like stepping into a time capsule. The old wooden houses and narrow lanes here were never destroyed by bombing raids or post-war redevelopment. The result: an authentic, almost nostalgic streetscape you won't find anywhere else in Tokyo.</p>
+        <p>Stroll down <span class="hl">Yanaka Ginza</span> – an old shōtengai (covered shopping street) where grandmothers sell tofu and cats sleep on the rooftops. No kitsch, no tourist traps. Just real life.</p>
+        <div class="tip-box"><p><strong>Tip:</strong> Visit Yanaka Cemetery – it sounds odd at first, but it's genuinely beautiful. Cherry trees grow among old graves and locals have picnics here.</p></div>
+
+        <div class="place-heading">
+          <span class="place-number">2</span>
+          <h2>Koenji – Tokyo's alternative scene</h2>
+        </div>
+        <p>If you want to know where Tokyo's creatives, musicians and free spirits live, head to Koenji. This neighbourhood is the heart of vintage and underground culture. The streets are packed with second-hand shops, record stores and small live music venues.</p>
+        <div class="tip-box"><p><strong>Tip:</strong> Come on a weekend – there are often spontaneous flea markets right outside the station.</p></div>
+
+        <div class="place-heading">
+          <span class="place-number">3</span>
+          <h2>Shimokitazawa – for the bohemian soul</h2>
+        </div>
+        <p>Shimokitazawa is so small you could almost overlook it – which is exactly what makes it special. This lively area is known for its theatre scene, countless vintage shops and cosy cafés where baristas brew their coffee with surgical precision. The pace is slower here than anywhere else in the city.</p>
+        <div class="tip-box"><p><strong>Tip:</strong> Go after sunset – the small bars and restaurants fill up with young Tokyoites and the energy is simply magical.</p></div>
+
+        <div class="place-heading">
+          <span class="place-number">4</span>
+          <h2>Nezu-Jinja – Fushimi Inari's quieter sibling</h2>
+        </div>
+        <p>You know the famous red torii gates of Fushimi Inari in Kyoto. What many people don't know: Tokyo has its own, much quieter equivalent. <span class="hl">Nezu-Jinja shrine</span> sits in the middle of the Yanaka neighbourhood and features hundreds of red gates winding up a hillside – almost no foreign visitors.</p>
+        <div class="tip-box"><p><strong>Tip:</strong> It's especially beautiful in April when azaleas bloom in vivid pink and red around the shrine.</p></div>
+
+        <div class="place-heading">
+          <span class="place-number">5</span>
+          <h2>Kagurazaka – little Paris in Tokyo</h2>
+        </div>
+        <p>Kagurazaka has an interesting history: it was once the centre of French expat life in Tokyo, and it has preserved that charm to this day. Cobblestone alleyways (<em>yokochō</em>), hidden restaurants and a unique mix of Japanese and European architecture make this neighbourhood a genuine hidden gem.</p>
+        <div class="tip-box"><p><strong>Tip:</strong> Get intentionally lost in the small side alleys behind the main street. You'll stumble upon tiny restaurants with no English menu – and that's exactly where the best food is.</p></div>
+
+        <div class="place-heading">
+          <span class="place-number">6</span>
+          <h2>Toden Arakawa Line – Tokyo's last tram</h2>
+        </div>
+        <p>Tokyo is famous for its perfect metro network. But did you know there is still one solitary tram? The <span class="hl">Toden Arakawa Line</span> (also called the Sakura Tram) rattles along old tracks through residential neighbourhoods tourists never see.</p>
+        <div class="tip-box"><p><strong>Tip:</strong> The ride costs just 170 yen. Buy a ticket and ride the entire route – it takes about 45 minutes and is one of the most authentic experiences Tokyo has to offer.</p></div>
+
+        <div class="place-heading">
+          <span class="place-number">7</span>
+          <h2>Musashi-Koyama – the shopping arcade that never ends</h2>
+        </div>
+        <p>Hidden beneath this quiet western neighbourhood is Tokyo's longest covered shopping arcade: <span class="hl">Musashi-Koyama Shopping Street Palm</span> – 800 metres of small shops, fresh vegetable stalls, bakeries and ramen restaurants. This is where locals actually shop.</p>
+        <div class="tip-box"><p><strong>Tip:</strong> Come at lunchtime – the smell of freshly prepared meals drifts through the arcade and the lunch set menus (teishoku) are plentiful and cheap.</p></div>
+
+        <div class="place-heading">
+          <span class="place-number">8</span>
+          <h2>Hamarikyu Gardens – calm in the middle of the madness</h2>
+        </div>
+        <p>Yes, Hamarikyu Gardens appear on tourist maps – but most people drive straight past. That's a mistake. This traditional garden sits right next to the Teamlab Borderless museum and the Shiodome skyscraper district. The <span class="hl">contrast is breathtaking</span>. Drink matcha tea in a traditional teahouse on a small island in a saltwater pond while gazing at Tokyo's skyline.</p>
+        <div class="tip-box"><p><strong>Tip:</strong> Early in the morning the garden is almost empty. This green oasis is all yours for an hour.</p></div>
+
+        <div class="place-heading">
+          <span class="place-number">9</span>
+          <h2>Todoroki Ravine – a jungle in the city</h2>
+        </div>
+        <p>Hard to believe, but true: Tokyo has a real gorge. <span class="hl">Todoroki Ravine</span> in the west of the city is the only natural valley within the city limits. A small river winds through dense bamboo and old trees – and you're just a few metro stops from the urban bustle. The walk takes about 30–40 minutes and ends at a small hidden Shinto shrine.</p>
+        <div class="tip-box"><p><strong>Tip:</strong> Café Setagaya sits right at the exit of the ravine – perfect for an iced coffee after the walk.</p></div>
+
+        <div class="place-heading">
+          <span class="place-number">10</span>
+          <h2>Ebisu and Daikanyama – the stylish alternative to Harajuku</h2>
+        </div>
+        <p>Ebisu and Daikanyama are a short walk apart and together form perhaps Tokyo's most relaxed, design-conscious neighbourhood. Boutiques that look like art galleries, bookshops you can browse until midnight (check out <span class="hl">Daikanyama T-Site</span>), and restaurants with inner courtyards where time doesn't matter.</p>
+        <div class="tip-box"><p><strong>Tip:</strong> The Nakameguro Canal connects Daikanyama to neighbouring Nakameguro. An evening stroll along the canal – when small bars cast their warm light over the water – is one of the most beautiful things Tokyo has to offer.</p></div>
+
+        <h2>The takeaway</h2>
+        <p>Tokyo is so vast that even people who've lived there for years keep discovering new places. Don't let the tourist crowds push you into the same old spots. Grab a Suica card, jump on a train and follow your curiosity. The best experiences are waiting exactly where no guidebook points.</p>
+
+      </div>
+
+      <div class="blog-cta-box">
+        <h2 class="i18n-de">Diese Orte live erleben?</h2>
+        <h2 class="i18n-en" hidden>Want to experience these places in person?</h2>
+        <p class="i18n-de">Ich kenne alle diese Viertel aus dem Effeff – und zeige dir gerne die Ecken, die du alleine nie finden würdest. Kleine Gruppe, flexible Route, echtes Tokio.</p>
+        <p class="i18n-en" hidden>I know every one of these neighbourhoods inside out – and I'd love to show you the corners you'd never find on your own. Small group, flexible route, real Tokyo.</p>
+        <a href="../#kontakt" class="btn btn-primary" data-de="Tour anfragen" data-en="Request a Tour">Tour anfragen</a>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="nav-logo footer-logo-text">
+          <span class="logo-main">Unentdecktes</span>
+          <span class="logo-sub">Tokio</span>
+        </div>
+        <p class="footer-tagline" data-de="Deutschsprachige Privattouren in Japan" data-en="Private Tours in Japan with a German-speaking Guide">Deutschsprachige Privattouren in Japan</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer Navigation">
+        <a href="../#touren" data-de="Touren" data-en="Tours">Touren</a>
+        <a href="../#ueber-mich" data-de="Über mich" data-en="About">Über mich</a>
+        <a href="../#warum-ich" data-de="Warum ich?" data-en="Why me?">Warum ich?</a>
+        <a href="../#blog" data-de="Blog" data-en="Blog">Blog</a>
+        <a href="../#kontakt" data-de="Kontakt" data-en="Contact">Kontakt</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p data-de="© 2025 Unentdecktes Tokio. Alle Rechte vorbehalten." data-en="© 2025 Unentdecktes Tokio. All rights reserved.">© 2025 Unentdecktes Tokio. Alle Rechte vorbehalten.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

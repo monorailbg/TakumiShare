@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Die besten Aussichtsplattformen in Tokio im Vergleich: Skytree, Tokyo Tower, Shibuya Sky, Roppongi Hills und mehr. Mit Preisen, Öffnungszeiten und persönlichen Empfehlungen.">
+  <title>Tokio von oben: Die besten Aussichtsplattformen | Unentdecktes Tokio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <style>
+    .blog-post-hero {
+      background: linear-gradient(135deg, #0d0d1a 0%, #2a1a50 50%, #1a1a2e 100%);
+      padding: 140px 0 80px;
+      text-align: center;
+    }
+    .blog-post-hero .blog-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--stone-light);
+      background: rgba(244, 167, 185, 0.2);
+      padding: 6px 16px;
+      border-radius: 50px;
+      margin-bottom: 24px;
+    }
+    .blog-post-hero h1 {
+      color: var(--white);
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      max-width: 820px;
+      margin: 0 auto 24px;
+      line-height: 1.2;
+    }
+    .blog-post-hero .post-meta {
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 0.85rem;
+    }
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.5);
+      justify-content: center;
+      margin-bottom: 28px;
+    }
+    .breadcrumb a { color: rgba(255, 255, 255, 0.6); transition: color var(--ease); }
+    .breadcrumb a:hover { color: var(--stone-light); }
+    .breadcrumb span { color: rgba(255, 255, 255, 0.3); }
+    .blog-post-body {
+      background: var(--cream);
+      padding: 80px 0 100px;
+    }
+    .blog-post-content {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+    .blog-post-content h2 {
+      font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+      color: var(--dark);
+      margin: 52px 0 16px;
+      line-height: 1.25;
+    }
+    .blog-post-content h2:first-child { margin-top: 0; }
+    .blog-post-content p {
+      font-size: 1.05rem;
+      color: var(--text);
+      line-height: 1.9;
+      margin-bottom: 18px;
+    }
+    .deck-meta {
+      background: var(--white);
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+      margin: 0 0 20px;
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+    }
+    .deck-meta-item {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+    .deck-meta-item strong {
+      display: block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--forest);
+      margin-bottom: 2px;
+    }
+    .tip-box {
+      background: var(--white);
+      border-left: 4px solid var(--forest);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 16px 22px;
+      margin: 20px 0 28px;
+      box-shadow: var(--shadow);
+    }
+    .tip-box p { margin-bottom: 0 !important; font-size: 0.95rem !important; }
+    .tip-box strong { color: var(--forest); }
+    .verdict-badge {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 50px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+    .verdict-must { background: #d4edda; color: #1a5c28; }
+    .verdict-good { background: #fff3cd; color: #7d5a00; }
+    .verdict-skip { background: #f8d7da; color: #7c1a20; }
+    .place-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: var(--forest);
+      color: var(--white);
+      border-radius: 50%;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-right: 12px;
+      flex-shrink: 0;
+    }
+    .place-heading {
+      display: flex;
+      align-items: center;
+      margin: 52px 0 16px;
+    }
+    .place-heading h2 { margin: 0; }
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 32px 0;
+      background: var(--white);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      font-size: 0.88rem;
+    }
+    .comparison-table th {
+      background: var(--dark);
+      color: var(--white);
+      padding: 12px 14px;
+      text-align: left;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .comparison-table td {
+      padding: 12px 14px;
+      color: var(--text);
+      border-bottom: 1px solid var(--beige);
+    }
+    .comparison-table tr:last-child td { border-bottom: none; }
+    .comparison-table tr:nth-child(even) td { background: var(--cream); }
+    .blog-cta-box {
+      background: var(--dark);
+      border-radius: var(--radius);
+      padding: 52px 44px;
+      text-align: center;
+      margin-top: 64px;
+    }
+    .blog-cta-box h2 {
+      color: var(--white);
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      margin-bottom: 16px;
+    }
+    .blog-cta-box p {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 1rem;
+      margin-bottom: 32px;
+      line-height: 1.75;
+    }
+    @media (max-width: 600px) {
+      .blog-cta-box { padding: 36px 24px; }
+      .comparison-table { font-size: 0.78rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="../" class="nav-logo">
+        <span class="logo-main">Unentdecktes</span>
+        <span class="logo-sub">Tokio</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../#touren" class="nav-link" data-de="Touren" data-en="Tours">Touren</a></li>
+        <li><a href="../#ueber-mich" class="nav-link" data-de="Über mich" data-en="About">Über mich</a></li>
+        <li><a href="../#warum-ich" class="nav-link" data-de="Warum ich?" data-en="Why me?">Warum ich?</a></li>
+        <li><a href="../#blog" class="nav-link" data-de="Blog" data-en="Blog">Blog</a></li>
+        <li><a href="../#kontakt" class="nav-link btn-nav" data-de="Kontakt" data-en="Contact">Kontakt</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="lang-toggle">
+          <button class="lang-btn active" data-lang="de">DE</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== BLOG POST HERO ===== -->
+  <section class="blog-post-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../" data-de="Startseite" data-en="Home">Startseite</a>
+        <span>›</span>
+        <a href="../#blog" data-de="Blog" data-en="Blog">Blog</a>
+        <span>›</span>
+        <span class="i18n-de">Aussichtsplattformen</span>
+        <span class="i18n-en" hidden>Observation Decks</span>
+      </nav>
+      <span class="blog-tag" data-de="Aussicht" data-en="Views">Aussicht</span>
+      <h1 class="i18n-de">Tokio von oben: Die besten Aussichtsplattformen im Vergleich</h1>
+      <h1 class="i18n-en" hidden>Tokyo from Above: The Best Observation Decks Compared</h1>
+      <p class="post-meta i18n-de">Von Immanuel · Mai 2026 · 7 Minuten Lesezeit</p>
+      <p class="post-meta i18n-en" hidden>By Immanuel · May 2026 · 7 min read</p>
+    </div>
+  </section>
+
+  <!-- ===== BLOG POST BODY ===== -->
+  <article class="blog-post-body">
+    <div class="blog-post-content">
+
+      <!-- GERMAN VERSION -->
+      <div class="i18n-de">
+
+        <p>Es gibt kaum etwas Beeindruckenderes als Tokio aus der Vogelperspektive zu sehen. Eine Stadt, die sich in alle Richtungen bis zum Horizont erstreckt – Millionen von Lichtern, Hochhäuser, Tempel, der Fuji am Horizont. Ich habe alle wichtigen Aussichtsplattformen der Stadt besucht und verrate dir hier, welche sich wirklich lohnen – und welche du getrost überspringen kannst.</p>
+
+        <div class="place-heading">
+          <span class="place-number">1</span>
+          <h2>Tokyo Skytree – Der Höchste im Land</h2>
+        </div>
+        <div class="deck-meta">
+          <div class="deck-meta-item"><strong>Höhe</strong>634 m (Plattformen bei 350 m und 450 m)</div>
+          <div class="deck-meta-item"><strong>Eintritt</strong>ca. 2.000–3.400 Yen</div>
+          <div class="deck-meta-item"><strong>Ort</strong>Oshiage, Sumida-ku</div>
+          <div class="deck-meta-item"><strong>Öffnungszeiten</strong>10:00–21:00 Uhr</div>
+        </div>
+        <p>Der Tokyo Skytree ist mit 634 Metern das höchste Bauwerk Japans – und die Aussicht ist entsprechend atemberaubend. Bei klarem Wetter siehst du bis zum Fuji, die Kanto-Ebene und die Bucht von Tokio. Es gibt zwei Plattformen: den <span class="hl">Tembo Deck</span> bei 350 Metern und den <span class="hl">Tembo Galleria</span> bei 450 Metern – letzterer ist eine spiralförmige Röhre aus Glas.</p>
+        <p><strong>Wann gehen?</strong> Abends für das Lichtermeer der Stadt. Aber ich empfehle auch den frühen Morgen – dann ist die Luft oft klarer und du siehst den Fuji besser.</p>
+        <div class="tip-box"><p><strong>Mein Fazit:</strong> Touristisch, manchmal voll und etwas teuer – aber die Aussicht rechtfertigt es. Buche online im Voraus, um Warteschlangen zu vermeiden.</p></div>
+
+        <div class="place-heading">
+          <span class="place-number">2</span>
+          <h2>Tokyo Tower – Der Klassiker mit Charme</h2>
+        </div>
+        <div class="deck-meta">
+          <div class="deck-meta-item"><strong>Höhe</strong>333 m (Hauptplattform 150 m, Top 250 m)</div>
+          <div class="deck-meta-item"><strong>Eintritt</strong>ca. 1.200–3.000 Yen</div>
+          <div class="deck-meta-item"><strong>Ort</strong>Shiba Park, Minato-ku</div>
+          <div class="deck-meta-item"><strong>Öffnungszeiten</strong>9:00–23:00 Uhr</div>
+        </div>
+        <p>Der Tokyo Tower ist ein Stück Stadtgeschichte. Inspiriert vom Pariser Eiffelturm, aber in Orange-Weiß gehalten, eröffnete er 1958 – mitten im Wiederaufbau Japans nach dem Krieg. Heute steht er zwischen glänzenden Wolkenkratzern wie ein <span class="hl">nostalgisches Relikt</span> aus einer anderen Zeit.</p>
+        <div class="tip-box"><p><strong>Geheimtipp:</strong> Von der anderen Seite des Shiba-Parks hast du die beste Fotoperspektive auf den Tower – besonders nachts, wenn er beleuchtet ist.</p></div>
+
+        <div class="place-heading">
+          <span class="place-number">3</span>
+          <h2>Tokyo Metropolitan Government Building <span class="verdict-badge verdict-must">Kostenlos!</span></h2>
+        </div>
+        <div class="deck-meta">
+          <div class="deck-meta-item"><strong>Höhe</strong>243 m (Plattform bei 202 m)</div>
+          <div class="deck-meta-item"><strong>Eintritt</strong>Kostenlos!</div>
+          <div class="deck-meta-item"><strong>Ort</strong>Shinjuku</div>
+          <div class="deck-meta-item"><strong>Öffnungszeiten</strong>Nord: tägl. 9:00–22:30 Uhr</div>
+        </div>
+        <p>Ja, du liest richtig: <span class="hl">kostenlos</span>. Das Rathaus von Tokio hat einen öffentlichen Aussichtsturm, der jeden anderen in Sachen Preis-Leistung schlägt. Der Blick ist überraschend gut – du siehst Shinjuku direkt unter dir, und an klaren Tagen sogar den Fuji.</p>
+        <div class="tip-box"><p><strong>Mein Fazit:</strong> Pflichtbesuch! Kein anderer Ort in Tokio bietet so einen guten Ausblick für umsonst. Auch gut für spontane Abendpläne geeignet.</p></div>
+
+        <div class="place-heading">
+          <span class="place-number">4</span>
+          <h2>Mori Art Museum + Sky Deck (Roppongi Hills)</h2>
+        </div>
+        <div class="deck-meta">
+          <div class="deck-meta-item"><strong>Höhe</strong>238 m (52. Etage)</div>
+          <div class="deck-meta-item"><strong>Eintritt</strong>ca. 2.000 Yen</div>
+          <div class="deck-meta-item"><strong>Ort</strong>Roppongi Hills, Minato-ku</div>
+          <div class="deck-meta-item"><strong>Öffnungszeiten</strong>10:00–23:00 Uhr</div>
+        </div>
+        <p>Das Mori Art Museum im 53. Stockwerk von Roppongi Hills ist eines der besten Kunstmuseen der Stadt. Direkt daneben liegt die Tokyo City View – eine 360-Grad-Aussichtsplattform. Und dann gibt es noch den <span class="hl">Sky Deck</span>: eine Open-Air-Plattform auf dem Dach des Gebäudes. Wenn du dich traust (es gibt keine Glascheiben!), stehst du wirklich im Freien, mit dem Wind in den Haaren und der Stadt zu deinen Füßen.</p>
+        <div class="tip-box"><p><strong>Mein Fazit:</strong> Mein persönlicher Favorit. Tolle Kombination aus Kunst und Aussicht, weniger touristisch als der Skytree und das Sky Deck-Erlebnis ist unvergleichlich.</p></div>
+
+        <div class="place-heading">
+          <span class="place-number">5</span>
+          <h2>Shibuya Sky (Scramble Square)</h2>
+        </div>
+        <div class="deck-meta">
+          <div class="deck-meta-item"><strong>Höhe</strong>229 m (46. Stockwerk)</div>
+          <div class="deck-meta-item"><strong>Eintritt</strong>ca. 2.000 Yen</div>
+          <div class="deck-meta-item"><strong>Ort</strong>Scramble Square, Shibuya</div>
+          <div class="deck-meta-item"><strong>Öffnungszeiten</strong>10:00–23:00 Uhr</div>
+        </div>
+        <p>Shibuya Sky ist die neueste (2019 eröffnet) und vielleicht fotogenste Aussichtsplattform Tokios. Das Dach ist offen – du stehst im Freien, direkt über der berühmten Shibuya-Kreuzung. Tausende Leuchtreklamen und Ampeln unter dir. Das Design der Plattform ist besonders gelungen: <span class="hl">geschwungene Wände, kluge Beleuchtung</span>, tolle Fotoecken.</p>
+        <div class="tip-box"><p><strong>Wichtig:</strong> Tickets solltest du <strong>unbedingt im Voraus online buchen</strong> – vor Ort ausverkauft ist keine Seltenheit. Beste Zeit: kurz vor Sonnenuntergang.</p></div>
+
+        <div class="place-heading">
+          <span class="place-number">6</span>
+          <h2>Bunkyo Civic Center <span class="verdict-badge verdict-must">Kostenlos!</span></h2>
+        </div>
+        <div class="deck-meta">
+          <div class="deck-meta-item"><strong>Höhe</strong>58 m (25. Stockwerk)</div>
+          <div class="deck-meta-item"><strong>Eintritt</strong>Kostenlos!</div>
+          <div class="deck-meta-item"><strong>Ort</strong>Bunkyo-ku (Nähe Korakuen)</div>
+          <div class="deck-meta-item"><strong>Öffnungszeiten</strong>Mo–Fr 8:30–22:00, Sa/So 9:00–20:30</div>
+        </div>
+        <p>Noch ein Geheimtipp für Sparfüchse. Das Rathaus des Bunkyo-Bezirks hat eine öffentliche Aussichtsebene im 25. Stock – mit schönem Blick auf Ueno, Akihabara und Richtung Fuji. Besonderheit: Du siehst von hier oben den <span class="hl">Tokyo Dome</span> direkt unter dir – das riesige weiße Dach sieht aus wie ein riesiges Kissen.</p>
+        <div class="tip-box"><p><strong>Mein Fazit:</strong> Nicht spektakulär, aber kostenlos und kaum besucht – ein echter Geheimtipp für ein authentisches Tokio-Feeling.</p></div>
+
+        <h2>Der große Vergleich</h2>
+
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Plattform</th>
+              <th>Höhe</th>
+              <th>Eintritt</th>
+              <th>Fuji?</th>
+              <th>Open-Air?</th>
+              <th>Beste Zeit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Tokyo Skytree</strong></td>
+              <td>350/450 m</td>
+              <td>€€€</td>
+              <td>✓</td>
+              <td>Nein</td>
+              <td>Morgen/Abend</td>
+            </tr>
+            <tr>
+              <td><strong>Tokyo Tower</strong></td>
+              <td>150/250 m</td>
+              <td>€€</td>
+              <td>Manchmal</td>
+              <td>Nein</td>
+              <td>Abends</td>
+            </tr>
+            <tr>
+              <td><strong>TMG Building</strong></td>
+              <td>202 m</td>
+              <td>Kostenlos</td>
+              <td>✓</td>
+              <td>Nein</td>
+              <td>Abends</td>
+            </tr>
+            <tr>
+              <td><strong>Roppongi Sky Deck</strong></td>
+              <td>238 m</td>
+              <td>€€</td>
+              <td>Manchmal</td>
+              <td>✓ Ja</td>
+              <td>Abends</td>
+            </tr>
+            <tr>
+              <td><strong>Shibuya Sky</strong></td>
+              <td>229 m</td>
+              <td>€€</td>
+              <td>✓</td>
+              <td>✓ Ja</td>
+              <td>Sonnenuntergang</td>
+            </tr>
+            <tr>
+              <td><strong>Bunkyo Civic</strong></td>
+              <td>~150 m</td>
+              <td>Kostenlos</td>
+              <td>Manchmal</td>
+              <td>Nein</td>
+              <td>Tags</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Meine persönliche Empfehlung</h2>
+
+        <p>Wenn ich nur <strong>eine</strong> Plattform wählen müsste: <span class="hl">Shibuya Sky bei Sonnenuntergang</span>. Die Kombination aus offenem Dach, dem magischen Licht und dem Blick auf Tokios berühmteste Kreuzung ist einfach unschlagbar.</p>
+
+        <p>Wenn du auf dein Budget achtest: Das <strong>Metropolitan Government Building</strong> in Shinjuku gibt dir 80% des Erlebnisses für 0 Yen.</p>
+
+        <p>Und wenn du das volle Premium-Erlebnis willst: <strong>Skytree morgens</strong> für den Fuji-Blick + <strong>Mori Sky Deck abends</strong> für das Lichtermeer – das ist Tokio at its best.</p>
+
+        <div class="tip-box"><p>An klaren Wintertagen (November bis März) siehst du den Fuji von fast allen Plattformen. Schau vorher auf die Wettervorhersage und plan deinen Besuch entsprechend.</p></div>
+
+      </div>
+
+      <!-- ENGLISH VERSION -->
+      <div class="i18n-en" hidden>
+
+        <p>There are few things more impressive than seeing Tokyo from above. A city stretching in every direction to the horizon – millions of lights, skyscrapers, temples, Mt. Fuji on the skyline. I've visited every major observation deck in the city and I'll tell you which ones are genuinely worth it – and which you can safely skip.</p>
+
+        <div class="place-heading">
+          <span class="place-number">1</span>
+          <h2>Tokyo Skytree – The Tallest in the Land</h2>
+        </div>
+        <div class="deck-meta">
+          <div class="deck-meta-item"><strong>Height</strong>634 m (platforms at 350 m and 450 m)</div>
+          <div class="deck-meta-item"><strong>Entry</strong>approx. 2,000–3,400 yen</div>
+          <div class="deck-meta-item"><strong>Location</strong>Oshiage, Sumida</div>
+          <div class="deck-meta-item"><strong>Hours</strong>10:00–21:00</div>
+        </div>
+        <p>At 634 metres, the Tokyo Skytree is Japan's tallest structure – and the view is accordingly breathtaking. On clear days you can see all the way to Mt. Fuji, the Kanto Plain and Tokyo Bay. Two platforms: the <span class="hl">Tembo Deck</span> at 350 m and the <span class="hl">Tembo Galleria</span> at 450 m – the latter a spiral glass tube.</p>
+        <div class="tip-box"><p><strong>My verdict:</strong> Touristy, sometimes crowded and a bit expensive – but the view justifies it. Book online in advance to skip the queue.</p></div>
+
+        <div class="place-heading">
+          <span class="place-number">2</span>
+          <h2>Tokyo Tower – The Classic with Character</h2>
+        </div>
+        <div class="deck-meta">
+          <div class="deck-meta-item"><strong>Height</strong>333 m (main 150 m, top 250 m)</div>
+          <div class="deck-meta-item"><strong>Entry</strong>approx. 1,200–3,000 yen</div>
+          <div class="deck-meta-item"><strong>Location</strong>Shiba Park, Minato</div>
+          <div class="deck-meta-item"><strong>Hours</strong>9:00–23:00</div>
+        </div>
+        <p>Tokyo Tower is a piece of city history. Inspired by the Eiffel Tower but painted orange and white (for aviation safety), it opened in 1958 – right in the middle of Japan's post-war reconstruction. Today it stands between gleaming skyscrapers like a <span class="hl">nostalgic relic</span> from another era.</p>
+        <div class="tip-box"><p><strong>Hidden tip:</strong> The best photo angle is from the other side of Shiba Park – especially at night when it's illuminated.</p></div>
+
+        <div class="place-heading">
+          <span class="place-number">3</span>
+          <h2>Tokyo Metropolitan Government Building <span class="verdict-badge verdict-must">Free!</span></h2>
+        </div>
+        <div class="deck-meta">
+          <div class="deck-meta-item"><strong>Height</strong>243 m (platform at 202 m)</div>
+          <div class="deck-meta-item"><strong>Entry</strong>Free!</div>
+          <div class="deck-meta-item"><strong>Location</strong>Shinjuku</div>
+          <div class="deck-meta-item"><strong>Hours</strong>North tower: daily 9:00–22:30</div>
+        </div>
+        <p>Yes, you read that right: <span class="hl">free</span>. Tokyo's city hall has a public observation tower that beats everything else on value for money. The view is surprisingly good – you see Shinjuku directly below you, and on clear days even Mt. Fuji.</p>
+        <div class="tip-box"><p><strong>My verdict:</strong> A must-visit. Nowhere else in Tokyo offers such a good view for zero yen. Also great for spontaneous evening plans.</p></div>
+
+        <div class="place-heading">
+          <span class="place-number">4</span>
+          <h2>Mori Art Museum + Sky Deck (Roppongi Hills)</h2>
+        </div>
+        <div class="deck-meta">
+          <div class="deck-meta-item"><strong>Height</strong>238 m (52nd floor)</div>
+          <div class="deck-meta-item"><strong>Entry</strong>approx. 2,000 yen</div>
+          <div class="deck-meta-item"><strong>Location</strong>Roppongi Hills, Minato</div>
+          <div class="deck-meta-item"><strong>Hours</strong>10:00–23:00</div>
+        </div>
+        <p>The Mori Art Museum on the 53rd floor is one of the city's best art museums. Right next to it is the Tokyo City View – a 360-degree observation floor. And then there's the <span class="hl">Sky Deck</span>: a fully open-air platform on the roof of the building. If you dare (there are no glass panels!), you're standing outside in the open air, wind in your hair, city at your feet.</p>
+        <div class="tip-box"><p><strong>My verdict:</strong> My personal favourite. Great combination of art and views, less touristy than the Skytree, and the Sky Deck experience is unlike anything else.</p></div>
+
+        <div class="place-heading">
+          <span class="place-number">5</span>
+          <h2>Shibuya Sky (Scramble Square)</h2>
+        </div>
+        <div class="deck-meta">
+          <div class="deck-meta-item"><strong>Height</strong>229 m (46th floor)</div>
+          <div class="deck-meta-item"><strong>Entry</strong>approx. 2,000 yen</div>
+          <div class="deck-meta-item"><strong>Location</strong>Scramble Square, Shibuya</div>
+          <div class="deck-meta-item"><strong>Hours</strong>10:00–23:00</div>
+        </div>
+        <p>Shibuya Sky (opened 2019) is perhaps Tokyo's most photogenic observation deck. The roof is open – you stand outside, directly above the famous Shibuya Crossing. Thousands of neon signs and traffic lights below you. The design is exceptional: <span class="hl">curved walls, clever lighting</span>, great photo spots.</p>
+        <div class="tip-box"><p><strong>Important:</strong> You really should <strong>book tickets online in advance</strong> – sold out on-site is common. Best time: just before sunset.</p></div>
+
+        <div class="place-heading">
+          <span class="place-number">6</span>
+          <h2>Bunkyo Civic Center <span class="verdict-badge verdict-must">Free!</span></h2>
+        </div>
+        <div class="deck-meta">
+          <div class="deck-meta-item"><strong>Height</strong>58 m (25th floor)</div>
+          <div class="deck-meta-item"><strong>Entry</strong>Free!</div>
+          <div class="deck-meta-item"><strong>Location</strong>Bunkyo (near Korakuen)</div>
+          <div class="deck-meta-item"><strong>Hours</strong>Mon–Fri 8:30–22:00, Sat/Sun 9:00–20:30</div>
+        </div>
+        <p>Another hidden gem for the budget-conscious. Bunkyo district's civic centre has a public viewing floor on the 25th floor – with a nice view over Ueno, Akihabara and towards Fuji. The special feature: from up here you can see the <span class="hl">Tokyo Dome</span> directly below – the huge white roof looks like an enormous cushion from above.</p>
+
+        <h2>The big comparison</h2>
+
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Deck</th>
+              <th>Height</th>
+              <th>Entry</th>
+              <th>Fuji?</th>
+              <th>Open-Air?</th>
+              <th>Best Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Tokyo Skytree</strong></td><td>350/450 m</td><td>€€€</td><td>✓</td><td>No</td><td>Morning/Evening</td></tr>
+            <tr><td><strong>Tokyo Tower</strong></td><td>150/250 m</td><td>€€</td><td>Sometimes</td><td>No</td><td>Evening</td></tr>
+            <tr><td><strong>TMG Building</strong></td><td>202 m</td><td>Free</td><td>✓</td><td>No</td><td>Evening</td></tr>
+            <tr><td><strong>Roppongi Sky Deck</strong></td><td>238 m</td><td>€€</td><td>Sometimes</td><td>✓ Yes</td><td>Evening</td></tr>
+            <tr><td><strong>Shibuya Sky</strong></td><td>229 m</td><td>€€</td><td>✓</td><td>✓ Yes</td><td>Sunset</td></tr>
+            <tr><td><strong>Bunkyo Civic</strong></td><td>~150 m</td><td>Free</td><td>Sometimes</td><td>No</td><td>Daytime</td></tr>
+          </tbody>
+        </table>
+
+        <h2>My personal recommendation</h2>
+
+        <p>If I could only pick <strong>one</strong> deck: <span class="hl">Shibuya Sky at sunset</span>. The combination of open air, magical light and the view over Tokyo's most famous intersection is simply unbeatable.</p>
+
+        <p>On a budget? The <strong>Metropolitan Government Building</strong> in Shinjuku gives you 80% of the experience for 0 yen.</p>
+
+        <p>For the full premium experience: <strong>Skytree in the morning</strong> for the Fuji view + <strong>Mori Sky Deck in the evening</strong> for the city lights – that's Tokyo at its best.</p>
+
+        <div class="tip-box"><p>On clear winter days (November to March) you can see Mt. Fuji from almost every deck. Check the weather forecast before you go and plan accordingly.</p></div>
+
+      </div>
+
+      <div class="blog-cta-box">
+        <h2 class="i18n-de">Tokio auch zu Fuß entdecken?</h2>
+        <h2 class="i18n-en" hidden>Want to explore Tokyo at street level too?</h2>
+        <p class="i18n-de">Eine Aussichtsplattform zeigt dir die Stadt von oben – aber die echten Geschichten passieren unten. Ich zeige dir die Viertel und Ecken, die kein Reiseführer kennt.</p>
+        <p class="i18n-en" hidden>An observation deck shows you the city from above – but the real stories happen at street level. Let me show you the neighbourhoods and corners no guidebook covers.</p>
+        <a href="../#kontakt" class="btn btn-primary" data-de="Tour anfragen" data-en="Request a Tour">Tour anfragen</a>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="nav-logo footer-logo-text">
+          <span class="logo-main">Unentdecktes</span>
+          <span class="logo-sub">Tokio</span>
+        </div>
+        <p class="footer-tagline" data-de="Deutschsprachige Privattouren in Japan" data-en="Private Tours in Japan with a German-speaking Guide">Deutschsprachige Privattouren in Japan</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer Navigation">
+        <a href="../#touren" data-de="Touren" data-en="Tours">Touren</a>
+        <a href="../#ueber-mich" data-de="Über mich" data-en="About">Über mich</a>
+        <a href="../#warum-ich" data-de="Warum ich?" data-en="Why me?">Warum ich?</a>
+        <a href="../#blog" data-de="Blog" data-en="Blog">Blog</a>
+        <a href="../#kontakt" data-de="Kontakt" data-en="Contact">Kontakt</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p data-de="© 2025 Unentdecktes Tokio. Alle Rechte vorbehalten." data-en="© 2025 Unentdecktes Tokio. All rights reserved.">© 2025 Unentdecktes Tokio. Alle Rechte vorbehalten.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

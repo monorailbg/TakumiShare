@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vorbereitung für Tokio: Suica-Karte, JR Pass, Shinkansen, U-Bahn, SIM-Karte, Bargeld – alles was du wirklich brauchst, bevor du losfährst.">
+  <title>Vorbereitung für Tokio: Alles was du brauchst | Unentdecktes Tokio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <style>
+    .blog-post-hero {
+      background: linear-gradient(135deg, #0f2340 0%, #1a6070 100%);
+      padding: 140px 0 80px;
+      text-align: center;
+    }
+    .blog-post-hero .blog-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--stone-light);
+      background: rgba(244, 167, 185, 0.2);
+      padding: 6px 16px;
+      border-radius: 50px;
+      margin-bottom: 24px;
+    }
+    .blog-post-hero h1 {
+      color: var(--white);
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      max-width: 820px;
+      margin: 0 auto 24px;
+      line-height: 1.2;
+    }
+    .blog-post-hero .post-meta {
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 0.85rem;
+    }
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.5);
+      justify-content: center;
+      margin-bottom: 28px;
+    }
+    .breadcrumb a { color: rgba(255, 255, 255, 0.6); transition: color var(--ease); }
+    .breadcrumb a:hover { color: var(--stone-light); }
+    .breadcrumb span { color: rgba(255, 255, 255, 0.3); }
+    .blog-post-body {
+      background: var(--cream);
+      padding: 80px 0 100px;
+    }
+    .blog-post-content {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+    .blog-post-content h2 {
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      color: var(--dark);
+      margin: 52px 0 20px;
+      line-height: 1.25;
+    }
+    .blog-post-content h2:first-child { margin-top: 0; }
+    .blog-post-content h3 {
+      font-size: 1.1rem;
+      color: var(--dark);
+      margin: 28px 0 10px;
+    }
+    .blog-post-content p {
+      font-size: 1.05rem;
+      color: var(--text);
+      line-height: 1.9;
+      margin-bottom: 18px;
+    }
+    .tip-box {
+      background: var(--white);
+      border-left: 4px solid var(--forest);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 16px 22px;
+      margin: 20px 0 28px;
+      box-shadow: var(--shadow);
+    }
+    .tip-box p { margin-bottom: 0 !important; font-size: 0.95rem !important; }
+    .tip-box strong { color: var(--forest); }
+    .option-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin: 20px 0 28px;
+    }
+    .option-card {
+      background: var(--white);
+      border-radius: var(--radius-sm);
+      padding: 20px;
+      box-shadow: var(--shadow);
+      border-top: 3px solid var(--stone);
+    }
+    .option-card.recommended { border-top-color: var(--forest); }
+    .option-card h4 {
+      font-size: 0.95rem;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+    .option-card p {
+      font-size: 0.87rem !important;
+      color: var(--text-muted) !important;
+      line-height: 1.6 !important;
+      margin-bottom: 0 !important;
+    }
+    .recommended-badge {
+      display: inline-block;
+      background: rgba(192,57,43,0.12);
+      color: var(--forest);
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 2px 10px;
+      border-radius: 50px;
+      margin-bottom: 8px;
+    }
+    .app-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0 32px;
+      background: var(--white);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .app-table th {
+      background: var(--dark);
+      color: var(--white);
+      padding: 12px 16px;
+      text-align: left;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .app-table td {
+      padding: 12px 16px;
+      font-size: 0.92rem;
+      color: var(--text);
+      border-bottom: 1px solid var(--beige);
+    }
+    .app-table tr:last-child td { border-bottom: none; }
+    .app-table tr:nth-child(even) td { background: var(--cream); }
+    .checklist {
+      background: var(--white);
+      border-radius: var(--radius-sm);
+      padding: 28px 32px;
+      margin: 32px 0;
+      box-shadow: var(--shadow);
+    }
+    .checklist h3 {
+      font-size: 1.1rem;
+      color: var(--dark);
+      margin-bottom: 16px;
+    }
+    .checklist ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .checklist ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 0;
+      font-size: 0.97rem;
+      color: var(--text);
+      border-bottom: 1px solid var(--beige);
+    }
+    .checklist ul li:last-child { border-bottom: none; }
+    .checklist ul li::before {
+      content: '☐';
+      color: var(--forest);
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      margin-top: -1px;
+    }
+    .blog-cta-box {
+      background: var(--dark);
+      border-radius: var(--radius);
+      padding: 52px 44px;
+      text-align: center;
+      margin-top: 64px;
+    }
+    .blog-cta-box h2 {
+      color: var(--white);
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      margin-bottom: 16px;
+    }
+    .blog-cta-box p {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 1rem;
+      margin-bottom: 32px;
+      line-height: 1.75;
+    }
+    @media (max-width: 600px) {
+      .blog-cta-box { padding: 36px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="../" class="nav-logo">
+        <span class="logo-main">Unentdecktes</span>
+        <span class="logo-sub">Tokio</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../#touren" class="nav-link" data-de="Touren" data-en="Tours">Touren</a></li>
+        <li><a href="../#ueber-mich" class="nav-link" data-de="Über mich" data-en="About">Über mich</a></li>
+        <li><a href="../#warum-ich" class="nav-link" data-de="Warum ich?" data-en="Why me?">Warum ich?</a></li>
+        <li><a href="../#blog" class="nav-link" data-de="Blog" data-en="Blog">Blog</a></li>
+        <li><a href="../#kontakt" class="nav-link btn-nav" data-de="Kontakt" data-en="Contact">Kontakt</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="lang-toggle">
+          <button class="lang-btn active" data-lang="de">DE</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== BLOG POST HERO ===== -->
+  <section class="blog-post-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../" data-de="Startseite" data-en="Home">Startseite</a>
+        <span>›</span>
+        <a href="../#blog" data-de="Blog" data-en="Blog">Blog</a>
+        <span>›</span>
+        <span class="i18n-de">Vorbereitung für Tokio</span>
+        <span class="i18n-en" hidden>Preparing for Tokyo</span>
+      </nav>
+      <span class="blog-tag" data-de="Reisevorbereitung" data-en="Travel Prep">Reisevorbereitung</span>
+      <h1 class="i18n-de">Vorbereitung für Tokio: Alles, was du wirklich brauchst</h1>
+      <h1 class="i18n-en" hidden>Preparing for Tokyo: Everything You Actually Need</h1>
+      <p class="post-meta i18n-de">Von Immanuel · Mai 2026 · 10 Minuten Lesezeit</p>
+      <p class="post-meta i18n-en" hidden>By Immanuel · May 2026 · 10 min read</p>
+    </div>
+  </section>
+
+  <!-- ===== BLOG POST BODY ===== -->
+  <article class="blog-post-body">
+    <div class="blog-post-content">
+
+      <!-- GERMAN VERSION -->
+      <div class="i18n-de">
+
+        <p>Tokio kann auf den ersten Blick überwältigend wirken – eine Stadt mit 14 Millionen Menschen, einem der komplexesten U-Bahn-Netze der Welt und einer Sprache, die du wahrscheinlich nicht sprichst. Aber keine Panik! Mit der richtigen Vorbereitung läuft alles wie am Schnürchen.</p>
+
+        <h2>1. Die Suica-Karte – dein wichtigstes Reisemittel</h2>
+
+        <p>Die <span class="hl">Suica-Karte</span> ist eine aufladbare Prepaid-Karte, die du für fast alle öffentlichen Verkehrsmittel in Japan nutzen kannst: U-Bahn, Busse, Regionalbahnen und sogar viele Lokalzüge. Aber das ist noch nicht alles – du kannst damit auch in Konbinis, an Automaten und in vielen Restaurants bezahlen. Kurzum: Die Suica ist dein Alltagsbegleiter.</p>
+
+        <div class="option-grid">
+          <div class="option-card recommended">
+            <span class="recommended-badge">Empfohlen</span>
+            <h4>Am Flughafen-Automaten</h4>
+            <p>Grüne JR East-Automaten direkt nach der Ankunft. 500 Yen Kaution, direkt 3.000–5.000 Yen aufladen.</p>
+          </div>
+          <div class="option-card">
+            <h4>Suica-App (iPhone)</h4>
+            <p>Aus dem japanischen App Store herunterladen, mit Apple Pay bezahlen. Komfortabel, kein Kartenkramen.</p>
+          </div>
+          <div class="option-card">
+            <h4>Pasmo-Karte</h4>
+            <p>Quasi dasselbe wie Suica, anderer Anbieter. Funktioniert überall gleich – nimm, was du kriegst.</p>
+          </div>
+        </div>
+
+        <div class="tip-box"><p><strong>Mein Tipp:</strong> Lad immer etwas mehr drauf als du glaubst zu brauchen. Wenn das Guthaben leer ist, blockiert das Drehkreuz – das ist peinlich und du musst dann zum Aufladeautomaten.</p></div>
+
+        <h2>2. Japan Rail Pass – lohnt er sich?</h2>
+
+        <p>Der <span class="hl">Japan Rail Pass (JR Pass)</span> ist ein Touristenticket für 7, 14 oder 21 Tage mit unbegrenzten Fahrten auf allen JR-Zügen – inklusive der meisten Shinkansen.</p>
+
+        <p><strong>Lohnt er sich für Tokio alleine?</strong> Ehrlich gesagt: nein. Tokios U-Bahn wird größtenteils von privaten Anbietern betrieben und ist nicht mit dem JR Pass nutzbar. Aber wenn du Tagesausflüge nach Kyoto, Osaka oder Hiroshima planst, rechnet er sich sehr schnell. Ein einfaches Shinkansen-Ticket Tokio–Kyoto kostet ca. 13.000–14.000 Yen. Ein 7-Tage-Pass (ca. 50.000 Yen) amortisiert sich nach zwei Hin- und Rückfahrten.</p>
+
+        <div class="tip-box"><p><strong>Wichtig:</strong> Den JR Pass musst du <strong>vor deiner Abreise</strong> aus Deutschland kaufen. In Japan selbst ist er für Touristen nicht erhältlich (Ausnahmen sind teurer). Empfehlenswert: japan-experience.com oder jrailpass.com.</p></div>
+
+        <h2>3. Shinkansen – der Hochgeschwindigkeitszug</h2>
+
+        <p>Der Shinkansen ist ein Erlebnis für sich. Pünktlich auf die Sekunde, blitzsauber und unfassbar schnell – Tokio nach Kyoto in 2 Stunden 15 Minuten.</p>
+
+        <p>Die wichtigsten Typen: <span class="hl">Nozomi</span> ist der schnellste, aber nicht mit dem JR Pass nutzbar. <span class="hl">Hikari</span> ist etwas langsamer, mit JR Pass nutzbar – für die meisten Strecken völlig ausreichend. <span class="hl">Kodama</span> hält überall, am langsamsten.</p>
+
+        <div class="tip-box"><p><strong>Tipp:</strong> Buche immer Seite A oder B auf der rechten Seite (in Fahrtrichtung) auf der Strecke Tokio–Kyoto – dort hast du den besten Fuji-Blick!</p></div>
+
+        <h2>4. Die Tokioter U-Bahn verstehen</h2>
+
+        <p>Tokios U-Bahn hat 13 Linien, bedient über 280 Stationen und wird von zwei Anbietern betrieben: <strong>Tokyo Metro</strong> und <strong>Toei Subway</strong>. Dazu kommen Dutzende private Linien. Klingt verwirrend? Ist es auch – aber nur auf den ersten Blick.</p>
+
+        <p>Was du wissen musst: Stationen haben <span class="hl">Namen und Nummern</span> (z.B. Shibuya = G01 auf der Ginza-Linie). Mit der Suica-Karte fährst du überall – egal welche Linie. Die Züge sind pünktlich. Wirklich.</p>
+
+        <p>Die wichtigsten Linien für Touristen:</p>
+        <ul style="list-style: none; padding: 0; margin: 0 0 24px;">
+          <li style="padding: 10px 0; border-bottom: 1px solid var(--beige); display: flex; gap: 10px;"><span style="font-size: 1.1em;">🟠</span> <span><strong>Ginza-Linie</strong> – durch das Zentrum (Shibuya, Ginza, Ueno)</span></li>
+          <li style="padding: 10px 0; border-bottom: 1px solid var(--beige); display: flex; gap: 10px;"><span style="font-size: 1.1em;">🟣</span> <span><strong>Hibiya-Linie</strong> – Roppongi, Ginza, Akihabara</span></li>
+          <li style="padding: 10px 0; border-bottom: 1px solid var(--beige); display: flex; gap: 10px;"><span style="font-size: 1.1em;">🔵</span> <span><strong>Marunouchi-Linie</strong> – Shinjuku, Tokio Station, Ginza</span></li>
+          <li style="padding: 10px 0; display: flex; gap: 10px;"><span style="font-size: 1.1em;">🟢</span> <span><strong>Yamanote-Linie (JR)</strong> – der Ring um die Stadt (Shinjuku, Shibuya, Harajuku, Ikebukuro, Ueno)</span></li>
+        </ul>
+
+        <h2>5. Google Maps – dein bester Freund in Tokio</h2>
+
+        <p>Lade Google Maps <span class="hl">offline</span> herunter, bevor du fliegst (Einstellungen → Offlinekarten → Bereich herunterladen). So kannst du es auch ohne Daten nutzen.</p>
+
+        <p>Google Maps kennt alle U-Bahn-Verbindungen, Buslinien und sogar Gehrouten zwischen Stationen – und zeigt dir die genaue Ausstiegsnummer an (z.B. „Ausgang 3b"). Das ist wichtig, weil große Stationen wie Shinjuku oder Shibuya dutzende Ausgänge haben.</p>
+
+        <h2>6. Pocket WiFi oder SIM-Karte?</h2>
+
+        <div class="option-grid">
+          <div class="option-card">
+            <h4>Pocket WiFi</h4>
+            <p>Gut für Gruppen – mehrere Personen können sich verbinden. Am Flughafen abholen, am Ende abgeben. Ca. 8–12 € pro Tag.</p>
+          </div>
+          <div class="option-card recommended">
+            <span class="recommended-badge">Für Alleinreisende</span>
+            <h4>SIM-Karte</h4>
+            <p>Günstig und einfach. Datensim für 15 oder 30 Tage. IIJmio, Docomo Tourist SIM. Ca. 20–35 € für 15 Tage.</p>
+          </div>
+        </div>
+
+        <div class="tip-box"><p><strong>Wichtig:</strong> Normale Touristen-SIMs erlauben oft kein Telefonieren – nur Daten. Für Anrufe brauchst du eine spezielle Karte oder nutzt WhatsApp/LINE.</p></div>
+
+        <h2>7. Geld – Bares ist in Japan noch König</h2>
+
+        <p>Japan ist nach wie vor eine stark bargeldbasierte Gesellschaft. <span class="hl">Viele Restaurants, kleine Läden und Tempel akzeptieren keine Kreditkarten</span>. Heb regelmäßig Geld ab.</p>
+
+        <p>Die zuverlässigste Option: <strong>7-Eleven-Geldautomaten</strong> (in jedem 7-Eleven-Konbini). Die akzeptieren internationale Karten und haben eine englische Oberfläche. Visa und Mastercard werden in größeren Restaurants und Kaufhäusern akzeptiert. American Express weniger.</p>
+
+        <h2>8. Nützliche Apps auf einen Blick</h2>
+
+        <table class="app-table">
+          <thead>
+            <tr><th>App</th><th>Wofür</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Google Maps</strong></td><td>Navigation, U-Bahn-Verbindungen</td></tr>
+            <tr><td><strong>Google Translate</strong></td><td>Speisekarten, Schilder (Kamerafunktion!)</td></tr>
+            <tr><td><strong>Hyperdia</strong></td><td>Genaue Zugzeiten und Preise</td></tr>
+            <tr><td><strong>Tabelog</strong></td><td>Restaurantbewertungen (japanisches Yelp)</td></tr>
+            <tr><td><strong>LINE</strong></td><td>Meistgenutzte Chat-App in Japan</td></tr>
+            <tr><td><strong>Suica-App</strong></td><td>Digitale Suica-Karte (iPhone)</td></tr>
+            <tr><td><strong>Weather News</strong></td><td>Sehr genaue Wettervorhersage für Japan</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Checkliste vor dem Abflug</h2>
+
+        <div class="checklist">
+          <ul>
+            <li>Japan Rail Pass kaufen (wenn du Tagesausflüge planst)</li>
+            <li>Suica-Karte am Flughafen holen (oder Suica-App einrichten)</li>
+            <li>SIM-Karte oder Pocket WiFi vorbereiten</li>
+            <li>Google Maps offline für Tokio herunterladen</li>
+            <li>Google Translate installieren (Kamerafunktion ist Gold wert!)</li>
+            <li>Bargeld für die ersten Tage besorgen oder am Flughafen abheben</li>
+            <li>Shinkansen-Tickets vorbuchen (bei Reisen außerhalb Tokios)</li>
+          </ul>
+        </div>
+
+        <p>Tokio klingt nach Vorbereitung – aber diese Vorbereitung zahlt sich aus. Einmal angekommen und einmal mit der Suica-Karte durch die ersten Drehkreuze getappt, läuft alles wie von selbst. Versprochen.</p>
+
+      </div>
+
+      <!-- ENGLISH VERSION -->
+      <div class="i18n-en" hidden>
+
+        <p>Tokyo can look overwhelming at first glance – a city of 14 million people with one of the world's most complex metro networks and a language you probably don't speak. But don't panic! With the right preparation, everything runs smoothly.</p>
+
+        <h2>1. The Suica Card – your most important travel tool</h2>
+
+        <p>The <span class="hl">Suica card</span> is a rechargeable prepaid card you can use on virtually all public transport in Japan: metro, buses, regional trains. But it also works at convenience stores, vending machines and many restaurants. In short: Suica is your everyday companion.</p>
+
+        <div class="option-grid">
+          <div class="option-card recommended">
+            <span class="recommended-badge">Recommended</span>
+            <h4>At the airport machine</h4>
+            <p>Green JR East machines right after arrival. 500 yen deposit, load 3,000–5,000 yen to start.</p>
+          </div>
+          <div class="option-card">
+            <h4>Suica App (iPhone)</h4>
+            <p>Download from the Japanese App Store, pay with Apple Pay. Convenient – no need to dig out a card.</p>
+          </div>
+          <div class="option-card">
+            <h4>Pasmo Card</h4>
+            <p>Essentially the same as Suica, different provider. Works everywhere the same – just grab whichever is available.</p>
+          </div>
+        </div>
+
+        <div class="tip-box"><p><strong>My tip:</strong> Always load more than you think you'll need. If the balance runs out, the gate blocks – embarrassing, and you'll have to find a top-up machine.</p></div>
+
+        <h2>2. Japan Rail Pass – is it worth it?</h2>
+
+        <p>The <span class="hl">JR Pass</span> is a tourist ticket for 7, 14 or 21 days of unlimited travel on all JR trains including most shinkansen.</p>
+
+        <p>For Tokyo only? Honestly: no. Tokyo's metro is mostly run by private operators not covered by the JR Pass. But for day trips to Kyoto, Osaka or Hiroshima, it pays for itself very quickly. A one-way shinkansen Tokyo–Kyoto costs about 13,000–14,000 yen. A 7-day pass (about 50,000 yen) breaks even after two return trips.</p>
+
+        <div class="tip-box"><p><strong>Important:</strong> You must buy the JR Pass <strong>before leaving your home country</strong>. It's not available to tourists in Japan (exceptions cost more). Try japan-experience.com or jrailpass.com.</p></div>
+
+        <h2>3. Shinkansen – the bullet train</h2>
+
+        <p>The shinkansen is an experience in itself. Punctual to the second, spotlessly clean and breathtakingly fast – Tokyo to Kyoto in 2 hours 15 minutes.</p>
+
+        <p>The main types: <span class="hl">Nozomi</span> is the fastest but not covered by the JR Pass. <span class="hl">Hikari</span> is slightly slower, JR Pass valid, and perfectly adequate for most routes. <span class="hl">Kodama</span> stops everywhere – slowest.</p>
+
+        <div class="tip-box"><p><strong>Tip:</strong> On the Tokyo–Kyoto route, always book seats on the right side (seats A or B, facing the direction of travel) – that's where you get the best view of Mt. Fuji.</p></div>
+
+        <h2>4. Understanding Tokyo's metro</h2>
+
+        <p>Tokyo's metro has 13 lines, serves over 280 stations and is operated by two companies: <strong>Tokyo Metro</strong> and <strong>Toei Subway</strong>, plus dozens of private lines. Sounds confusing? It is – but only at first.</p>
+
+        <p>What you need to know: stations have <span class="hl">names and numbers</span> (e.g. Shibuya = G01 on the Ginza Line). With your Suica card, you can ride any line. Trains are punctual. Really.</p>
+
+        <h2>5. Google Maps – your best friend in Tokyo</h2>
+
+        <p>Download Google Maps <span class="hl">offline</span> before you fly (Settings → Offline Maps → Select area). This way you can use it without mobile data. Google Maps knows all metro connections and even tells you which exit to use – crucial in giant stations like Shinjuku and Shibuya.</p>
+
+        <h2>6. Pocket WiFi or SIM card?</h2>
+
+        <div class="option-grid">
+          <div class="option-card">
+            <h4>Pocket WiFi</h4>
+            <p>Great for groups – multiple people can connect. Pick up at the airport, return at the end. About €8–12 per day.</p>
+          </div>
+          <div class="option-card recommended">
+            <span class="recommended-badge">For solo travellers</span>
+            <h4>SIM Card</h4>
+            <p>Cheapest and simplest. Data SIM for 15 or 30 days. IIJmio, Docomo Tourist SIM. About €20–35 for 15 days.</p>
+          </div>
+        </div>
+
+        <h2>7. Cash – still king in Japan</h2>
+
+        <p>Japan remains a strongly cash-based society. <span class="hl">Many restaurants, small shops and temples don't accept credit cards</span>. Withdraw cash regularly.</p>
+
+        <p>Most reliable option: <strong>7-Eleven ATMs</strong> (in every 7-Eleven convenience store). They accept international cards and have an English interface.</p>
+
+        <h2>8. Useful apps at a glance</h2>
+
+        <table class="app-table">
+          <thead>
+            <tr><th>App</th><th>What for</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Google Maps</strong></td><td>Navigation, metro connections</td></tr>
+            <tr><td><strong>Google Translate</strong></td><td>Menus, signs (camera function!)</td></tr>
+            <tr><td><strong>Hyperdia</strong></td><td>Exact train times and prices</td></tr>
+            <tr><td><strong>Tabelog</strong></td><td>Restaurant reviews (Japanese Yelp)</td></tr>
+            <tr><td><strong>LINE</strong></td><td>Most-used chat app in Japan</td></tr>
+            <tr><td><strong>Suica App</strong></td><td>Digital Suica card (iPhone)</td></tr>
+            <tr><td><strong>Weather News</strong></td><td>Very accurate Japan weather forecasts</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Pre-departure checklist</h2>
+        <div class="checklist">
+          <ul>
+            <li>Buy Japan Rail Pass (if planning day trips)</li>
+            <li>Get Suica card at the airport (or set up the Suica App)</li>
+            <li>Arrange SIM card or Pocket WiFi</li>
+            <li>Download Google Maps offline for Tokyo</li>
+            <li>Install Google Translate (camera function is invaluable!)</li>
+            <li>Get cash for the first few days or withdraw at the airport</li>
+            <li>Pre-book shinkansen tickets (for trips outside Tokyo)</li>
+          </ul>
+        </div>
+
+        <p>Tokyo sounds like a lot of preparation – but it pays off. Once you're there and you've tapped through the first gates with your Suica card, everything runs like clockwork. Promise.</p>
+
+      </div>
+
+      <div class="blog-cta-box">
+        <h2 class="i18n-de">Noch Fragen vor deiner Tokio-Reise?</h2>
+        <h2 class="i18n-en" hidden>Still have questions before your Tokyo trip?</h2>
+        <p class="i18n-de">Ich helfe gerne weiter – ob per Nachricht oder direkt auf einer Tour. Ich beantworte alle deine Fragen und sorge dafür, dass du optimal vorbereitet ankommst.</p>
+        <p class="i18n-en" hidden>I'm happy to help – by message or directly on a tour. I'll answer all your questions and make sure you arrive perfectly prepared.</p>
+        <a href="../#kontakt" class="btn btn-primary" data-de="Frage stellen" data-en="Ask a Question">Frage stellen</a>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="nav-logo footer-logo-text">
+          <span class="logo-main">Unentdecktes</span>
+          <span class="logo-sub">Tokio</span>
+        </div>
+        <p class="footer-tagline" data-de="Deutschsprachige Privattouren in Japan" data-en="Private Tours in Japan with a German-speaking Guide">Deutschsprachige Privattouren in Japan</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer Navigation">
+        <a href="../#touren" data-de="Touren" data-en="Tours">Touren</a>
+        <a href="../#ueber-mich" data-de="Über mich" data-en="About">Über mich</a>
+        <a href="../#warum-ich" data-de="Warum ich?" data-en="Why me?">Warum ich?</a>
+        <a href="../#blog" data-de="Blog" data-en="Blog">Blog</a>
+        <a href="../#kontakt" data-de="Kontakt" data-en="Contact">Kontakt</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p data-de="© 2025 Unentdecktes Tokio. Alle Rechte vorbehalten." data-en="© 2025 Unentdecktes Tokio. All rights reserved.">© 2025 Unentdecktes Tokio. Alle Rechte vorbehalten.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
