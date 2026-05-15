@@ -46,7 +46,17 @@
 [data-theme="dark"] .section-eyebrow { color: var(--forest-light); }
 [data-theme="dark"] .tour-title,
 [data-theme="dark"] .blog-card-body h3,
-[data-theme="dark"] .testimonial-author strong { color: var(--cream); }
+[data-theme="dark"] .testimonial-author strong,
+[data-theme="dark"] .why-card h3,
+[data-theme="dark"] .contact-method strong { color: var(--cream); }
+
+/* Slightly lighter blue for secondary buttons on dark cards */
+[data-theme="dark"] .btn-secondary { color: #5B82C7; border-color: #5B82C7; }
+[data-theme="dark"] .btn-secondary:hover { background: #5B82C7; border-color: #5B82C7; color: var(--white); }
+
+/* WhatsApp contact method: dark green tile, brand-green label */
+[data-theme="dark"] .contact-method-icon--wa { background: #0E4429; }
+[data-theme="dark"] .contact-method:has(.contact-method-icon--wa) strong { color: #25D366; }
 
 /* ============================================================
    Reset & base
