@@ -442,13 +442,15 @@ h1, h2, h3 {
 .tour-img--tokyo {
   background:
     linear-gradient(to bottom, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.56) 100%),
-    url('images/tokio-tempel.jpg') center / cover no-repeat;
+    url('images/tokio-tempel.jpg') center / cover no-repeat,
+    url('https://images.pexels.com/photos/2614818/pexels-photo-2614818.jpeg?auto=compress&cs=tinysrgb&w=800') center / cover no-repeat;
 }
 
 .tour-img--kamakura {
   background:
     linear-gradient(to bottom, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.38) 100%),
-    url('images/kamakura-buddha.jpg') center / cover no-repeat;
+    url('images/kamakura-buddha.jpg') center / cover no-repeat,
+    url('https://images.pexels.com/photos/2738730/pexels-photo-2738730.jpeg?auto=compress&cs=tinysrgb&w=800') center / cover no-repeat;
 }
 
 .tour-img--mountains {
