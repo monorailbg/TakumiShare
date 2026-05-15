@@ -144,6 +144,12 @@ h1, h2, h3 {
 
 .btn-full { width: 100%; text-align: center; }
 
+.btn-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
 /* ============================================================
    Navigation
    ============================================================ */
