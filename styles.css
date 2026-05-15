@@ -186,7 +186,7 @@ h1, h2, h3 {
   width: 28px;
   height: 28px;
   flex-shrink: 0;
-  color: var(--forest);
+  border-radius: 50%;
 }
 .logo-text {
   display: flex;
@@ -965,7 +965,7 @@ h1, h2, h3 {
 }
 
 .footer-brand .nav-logo { margin-bottom: 10px; }
-.footer-logo-text .logo-icon { color: var(--white); }
+
 .footer-logo-text .logo-main { color: var(--white); }
 .footer-logo-text .logo-sub  { color: var(--forest-light); }
 
