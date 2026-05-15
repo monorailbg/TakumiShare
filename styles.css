@@ -177,19 +177,32 @@ h1, h2, h3 {
 /* Logo */
 .nav-logo {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
   line-height: 1.1;
+}
+.logo-icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  color: var(--forest);
+}
+.logo-text {
+  display: flex;
+  flex-direction: column;
   gap: 1px;
 }
 .logo-main {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 1.45rem;
   font-weight: 700;
   color: var(--dark);
+  letter-spacing: -0.01em;
 }
 .logo-sub {
   font-family: var(--font-heading);
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   font-style: italic;
   color: var(--forest);
 }
@@ -203,8 +216,10 @@ h1, h2, h3 {
 
 .nav-link {
   padding: 7px 15px;
-  font-size: 0.88rem;
-  font-weight: 500;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
   color: var(--text);
   border-radius: 50px;
   transition: background var(--ease), color var(--ease);
@@ -241,6 +256,13 @@ h1, h2, h3 {
   border-radius: 50px;
   transition: background var(--ease), color var(--ease), box-shadow var(--ease);
   letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.lang-flag {
+  font-size: 1rem;
+  line-height: 1;
 }
 .lang-btn.active {
   background: var(--white);
@@ -943,8 +965,9 @@ h1, h2, h3 {
 }
 
 .footer-brand .nav-logo { margin-bottom: 10px; }
+.footer-logo-text .logo-icon { color: var(--white); }
 .footer-logo-text .logo-main { color: var(--white); }
-.footer-logo-text .logo-sub  { color: var(--stone); }
+.footer-logo-text .logo-sub  { color: var(--forest-light); }
 
 .footer-tagline {
   font-size: 0.83rem;
