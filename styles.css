@@ -888,7 +888,12 @@ h1, h2, h3 {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   gap: 80px;
-  align-items: start;
+  align-items: stretch;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
 }
 
 .contact-info .section-title { margin-bottom: 16px; }
@@ -899,7 +904,7 @@ h1, h2, h3 {
   line-height: 1.85;
 }
 
-.contact-methods { display: flex; flex-direction: column; gap: 14px; }
+.contact-methods { display: flex; flex-direction: column; gap: 14px; margin-top: auto; }
 
 .contact-method {
   display: flex;
