@@ -1020,6 +1020,38 @@ h1, h2, h3 {
   margin-top: 12px;
 }
 
+.form-success {
+  background: rgba(37, 211, 102, 0.12);
+  color: #1a7a3c;
+  border: 1px solid rgba(37, 211, 102, 0.35);
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+[data-theme="dark"] .form-success {
+  color: #4ade80;
+  background: rgba(37, 211, 102, 0.08);
+}
+
+.form-error {
+  background: rgba(192, 57, 43, 0.1);
+  color: var(--stone);
+  border: 1px solid rgba(192, 57, 43, 0.3);
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.form-field-error {
+  display: block;
+  color: var(--stone);
+  font-size: 0.78rem;
+  margin-top: 4px;
+}
+
 /* ============================================================
    Footer
    ============================================================ */

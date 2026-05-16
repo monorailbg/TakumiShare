@@ -139,41 +139,7 @@
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
   // ── Contact form ─────────────────────────────────────────────
-  const form      = document.getElementById('contact-form');
-  const submitBtn = document.getElementById('submit-btn');
-
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-
-    // Basic validation feedback
-    let valid = true;
-    form.querySelectorAll('[required]').forEach(field => {
-      if (!field.value.trim()) {
-        field.style.borderColor = '#c0392b';
-        valid = false;
-        field.addEventListener('input', () => {
-          field.style.borderColor = '';
-        }, { once: true });
-      }
-    });
-    if (!valid) return;
-
-    // Success state
-    const originalText = submitBtn.textContent;
-    submitBtn.textContent = currentLang === 'de'
-      ? '✓ Nachricht gesendet!'
-      : '✓ Message sent!';
-    submitBtn.style.background = 'var(--forest-light)';
-    submitBtn.disabled = true;
-
-    setTimeout(() => {
-      submitBtn.textContent = currentLang === 'de'
-        ? 'Nachricht senden'
-        : 'Send Message';
-      submitBtn.style.background = '';
-      submitBtn.disabled = false;
-      form.reset();
-    }, 3500);
-  });
+  // Submission is handled by Formspree via data-fs-* attributes.
+  // The success/error messages use data-de/data-en for i18n.
 
 })();

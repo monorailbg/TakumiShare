@@ -476,19 +476,23 @@
       </div>
 
       <form class="contact-form fade-in" id="contact-form" novalidate>
+        <p class="form-success" data-fs-success data-de="Danke! Ich melde mich innerhalb von 24 Stunden." data-en="Thanks! I'll get back to you within 24 hours." hidden></p>
+        <p class="form-error" data-fs-error hidden></p>
         <div class="form-row">
           <div class="form-group">
             <label for="name" data-de="Dein Name" data-en="Your Name">Dein Name</label>
-            <input type="text" id="name" name="name" required autocomplete="name">
+            <input type="text" id="name" name="name" required autocomplete="name" data-fs-field>
+            <span class="form-field-error" data-fs-error="name"></span>
           </div>
           <div class="form-group">
             <label for="email" data-de="E-Mail-Adresse" data-en="Email Address">E-Mail-Adresse</label>
-            <input type="email" id="email" name="email" required autocomplete="email">
+            <input type="email" id="email" name="email" required autocomplete="email" data-fs-field>
+            <span class="form-field-error" data-fs-error="email"></span>
           </div>
         </div>
         <div class="form-group">
           <label for="tour" data-de="Gewünschte Tour" data-en="Tour of Interest">Gewünschte Tour</label>
-          <select id="tour" name="tour">
+          <select id="tour" name="tour" data-fs-field>
             <option value="" data-de="Bitte wählen …" data-en="Please select …">Bitte wählen …</option>
             <option value="tokyo" data-de="Mein Tokio: abseits der Touristenpfade" data-en="My Tokyo: Off the Beaten Path">Mein Tokio: abseits der Touristenpfade</option>
             <option value="kamakura" data-de="Kamakura – Buddhas &amp; Tempel" data-en="Kamakura – Buddhas &amp; Temples">Kamakura – Buddhas &amp; Tempel</option>
@@ -501,9 +505,11 @@
           <textarea id="message" name="message" rows="5" required
             class="i18n-placeholder"
             data-placeholder-de="Erzähl mir kurz von deiner Reise – wann kommst du, wen bringst du mit, und was interessiert euch am meisten?"
-            data-placeholder-en="Tell me briefly about your trip – when are you coming, who are you bringing, and what interests you most?"></textarea>
+            data-placeholder-en="Tell me briefly about your trip – when are you coming, who are you bringing, and what interests you most?"
+            data-fs-field></textarea>
+          <span class="form-field-error" data-fs-error="message"></span>
         </div>
-        <button type="submit" class="btn btn-primary btn-full" id="submit-btn" data-de="Deine Tokio-Reise beginnt hier →" data-en="Your Tokyo Adventure Starts Here →">Deine Tokio-Reise beginnt hier →</button>
+        <button type="submit" class="btn btn-primary btn-full" id="submit-btn" data-fs-submit-btn data-de="Deine Tokio-Reise beginnt hier →" data-en="Your Tokyo Adventure Starts Here →">Deine Tokio-Reise beginnt hier →</button>
         <p class="form-note" data-de="Ich antworte in der Regel innerhalb von 24 Stunden." data-en="I usually reply within 24 hours.">Ich antworte in der Regel innerhalb von 24 Stunden.</p>
       </form>
 
@@ -547,5 +553,10 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+    formspree('initForm', { formElement: '#contact-form', formId: 'mykorbzj' });
+  </script>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>
