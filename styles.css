@@ -137,6 +137,25 @@ h1, h2, h3 {
   background: var(--forest);
   color: var(--white);
   border-color: var(--forest);
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.18), transparent);
+  transform: skewX(-20deg);
+  animation: btn-shimmer 3.8s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes btn-shimmer {
+  0%   { left: -120%; }
+  45%  { left: 160%; }
+  100% { left: 160%; }
 }
 .btn-primary:hover {
   background: var(--forest-dark);
@@ -470,9 +489,21 @@ h1, h2, h3 {
    Stats bar
    ============================================================ */
 .stats {
-  background: var(--dark);
+  background: linear-gradient(135deg, #0d0c1a 0%, #1a1a2e 50%, #0e1520 100%);
   padding: 44px 0;
+  position: relative;
+  overflow: hidden;
 }
+.stats::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(38, 78, 140, 0.2) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 50%, rgba(192, 57, 43, 0.1) 0%, transparent 60%);
+  pointer-events: none;
+}
+.stats-grid { position: relative; }
 
 .stats-grid {
   display: grid;
@@ -522,8 +553,15 @@ h1, h2, h3 {
   transform: translateY(-6px);
   box-shadow: var(--shadow-md);
 }
-.tour-card--featured { transform: translateY(-14px); }
+.tour-card--featured {
+  transform: translateY(-14px);
+  animation: featured-glow 4s ease-in-out infinite;
+}
 .tour-card--featured:hover { transform: translateY(-20px); }
+@keyframes featured-glow {
+  0%, 100% { box-shadow: 0 0 0 2px var(--forest), 0 20px 60px rgba(38, 78, 140, 0.25); }
+  50%       { box-shadow: 0 0 0 2px var(--forest-light), 0 20px 60px rgba(58, 107, 190, 0.35); }
+}
 
 /* Tour image areas */
 .tour-img {
@@ -832,6 +870,21 @@ h1, h2, h3 {
   display: flex;
   flex-direction: column;
   gap: 0;
+  position: relative;
+  overflow: hidden;
+}
+.testimonial-card::before {
+  content: '\201C';
+  font-family: var(--font-heading);
+  font-size: 7rem;
+  line-height: 1;
+  color: var(--forest);
+  opacity: 0.08;
+  position: absolute;
+  top: 10px;
+  right: 24px;
+  pointer-events: none;
+  user-select: none;
 }
 
 .testimonial-stars {
@@ -1261,7 +1314,9 @@ h1, h2, h3 {
   height: 190px;
   background-size: cover;
   background-position: center;
+  transition: transform 0.5s ease;
 }
+.blog-card:hover .blog-card-img { transform: scale(1.04); }
 .blog-card-img--1 {
   background-image: url('https://images.pexels.com/photos/3532924/pexels-photo-3532924.jpeg?auto=compress&cs=tinysrgb&w=900');
 }
@@ -1352,4 +1407,115 @@ h1, h2, h3 {
 @media (max-width: 600px) {
   .blog-card-body { padding: 20px; }
   .blog-card--featured .blog-card-body { padding: 20px; }
+}
+
+/* ============================================================
+   UI/UX Pro Max — Design System Enhancements
+   ============================================================ */
+
+/* Focus styles — keyboard accessibility */
+:focus-visible {
+  outline: 2px solid var(--forest);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+.btn:focus-visible { border-radius: 50px; }
+
+/* cursor-pointer on interactive cards */
+.tour-card,
+.why-card,
+.blog-card,
+.testimonial-card { cursor: pointer; }
+
+/* ── Hero glass content panel ─────────────────────────────── */
+.hero-content {
+  background: rgba(8, 8, 22, 0.22);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 28px;
+  padding: 80px 52px 56px;
+}
+@media (max-width: 768px) {
+  .hero-content { padding: 80px 24px 40px; border-radius: 20px; }
+}
+
+/* ── Stat numbers — subtle count-up feel with gradient ────── */
+.stat-number {
+  background: linear-gradient(135deg, var(--white) 40%, rgba(245, 230, 211, 0.7) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Why cards — full border glow on hover ────────────────── */
+.why-card:hover {
+  box-shadow: 0 0 0 1.5px var(--forest), var(--shadow-md);
+}
+
+/* ── Blog card — image contained for zoom ─────────────────── */
+.blog-card { overflow: hidden; }
+.blog-card--featured .blog-card-img {
+  transition: transform 0.5s ease;
+}
+.blog-card--featured:hover .blog-card-img { transform: scale(1.04); }
+
+/* ── Avatar gradient colors per initial ───────────────────── */
+.testimonial-avatar:nth-child(1) { background: #264E8C; }
+.testimonial-card:nth-child(2) .testimonial-avatar { background: #C0392B; }
+.testimonial-card:nth-child(3) .testimonial-avatar { background: #1D6348; }
+.testimonial-card:nth-child(4) .testimonial-avatar { background: #5D3A8A; }
+.testimonial-card:nth-child(5) .testimonial-avatar { background: #B8520A; }
+
+/* ── Section divider shimmer line ─────────────────────────── */
+.tours::before,
+.why::before,
+.contact::before,
+.blog::before {
+  content: '';
+  display: block;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--beige-dark), transparent);
+  opacity: 0.5;
+}
+
+/* ── Contact method hover polish ──────────────────────────── */
+.contact-method { cursor: pointer; }
+.contact-method:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* ── Tour feature list — refined tick ─────────────────────── */
+.tour-features li::before {
+  content: '✓';
+  color: var(--forest);
+  font-weight: 700;
+}
+
+/* ── Highlight spans — stronger in dark mode ──────────────── */
+[data-theme="dark"] .hl {
+  background: linear-gradient(180deg, transparent 55%, rgba(58, 107, 190, 0.28) 55%);
+}
+
+/* ── Scroll indicator arrow ────────────────────────────────── */
+.hero-scroll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── prefers-reduced-motion — accessibility ───────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .fade-in {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .hero-scroll { animation: none; }
+  .tour-card--featured { animation: none; box-shadow: 0 0 0 2px var(--forest), var(--shadow-md); }
+  .btn-primary::after { animation: none; display: none; }
 }
