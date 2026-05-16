@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tokio mit Kindern – Familienreise ohne Stress. TeamLab, Ghibli Museum, Pokemon Center und praktische Tipps für Eltern in einer der familienfreundlichsten Städte der Welt.">
+  <title>Tokio mit Kindern – Familienreise ohne Stress | Unentdecktes Tokio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <style>
+    .blog-post-hero {
+      background:
+        linear-gradient(to bottom, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.60) 100%),
+        url('https://images.pexels.com/photos/1128318/pexels-photo-1128318.jpeg?auto=compress&cs=tinysrgb&w=1400') center / cover no-repeat;
+      padding: 140px 0 80px;
+      text-align: center;
+    }
+    .blog-post-hero .blog-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--stone-light);
+      background: rgba(244, 167, 185, 0.2);
+      padding: 6px 16px;
+      border-radius: 50px;
+      margin-bottom: 24px;
+    }
+    .blog-post-hero h1 {
+      color: var(--white);
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      max-width: 820px;
+      margin: 0 auto 24px;
+      line-height: 1.2;
+    }
+    .blog-post-hero .post-meta {
+      color: rgba(255,255,255,0.55);
+      font-size: 0.85rem;
+    }
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.5);
+      justify-content: center;
+      margin-bottom: 28px;
+    }
+    .breadcrumb a { color: rgba(255,255,255,0.6); transition: color var(--ease); }
+    .breadcrumb a:hover { color: var(--stone-light); }
+    .breadcrumb span { color: rgba(255,255,255,0.3); }
+    .blog-post-body {
+      background: var(--cream);
+      padding: 80px 0 100px;
+    }
+    .blog-post-content {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+    .blog-post-content h2 {
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      color: var(--dark);
+      margin: 52px 0 20px;
+      line-height: 1.25;
+    }
+    .blog-post-content h2:first-child { margin-top: 0; }
+    .blog-post-content h3 {
+      font-size: 1.15rem;
+      color: var(--dark);
+      margin: 32px 0 10px;
+    }
+    .blog-post-content p {
+      font-size: 1.05rem;
+      color: var(--text);
+      line-height: 1.9;
+      margin-bottom: 22px;
+    }
+    .blog-post-content ul {
+      list-style: none;
+      margin: 0 0 28px;
+      padding: 0;
+    }
+    .blog-post-content ul li {
+      position: relative;
+      padding: 10px 0 10px 28px;
+      font-size: 1rem;
+      color: var(--text);
+      line-height: 1.75;
+      border-bottom: 1px solid var(--beige);
+    }
+    .blog-post-content ul li:first-child { border-top: 1px solid var(--beige); }
+    .blog-post-content ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--forest);
+      font-weight: 700;
+    }
+    .blog-post-content .highlight-box {
+      background: var(--white);
+      border-left: 4px solid var(--forest);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 24px 28px;
+      margin: 32px 0;
+      box-shadow: var(--shadow);
+    }
+    .blog-post-content .highlight-box p {
+      margin-bottom: 0;
+      font-size: 1.05rem;
+      color: var(--text);
+      font-style: italic;
+    }
+    .activity-card {
+      background: var(--white);
+      border-radius: var(--radius-sm);
+      padding: 26px 30px;
+      margin: 22px 0;
+      box-shadow: var(--shadow);
+      border-top: 3px solid var(--stone);
+    }
+    .activity-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      color: var(--dark);
+      margin: 0 0 12px;
+    }
+    .activity-card .act-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .activity-card .act-meta span {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      background: var(--beige);
+      padding: 4px 12px;
+      border-radius: 50px;
+    }
+    .activity-card p {
+      font-size: 0.96rem !important;
+      margin-bottom: 10px !important;
+    }
+    .activity-card .act-tip {
+      font-size: 0.88rem;
+      color: var(--forest);
+      font-weight: 500;
+      margin-bottom: 0 !important;
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin: 24px 0 32px;
+    }
+    .why-item {
+      background: var(--white);
+      border-radius: var(--radius-sm);
+      padding: 18px 20px;
+      box-shadow: var(--shadow);
+    }
+    .why-item strong {
+      display: block;
+      color: var(--dark);
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+    }
+    .why-item span {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .day-plan {
+      background: var(--white);
+      border-radius: var(--radius-sm);
+      padding: 28px 32px;
+      margin: 28px 0;
+      box-shadow: var(--shadow);
+    }
+    .day-plan h3 {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      color: var(--dark);
+      margin: 0 0 16px;
+    }
+    .day-plan .plan-row {
+      display: flex;
+      gap: 16px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--beige);
+      font-size: 0.93rem;
+      color: var(--text);
+      line-height: 1.65;
+    }
+    .day-plan .plan-row:last-child { border-bottom: none; }
+    .day-plan .plan-time {
+      flex-shrink: 0;
+      font-weight: 600;
+      color: var(--stone);
+      min-width: 80px;
+      font-size: 0.82rem;
+      padding-top: 2px;
+    }
+    .blog-cta-box {
+      background: var(--dark);
+      border-radius: var(--radius);
+      padding: 52px 44px;
+      text-align: center;
+      margin-top: 64px;
+    }
+    .blog-cta-box h2 {
+      color: var(--white);
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      margin-bottom: 16px;
+    }
+    .blog-cta-box p {
+      color: rgba(255,255,255,0.65);
+      font-size: 1rem;
+      margin-bottom: 32px;
+      line-height: 1.75;
+    }
+    @media (max-width: 600px) {
+      .why-grid { grid-template-columns: 1fr; }
+      .blog-cta-box { padding: 36px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="../" class="nav-logo">
+        <span class="logo-main">Unentdecktes</span>
+        <span class="logo-sub">Tokio</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../#touren" class="nav-link" data-de="Touren" data-en="Tours">Touren</a></li>
+        <li><a href="../#ueber-mich" class="nav-link" data-de="Über mich" data-en="About">Über mich</a></li>
+        <li><a href="../#warum-ich" class="nav-link" data-de="Warum ich?" data-en="Why me?">Warum ich?</a></li>
+        <li><a href="../#blog" class="nav-link" data-de="Blog" data-en="Blog">Blog</a></li>
+        <li><a href="../#kontakt" class="nav-link btn-nav" data-de="Kontakt" data-en="Contact">Kontakt</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="lang-toggle">
+          <button class="lang-btn active" data-lang="de">DE</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="blog-post-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../" data-de="Startseite" data-en="Home">Startseite</a>
+        <span>›</span>
+        <a href="../#blog" data-de="Blog" data-en="Blog">Blog</a>
+        <span>›</span>
+        <span class="i18n-de">Tokio mit Kindern</span>
+        <span class="i18n-en" hidden>Tokyo with Kids</span>
+      </nav>
+      <span class="blog-tag" data-de="Familien" data-en="Family">Familien</span>
+      <h1 class="i18n-de">Tokio mit Kindern – Familienreise ohne Stress</h1>
+      <h1 class="i18n-en" hidden>Tokyo with Kids – Family Travel Without the Stress</h1>
+      <p class="post-meta i18n-de">Von Immanuel · Mai 2026 · 9 Minuten Lesezeit</p>
+      <p class="post-meta i18n-en" hidden>By Immanuel · May 2026 · 9 min read</p>
+    </div>
+  </section>
+
+  <article class="blog-post-body">
+    <div class="blog-post-content">
+
+      <!-- GERMAN -->
+      <div class="i18n-de">
+
+        <p>„Tokio mit Kindern? Ist das nicht viel zu chaotisch?" Diese Frage bekomme ich von Eltern erstaunlich oft. Und meine Antwort überrascht sie jedes Mal: <strong>Tokio ist eine der familienfreundlichsten Städte der Welt.</strong> Sauber, sicher, pünktlich – und voller Dinge, die Kinder zum Staunen bringen.</p>
+
+        <h2>Warum Tokio wirklich kinderfreundlich ist</h2>
+
+        <div class="why-grid">
+          <div class="why-item">
+            <strong>Sicherheit</strong>
+            <span>Eine der sichersten Großstädte der Welt. Kinder werden überall herzlich willkommen geheißen.</span>
+          </div>
+          <div class="why-item">
+            <strong>Sauberkeit</strong>
+            <span>Keine schmutzigen U-Bahnen, kein Müll auf den Straßen, saubere öffentliche Toiletten – oft mit Spielzeug für wartende Geschwister.</span>
+          </div>
+          <div class="why-item">
+            <strong>Ruhe &amp; Ordnung</strong>
+            <span>Die U-Bahn ist ruhig, Schlangen werden respektiert, niemand schubst. Entspannter als in vielen europäischen Städten.</span>
+          </div>
+          <div class="why-item">
+            <strong>Infrastruktur</strong>
+            <span>Aufzüge überall (perfekt für Kinderwagen), Wickelräume in fast jedem Kaufhaus, kinderfreundliche Menüs fast überall.</span>
+          </div>
+        </div>
+
+        <h2>Die besten Aktivitäten für Familien</h2>
+
+        <div class="activity-card">
+          <h3>1. TeamLab Planets – Toyosu</h3>
+          <div class="act-meta">
+            <span>📍 Toyosu</span>
+            <span>💴 ca. 3.200 ¥ Erwachsene, Kinder günstiger, unter 3 kostenlos</span>
+          </div>
+          <p>Barfuß durch riesige interaktive Kunsträume laufen – durch Wasserspiegel, schwebende Lichtblumen, unendliche Lichtreflexionen. Kinder drehen durch. Erwachsene auch.</p>
+          <p><strong>Wichtig:</strong> Es gibt zwei TeamLab-Museen. <strong>TeamLab Planets</strong> ist kompakter und für Familien mit kleineren Kindern besser geeignet. <strong>TeamLab Borderless</strong> in Azabudai Hills ist größer und eher für ältere Kinder.</p>
+          <p class="act-tip">→ Tipp: Unbedingt vorab online buchen auf teamlab.art – vor Ort oft ausverkauft. Der Boden ist manchmal nass – Wechselkleidung für die Kleinen mitnehmen.</p>
+        </div>
+
+        <div class="activity-card">
+          <h3>2. Ghibli Museum – Mitaka</h3>
+          <div class="act-meta">
+            <span>📍 Inokashira-Park, Mitaka</span>
+            <span>🕐 10:00–18:00 Uhr, Di geschlossen</span>
+            <span>💴 ca. 1.000 ¥ Erwachsene, unter 4 kostenlos</span>
+          </div>
+          <p>Wenn deine Kinder Spirited Away, Totoro oder Das Schloss im Himmel kennen, ist das Ghibli Museum ein Pflichtbesuch. Das kleine, verwinkelte Museum ist wie ein Spaziergang durch die Welt von Hayao Miyazaki – mit Originalzeichnungen, einem exklusiven Kurzfilm-Kinosaal und einem riesigen Catbus-Modell, in dem kleine Kinder klettern dürfen.</p>
+          <p class="act-tip">→ Achtung: Tickets müssen zwingend im Voraus gebucht werden – für Deutschland-Käufer über Klook oder Lawson-Konbinis. Ohne Ticket kommt man nicht rein.</p>
+        </div>
+
+        <div class="activity-card">
+          <h3>3. Ueno Zoo – Ueno</h3>
+          <div class="act-meta">
+            <span>📍 Ueno Park</span>
+            <span>💴 ca. 600 ¥ Erwachsene, Kinder unter 12 kostenlos/stark ermäßigt</span>
+          </div>
+          <p>Japans ältester Zoo liegt direkt neben dem Ueno Park. Er beherbergt über 3.000 Tiere, darunter die berühmten Pandabären. Nicht riesig nach westlichem Standard, aber sehr sauber und gut gepflegt. Die meisten Schilder haben englische Übersetzungen.</p>
+          <p class="act-tip">→ Kombination: Danach durch den Ueno Park schlendern, im Shinobazu-Teich Tretboot fahren (ca. 600 ¥/30 Min.) und im Park picknicken.</p>
+        </div>
+
+        <div class="activity-card">
+          <h3>4. Pokemon Center &amp; Nintendo Store – Ikebukuro/Shibuya</h3>
+          <div class="act-meta">
+            <span>📍 Pokemon Center: Ikebukuro · Nintendo Tokyo: Shibuya Scramble Square, 6. Etage</span>
+          </div>
+          <p><strong>Pokemon Center Mega Tokyo</strong> in Ikebukuro ist der größte Pokemon Store außerhalb von Yokohama. Mehrere Stockwerke voller Plüschtiere, Karten, Kleidung und Spiele. <strong>Nintendo Tokyo</strong> ist kleiner, aber elegant gestaltet mit exklusiven Produkten, die es nur hier gibt.</p>
+          <p class="act-tip">→ Tipp: Macht einen fixen Einkaufs-Betrag aus, den jedes Kind selbst entscheiden darf. Das vermeidet Streit und lehrt Entscheidungsfindung.</p>
+        </div>
+
+        <div class="activity-card">
+          <h3>5. Odaiba – Technik und Spaß auf der Insel</h3>
+          <div class="act-meta">
+            <span>📍 Odaiba (per Yurikamome Monorail erreichbar)</span>
+          </div>
+          <p>Odaiba ist eine künstliche Insel in der Bucht von Tokio. Die Monorail-Fahrt darüber ist selbst schon ein Erlebnis für Kinder. Was Odaiba bietet:</p>
+          <ul>
+            <li><strong>Lebensgroße Gundam-Statue</strong> vor dem DiverCity Mall – sie bewegt sich</li>
+            <li><strong>Joypolis</strong> – Segas Indoor-Freizeitpark mit VR-Attraktionen</li>
+            <li><strong>Wunderschöner Blick</strong> auf die Regenbogenbrücke und Tokio-Skyline</li>
+            <li>Foodcourts und Spielbereiche in den Einkaufszentren</li>
+          </ul>
+        </div>
+
+        <div class="activity-card">
+          <h3>6. Senso-ji in Asakusa – Omikuji für Kinder</h3>
+          <div class="act-meta">
+            <span>📍 Asakusa</span>
+            <span>💴 Tempel kostenlos, Omikuji 100 ¥</span>
+          </div>
+          <p>Ein Tempel klingt nach keinem aufregenden Kinderprogramm – aber der Senso-ji hat ein Ass im Ärmel: <strong>Omikuji</strong>. Man zahlt 100 ¥, schüttelt eine Metallbox, aus der ein Stäbchen mit einer Nummer fällt, und öffnet die entsprechende Schublade mit einem Zettel, der die Zukunft voraussagt. Kinder lieben das.</p>
+          <p>Auf der Nakamise-dori davor gibt es außerdem Waffelgebäck, Süßigkeiten und Spielzeug aus dem alten Japan – Shuriken aus Holz, Kreisel, traditionelle Masken.</p>
+        </div>
+
+        <div class="activity-card">
+          <h3>7. Shinkansen-Fahrt als Erlebnis</h3>
+          <div class="act-meta">
+            <span>📍 Tokio Hauptbahnhof</span>
+          </div>
+          <p>Wenn ihr sowieso einen Tagesausflug plant, mach die Shinkansen-Fahrt selbst zum Erlebnis. Setzt euch auf die rechte Seite (in Fahrtrichtung) für den Fuji-Blick. Kauft ein <strong>Ekiben</strong> (Bahnhofsbento-Box) am Tokioter Bahnhof – die Auswahl ist riesig und das Essen im Zug ist für Kinder ein Mini-Abenteuer.</p>
+        </div>
+
+        <h2>Praktische Tipps für Eltern</h2>
+
+        <ul>
+          <li><strong>Wickelräume:</strong> In jedem Kaufhaus – und viele sind besser ausgestattet als europäische Standards. Suche nach dem blauen Baby-Symbol.</li>
+          <li><strong>Kinderwagen in der U-Bahn:</strong> Aufzüge an fast allen Stationen. Stoßzeiten (8–9 &amp; 18–19 Uhr) meiden.</li>
+          <li><strong>Essen für wählerische Kinder:</strong> Udon-Ketten (mild, günstig), Kaiten-Sushi (Tamago-Sushi ist sehr mild), Yakiniku (gemeinsam grillen), Konbini als Notfalloption.</li>
+          <li><strong>Hitzeschutz im Sommer:</strong> Kinder überhitzen schnell – Fächer, Kühlpads, Hüte und viel Wasser mitnehmen. Mittags Museen und Shinkansen planen.</li>
+          <li><strong>Notfallkommunikation:</strong> Schreibe eurem Kind den Hotelnamen und eure Handynummer auf einen Zettel in die Tasche. Überall gibt es Koban (Polizeikästen) mit freundlichen Polizisten.</li>
+        </ul>
+
+        <h2>Mein Tagesplan-Vorschlag für eine Familie</h2>
+
+        <div class="day-plan">
+          <h3>Beispieltag in Tokio mit Kindern</h3>
+          <div class="plan-row">
+            <span class="plan-time">Morgen</span>
+            <span>Frühstück im Hotel oder Konbini → Ueno Zoo (Öffnung 9:30 Uhr)</span>
+          </div>
+          <div class="plan-row">
+            <span class="plan-time">Mittag</span>
+            <span>Im Ueno Park picknicken oder in einer Udon-Kette essen</span>
+          </div>
+          <div class="plan-row">
+            <span class="plan-time">Nachmittag</span>
+            <span>Asakusa Senso-ji + Omikuji + Nakamise-dori (Süßigkeiten einkaufen)</span>
+          </div>
+          <div class="plan-row">
+            <span class="plan-time">Abend</span>
+            <span>Kaiten-Sushi in Asakusa oder zurück zum Hotel</span>
+          </div>
+          <div class="plan-row">
+            <span class="plan-time">Nächster Tag</span>
+            <span>TeamLab Planets – vorab buchen! (teamlab.art)</span>
+          </div>
+        </div>
+
+        <div class="highlight-box">
+          <p>Tokio mit Kindern ist nicht nur machbar – es ist wunderbar. Und wenn du einmal den Gesichtsausdruck deines Kindes im TeamLab oder beim Anblick des Gundams siehst, weißt du: Diese Reise war genau richtig.</p>
+        </div>
+
+      </div>
+
+      <!-- ENGLISH -->
+      <div class="i18n-en" hidden>
+
+        <p>"Tokyo with kids? Isn't that way too chaotic?" I get this from parents surprisingly often. And my answer surprises them every time: <strong>Tokyo is one of the most family-friendly cities in the world.</strong> Clean, safe, punctual – and full of things that leave children speechless.</p>
+
+        <h2>Why Tokyo Is Genuinely Kid-Friendly</h2>
+
+        <div class="why-grid">
+          <div class="why-item">
+            <strong>Safety</strong>
+            <span>One of the safest cities in the world. Children are warmly welcomed everywhere.</span>
+          </div>
+          <div class="why-item">
+            <strong>Cleanliness</strong>
+            <span>No dirty metro cars, no litter on the streets, clean public toilets – often with toys for waiting siblings.</span>
+          </div>
+          <div class="why-item">
+            <strong>Order &amp; Calm</strong>
+            <span>The metro is quiet, queues are respected, nobody pushes. More relaxed than many European cities.</span>
+          </div>
+          <div class="why-item">
+            <strong>Infrastructure</strong>
+            <span>Lifts everywhere (great for prams), nappy-changing rooms in almost every department store, children's menus most places.</span>
+          </div>
+        </div>
+
+        <h2>The Best Activities for Families</h2>
+
+        <div class="activity-card">
+          <h3>1. TeamLab Planets – Toyosu</h3>
+          <div class="act-meta">
+            <span>📍 Toyosu</span>
+            <span>💴 approx. ¥3,200 adults, children cheaper, under 3 free</span>
+          </div>
+          <p>Walk barefoot through enormous interactive art rooms – through water mirrors, floating light flowers, endless light reflections. Children lose their minds. Adults too.</p>
+          <p><strong>Important:</strong> There are two TeamLab museums. <strong>TeamLab Planets</strong> is more compact and better suited for families with smaller children. <strong>TeamLab Borderless</strong> in Azabudai Hills is larger and better for older kids.</p>
+          <p class="act-tip">→ Tip: Book online in advance at teamlab.art – tickets are often sold out on the day. The floor can be wet – bring a change of clothes for small children.</p>
+        </div>
+
+        <div class="activity-card">
+          <h3>2. Ghibli Museum – Mitaka</h3>
+          <div class="act-meta">
+            <span>📍 Inokashira Park, Mitaka</span>
+            <span>🕐 10:00–18:00, closed Tue</span>
+            <span>💴 approx. ¥1,000 adults, under 4 free</span>
+          </div>
+          <p>If your children know and love Spirited Away, Totoro or Castle in the Sky, the Ghibli Museum is a must. The small, winding museum is like a walk through Hayao Miyazaki's world – original drawings, an exclusive short-film cinema and a giant Catbus model children can climb on.</p>
+          <p class="act-tip">→ Caution: Tickets must be booked in advance without exception – for buyers outside Japan via Klook or Lawson konbinis. You cannot enter without a ticket.</p>
+        </div>
+
+        <div class="activity-card">
+          <h3>3. Ueno Zoo – Ueno</h3>
+          <div class="act-meta">
+            <span>📍 Ueno Park</span>
+            <span>💴 approx. ¥600 adults, children under 12 free/heavily discounted</span>
+          </div>
+          <p>Japan's oldest zoo sits right next to Ueno Park. It's home to over 3,000 animals, including the famous giant pandas. Not enormous by western standards, but very clean and well-kept. Most signs have English translations.</p>
+          <p class="act-tip">→ Combo: Afterwards stroll through Ueno Park, rent a pedalo on Shinobazu Pond (approx. ¥600/30 min) and have a picnic in the park.</p>
+        </div>
+
+        <div class="activity-card">
+          <h3>4. Pokemon Center &amp; Nintendo Store – Ikebukuro/Shibuya</h3>
+          <div class="act-meta">
+            <span>📍 Pokemon Center: Ikebukuro · Nintendo Tokyo: Shibuya Scramble Square, 6F</span>
+          </div>
+          <p><strong>Pokemon Center Mega Tokyo</strong> in Ikebukuro is the largest Pokemon store outside Yokohama. Multiple floors of plush toys, cards, clothing and games. <strong>Nintendo Tokyo</strong> is smaller but elegantly designed with exclusive products you can only find here.</p>
+          <p class="act-tip">→ Tip: Agree on a fixed budget each child can spend as they choose. It prevents arguments and teaches decision-making.</p>
+        </div>
+
+        <div class="activity-card">
+          <h3>5. Odaiba – Technology and Fun on the Island</h3>
+          <div class="act-meta">
+            <span>📍 Odaiba (reachable via Yurikamome monorail)</span>
+          </div>
+          <p>Odaiba is an artificial island in Tokyo Bay. The monorail ride across is itself an experience for children. What Odaiba offers:</p>
+          <ul>
+            <li><strong>Life-size Gundam statue</strong> in front of DiverCity Mall – it moves</li>
+            <li><strong>Joypolis</strong> – Sega's indoor theme park with VR attractions</li>
+            <li><strong>Stunning views</strong> of Rainbow Bridge and the Tokyo skyline</li>
+            <li>Food courts and play areas in the shopping centres</li>
+          </ul>
+        </div>
+
+        <div class="activity-card">
+          <h3>6. Senso-ji in Asakusa – Omikuji for Kids</h3>
+          <div class="act-meta">
+            <span>📍 Asakusa</span>
+            <span>💴 Temple free, omikuji ¥100</span>
+          </div>
+          <p>A temple doesn't sound like thrilling children's entertainment – but Senso-ji has a secret weapon: <strong>omikuji</strong>. You pay ¥100, shake a metal box until a stick with a number falls out, then open the corresponding drawer to find a fortune slip predicting your future. Kids love it.</p>
+          <p>Along the Nakamise-dori shopping street leading to the temple, there are also waffle biscuits, sweets and toys from old Japan – wooden throwing stars, spinning tops, traditional masks.</p>
+        </div>
+
+        <div class="activity-card">
+          <h3>7. Shinkansen Ride as an Experience</h3>
+          <div class="act-meta">
+            <span>📍 Tokyo Station</span>
+          </div>
+          <p>If you're planning a day trip anyway, make the shinkansen ride itself an experience. Sit on the right side (in the direction of travel) for the Fuji view. Buy an <strong>ekiben</strong> (station bento box) at Tokyo Station – the selection is enormous and eating in the train is a mini-adventure for children.</p>
+        </div>
+
+        <h2>Practical Tips for Parents</h2>
+
+        <ul>
+          <li><strong>Changing rooms:</strong> In every department store – many are better equipped than European standards. Look for the blue baby symbol.</li>
+          <li><strong>Pushchairs on the metro:</strong> Lifts at almost all stations. Avoid rush hours (8–9am &amp; 6–7pm).</li>
+          <li><strong>Food for picky eaters:</strong> Udon chains (mild, cheap), kaiten sushi (egg sushi is very mild), yakiniku (grilling together is fun), konbini as the backup option.</li>
+          <li><strong>Heat protection in summer:</strong> Children overheat quickly – bring fans, cooling pads, hats and lots of water. Plan museums and shinkansen trips for the midday heat.</li>
+          <li><strong>Emergency communication:</strong> Write the hotel name and your mobile number on a slip of paper for your child's pocket. There are koban (police boxes) with helpful officers everywhere.</li>
+        </ul>
+
+        <h2>My Suggested Day Plan for a Family</h2>
+
+        <div class="day-plan">
+          <h3>Sample Day in Tokyo with Children</h3>
+          <div class="plan-row">
+            <span class="plan-time">Morning</span>
+            <span>Breakfast at hotel or konbini → Ueno Zoo (opens 9:30am)</span>
+          </div>
+          <div class="plan-row">
+            <span class="plan-time">Midday</span>
+            <span>Picnic in Ueno Park or eat at a udon chain</span>
+          </div>
+          <div class="plan-row">
+            <span class="plan-time">Afternoon</span>
+            <span>Asakusa Senso-ji + omikuji + Nakamise-dori (sweet shopping)</span>
+          </div>
+          <div class="plan-row">
+            <span class="plan-time">Evening</span>
+            <span>Kaiten sushi in Asakusa or back to the hotel</span>
+          </div>
+          <div class="plan-row">
+            <span class="plan-time">Next day</span>
+            <span>TeamLab Planets – book in advance! (teamlab.art)</span>
+          </div>
+        </div>
+
+        <div class="highlight-box">
+          <p>Tokyo with children isn't just manageable – it's wonderful. And when you see your child's face in TeamLab or at the sight of the Gundam, you'll know: this trip was exactly right.</p>
+        </div>
+
+      </div>
+
+      <div class="blog-cta-box">
+        <h2 class="i18n-de">Familienreise nach Tokio planen?</h2>
+        <h2 class="i18n-en" hidden>Planning a family trip to Tokyo?</h2>
+        <p class="i18n-de">Eine Familientour mit mir bedeutet: keine Zeitdruck, keine laute Gruppe – nur ein entspannter Tag, bei dem Kinder und Eltern gleichermaßen staunen. Ich weiß, wie man Tokio kinderfreundlich erlebt.</p>
+        <p class="i18n-en" hidden>A family tour with me means no time pressure, no noisy group – just a relaxed day where children and parents are equally amazed. I know how to experience Tokyo in a kid-friendly way.</p>
+        <a href="../#kontakt" class="btn btn-primary" data-de="Tour anfragen" data-en="Request a Tour">Tour anfragen</a>
+      </div>
+
+    </div>
+  </article>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="nav-logo footer-logo-text">
+          <span class="logo-main">Unentdecktes</span>
+          <span class="logo-sub">Tokio</span>
+        </div>
+        <p class="footer-tagline" data-de="Deutschsprachige Privattouren in Japan" data-en="Private Tours in Japan with a German-speaking Guide">Deutschsprachige Privattouren in Japan</p>
+        <a href="https://www.instagram.com/unentdecktes_tokio" class="footer-social" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+          <span>@unentdecktes_tokio</span>
+        </a>
+      </div>
+      <nav class="footer-links" aria-label="Footer Navigation">
+        <a href="../#touren" data-de="Touren" data-en="Tours">Touren</a>
+        <a href="../#ueber-mich" data-de="Über mich" data-en="About">Über mich</a>
+        <a href="../#warum-ich" data-de="Warum ich?" data-en="Why me?">Warum ich?</a>
+        <a href="../#blog" data-de="Blog" data-en="Blog">Blog</a>
+        <a href="../#kontakt" data-de="Kontakt" data-en="Contact">Kontakt</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p data-de="© 2025 Unentdecktes Tokio. Alle Rechte vorbehalten." data-en="© 2025 Unentdecktes Tokio. All rights reserved.">© 2025 Unentdecktes Tokio. Alle Rechte vorbehalten.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

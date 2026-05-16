@@ -387,7 +387,14 @@ h1, h2, h3 {
   min-height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   overflow: hidden;
+}
+
+/* Text panel left-aligned so the 3D city shows on the right */
+.hero .container {
+  margin-left: 0;
+  max-width: 560px;
 }
 
 .hero-canvas {
@@ -1311,6 +1318,18 @@ h1, h2, h3 {
 .blog-card-img--5 {
   background-image: url('images/tokio-von-oben.webp');
 }
+.blog-card-img--6 {
+  background-image: url('https://images.pexels.com/photos/884600/pexels-photo-884600.jpeg?auto=compress&cs=tinysrgb&w=900');
+}
+.blog-card-img--7 {
+  background-image: url('https://images.pexels.com/photos/2506923/pexels-photo-2506923.jpeg?auto=compress&cs=tinysrgb&w=900');
+}
+.blog-card-img--8 {
+  background-image: url('https://images.pexels.com/photos/315191/pexels-photo-315191.jpeg?auto=compress&cs=tinysrgb&w=900');
+}
+.blog-card-img--9 {
+  background-image: url('https://images.pexels.com/photos/1128318/pexels-photo-1128318.jpeg?auto=compress&cs=tinysrgb&w=900');
+}
 
 .blog-card-body {
   padding: 26px 28px;
@@ -1417,6 +1436,7 @@ h1, h2, h3 {
 }
 @media (max-width: 768px) {
   .hero-content { padding: 80px 24px 40px; border-radius: 20px; }
+  .hero .container { margin-left: auto; max-width: 100%; }
 }
 
 /* ── Stat numbers — subtle count-up feel with gradient ────── */
