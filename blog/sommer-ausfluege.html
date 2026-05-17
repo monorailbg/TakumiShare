@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Raus aus der Tokioter Sommerhitze: Die besten Tagesausflüge zu Flüssen, Bergen und Stränden – Okutama, Hatonosu, Nikko, Enoshima und mehr. Alles in 1–2 Stunden erreichbar.">
+  <title>Raus aus der Hitze: Die besten Sommer-Ausflüge rund um Tokio | Unentdecktes Tokio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <style>
+    .blog-post-hero {
+      background:
+        linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.60) 100%),
+        url('https://images.pexels.com/photos/572688/pexels-photo-572688.jpeg?auto=compress&cs=tinysrgb&w=1400') center / cover no-repeat;
+      padding: 140px 0 80px;
+      text-align: center;
+    }
+    .blog-post-hero .blog-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--stone-light);
+      background: rgba(244, 167, 185, 0.2);
+      padding: 6px 16px;
+      border-radius: 50px;
+      margin-bottom: 24px;
+    }
+    .blog-post-hero h1 {
+      color: var(--white);
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      max-width: 820px;
+      margin: 0 auto 24px;
+      line-height: 1.2;
+    }
+    .blog-post-hero .post-meta {
+      color: rgba(255,255,255,0.55);
+      font-size: 0.85rem;
+    }
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.5);
+      justify-content: center;
+      margin-bottom: 28px;
+    }
+    .breadcrumb a { color: rgba(255,255,255,0.6); transition: color var(--ease); }
+    .breadcrumb a:hover { color: var(--stone-light); }
+    .breadcrumb span { color: rgba(255,255,255,0.3); }
+    .blog-post-body {
+      background: var(--cream);
+      padding: 80px 0 100px;
+    }
+    .blog-post-content {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+    .blog-post-content h2 {
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      color: var(--dark);
+      margin: 52px 0 20px;
+      line-height: 1.25;
+    }
+    .blog-post-content h2:first-child { margin-top: 0; }
+    .blog-post-content h3 {
+      font-size: 1.15rem;
+      color: var(--dark);
+      margin: 28px 0 10px;
+    }
+    .blog-post-content p {
+      font-size: 1.05rem;
+      color: var(--text);
+      line-height: 1.9;
+      margin-bottom: 22px;
+    }
+    .blog-post-content ul {
+      list-style: none;
+      margin: 0 0 28px;
+      padding: 0;
+    }
+    .blog-post-content ul li {
+      position: relative;
+      padding: 10px 0 10px 28px;
+      font-size: 1rem;
+      color: var(--text);
+      line-height: 1.75;
+      border-bottom: 1px solid var(--beige);
+    }
+    .blog-post-content ul li:first-child { border-top: 1px solid var(--beige); }
+    .blog-post-content ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--forest);
+      font-weight: 700;
+    }
+    .blog-post-content .highlight-box {
+      background: var(--white);
+      border-left: 4px solid var(--forest);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 24px 28px;
+      margin: 32px 0;
+      box-shadow: var(--shadow);
+    }
+    .blog-post-content .highlight-box p {
+      margin-bottom: 0;
+      font-size: 1.05rem;
+      color: var(--text);
+      font-style: italic;
+    }
+    .escape-card {
+      background: var(--white);
+      border-radius: var(--radius-sm);
+      padding: 28px 32px;
+      margin: 24px 0;
+      box-shadow: var(--shadow);
+      border-top: 4px solid var(--forest);
+    }
+    .escape-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      color: var(--dark);
+      margin: 0 0 12px;
+    }
+    .escape-card .esc-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .escape-card .esc-meta span {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      background: var(--beige);
+      padding: 4px 12px;
+      border-radius: 50px;
+    }
+    .escape-card p {
+      font-size: 0.96rem !important;
+      margin-bottom: 12px !important;
+    }
+    .escape-card .esc-tip {
+      font-size: 0.88rem;
+      color: var(--forest);
+      font-weight: 500;
+      margin-bottom: 0 !important;
+    }
+    .escape-card ul {
+      margin: 8px 0 12px !important;
+    }
+    .escape-card ul li {
+      font-size: 0.93rem !important;
+      padding: 7px 0 7px 24px !important;
+    }
+    .escape-card ul li::before { top: 5px; }
+    .overview-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 28px 0;
+      background: var(--white);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      font-size: 0.88rem;
+    }
+    .overview-table th {
+      background: var(--dark);
+      color: var(--white);
+      padding: 12px 14px;
+      text-align: left;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .overview-table td {
+      padding: 10px 14px;
+      color: var(--text);
+      border-bottom: 1px solid var(--beige);
+      vertical-align: top;
+    }
+    .overview-table tr:last-child td { border-bottom: none; }
+    .overview-table tr:hover td { background: rgba(0,0,0,0.02); }
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin: 24px 0;
+    }
+    .tip-item {
+      background: var(--white);
+      border-radius: var(--radius-sm);
+      padding: 16px 18px;
+      box-shadow: var(--shadow);
+      font-size: 0.9rem;
+      color: var(--text);
+      line-height: 1.65;
+    }
+    .tip-item strong {
+      display: block;
+      color: var(--dark);
+      margin-bottom: 4px;
+    }
+    .blog-cta-box {
+      background: var(--dark);
+      border-radius: var(--radius);
+      padding: 52px 44px;
+      text-align: center;
+      margin-top: 64px;
+    }
+    .blog-cta-box h2 {
+      color: var(--white);
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      margin-bottom: 16px;
+    }
+    .blog-cta-box p {
+      color: rgba(255,255,255,0.65);
+      font-size: 1rem;
+      margin-bottom: 32px;
+      line-height: 1.75;
+    }
+    @media (max-width: 600px) {
+      .tips-grid { grid-template-columns: 1fr; }
+      .blog-cta-box { padding: 36px 24px; }
+      .overview-table th, .overview-table td { padding: 8px 10px; font-size: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="../" class="nav-logo">
+        <span class="logo-main">Unentdecktes</span>
+        <span class="logo-sub">Tokio</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../#touren" class="nav-link" data-de="Touren" data-en="Tours">Touren</a></li>
+        <li><a href="../#ueber-mich" class="nav-link" data-de="Über mich" data-en="About">Über mich</a></li>
+        <li><a href="../#warum-ich" class="nav-link" data-de="Warum ich?" data-en="Why me?">Warum ich?</a></li>
+        <li><a href="../#blog" class="nav-link" data-de="Blog" data-en="Blog">Blog</a></li>
+        <li><a href="../#kontakt" class="nav-link btn-nav" data-de="Kontakt" data-en="Contact">Kontakt</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="lang-toggle">
+          <button class="lang-btn active" data-lang="de">DE</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="blog-post-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../" data-de="Startseite" data-en="Home">Startseite</a>
+        <span>›</span>
+        <a href="../#blog" data-de="Blog" data-en="Blog">Blog</a>
+        <span>›</span>
+        <span class="i18n-de">Sommer-Ausflüge rund um Tokio</span>
+        <span class="i18n-en" hidden>Summer Day Trips from Tokyo</span>
+      </nav>
+      <span class="blog-tag" data-de="Ausflüge" data-en="Day Trips">Ausflüge</span>
+      <h1 class="i18n-de">Raus aus der Hitze: Die besten Sommer-Ausflüge rund um Tokio</h1>
+      <h1 class="i18n-en" hidden>Escape the Heat: The Best Summer Day Trips from Tokyo</h1>
+      <p class="post-meta i18n-de">Von Immanuel · Mai 2026 · 9 Minuten Lesezeit</p>
+      <p class="post-meta i18n-en" hidden>By Immanuel · May 2026 · 9 min read</p>
+    </div>
+  </section>
+
+  <article class="blog-post-body">
+    <div class="blog-post-content">
+
+      <!-- GERMAN -->
+      <div class="i18n-de">
+
+        <p>Ein Tokioter Sommer ist kein Spaß. Ich meine das ernst. 35 Grad, 90% Luftfeuchtigkeit, Asphalt der die Hitze zurückwirft, U-Bahnen voller Menschen – selbst die Einheimischen flüchten. Und genau das ist der Plan: raus aus der Stadt, rein ins Grüne. Flussschwimmen, Bergluft, Wälder, kühles Wasser – alles innerhalb von 1–2 Stunden von Tokio.</p>
+
+        <div class="escape-card">
+          <h3>1. Okutama (奥多摩) – Das grüne Herz Tokios</h3>
+          <div class="esc-meta">
+            <span>🚃 ca. 2 Std. ab Shinjuku</span>
+            <span>💴 Eintritt kostenlos</span>
+            <span>Schwimmen · Wandern · Natur</span>
+          </div>
+          <p>Okutama ist mein absoluter Sommer-Favorit. Dieses Tal im äußersten Westen Tokios – ja, technisch noch innerhalb der Stadtgrenzen – fühlt sich an wie eine andere Welt. Tiefe Schluchten, rauschende Flüsse, dichter Wald, saubere Bergluft. Und das Beste: Der <strong>Tama-Fluss</strong> ist hier kristallklar und kalt.</p>
+          <ul>
+            <li><strong>Schwimmen im Tama-Fluss:</strong> Offizielle Badestellen entlang des Flusses im Sommer. Das Wasser kommt direkt aus den Bergen und bleibt selbst im heißesten August angenehm kühl.</li>
+            <li><strong>Okutama-See-Wanderung:</strong> Von bewaldeten Berghängen umgeben – auch für Kinder machbar.</li>
+            <li><strong>Nishizawa-Höhle (日原鍾乳洞):</strong> Eine kurze Busfahrt vom Bahnhof. In der Höhle ganzjährig ca. 11°C – eine natürliche Klimaanlage.</li>
+            <li><strong>Kajak &amp; Stand-Up-Paddling</strong> auf dem ruhigen Okutama-See – kein Vorwissen nötig.</li>
+          </ul>
+          <p class="esc-tip">→ Tipp: Leih ein Fahrrad am Bahnhof und folge dem Fluss talabwärts – versteckte Badestellen abseits der Touristenspots warten auf dich.</p>
+        </div>
+
+        <div class="escape-card">
+          <h3>2. Hatonosu (鳩ノ巣) – Das vergessene Flusstal</h3>
+          <div class="esc-meta">
+            <span>🚃 ca. 1 Std. 45 Min. ab Shinjuku</span>
+            <span>💴 Eintritt kostenlos</span>
+            <span>Wandern · Flussschwimmen</span>
+          </div>
+          <p>Hatonosu ist der kleine Bruder von Okutama – weniger bekannt, noch ruhiger und meiner Meinung nach noch schöner. Ein kurzer Fußmarsch bergab führt zur Flusschlucht, in der der Tama-Fluss zwischen riesigen Felsen rauscht. Holzbrücken spannen sich über den Fluss, moos-bewachsene Felsen säumen den Weg.</p>
+          <p><strong>Geheimtipp:</strong> Wandere von Hatonosu flussaufwärts bis nach Okutama (ca. 2,5–3 Stunden), durchgehend durch Wald und entlang des Flusses. Nimm den Zug zurück.</p>
+          <p class="esc-tip">→ Tipp: Pack Wechselkleidung und wasserfeste Sandalen – der Weg führt manchmal direkt durchs Wasser.</p>
+        </div>
+
+        <div class="escape-card">
+          <h3>3. Nakagawa-Schlucht / Nakagawa (中津川) – Kanagawa</h3>
+          <div class="esc-meta">
+            <span>🚃 ca. 2 Std. ab Shinjuku</span>
+            <span>💴 Eintritt kostenlos</span>
+            <span>Canyoning · Naturpool · Familien</span>
+          </div>
+          <p>Die Nakagawa-Schlucht in den Bergen der Präfektur Kanagawa ist einer der besten Badespots in der Region – und kaum bei ausländischen Touristen bekannt. Der Fluss bildet natürliche Becken und kleine Wasserfälle. Das Wasser ist selbst im August erfrischend kalt.</p>
+          <p>Das Wasser fließt zügig, die Felsen sind glatt – an manchen Stellen springt man von kleinen Klippen ins Wasser. <strong>Canyoning-Touren</strong> mit Neoprenanzug, Helm und Guide bieten ein unvergessliches Erlebnis für Abenteuerhungrige.</p>
+          <p class="esc-tip">→ Tipp: Komm früh (vor 9 Uhr) – nachmittags kann es, besonders an Wochenenden, voll werden.</p>
+        </div>
+
+        <div class="escape-card">
+          <h3>4. Tanzawa-Ōyama (丹沢大山) – Bergluft und Wasserfall</h3>
+          <div class="esc-meta">
+            <span>🚃 ca. 1,5 Std. ab Shinjuku</span>
+            <span>💴 Eintritt kostenlos (Seilbahn kostenpflichtig)</span>
+            <span>Wandern · Bergluft · Tempel</span>
+          </div>
+          <p>Das Tanzawa-Gebirge ist das große Wandergebiet südwestlich von Tokio – und im Sommer ein dringend nötiger Temperatur-Puffer. Auf dem Gipfel des Ōyama (1.252 m) sind es oft 10–12 Grad weniger als in der Stadt.</p>
+          <ul>
+            <li><strong>Ōyama Fudo-ji Wasserfall:</strong> Buddhistische Mönche meditieren hier traditionell unter dem kalten Wasser (Misogi).</li>
+            <li><strong>Gipfelpanorama:</strong> An klaren Tagen siehst du die gesamte Kanto-Ebene, die Bucht von Tokio und den Fuji.</li>
+            <li><strong>Tofu-Restaurants:</strong> Das Dorf Ōyama ist berühmt für handgemachten Tofu – kleine Restaurants reihen sich auf dem Weg zum Schrein aneinander.</li>
+          </ul>
+        </div>
+
+        <div class="escape-card">
+          <h3>5. Mitake-Tal (御岳渓谷) – Kajak und Stromschnellen</h3>
+          <div class="esc-meta">
+            <span>🚃 ca. 1,5 Std. ab Shinjuku</span>
+            <span>💴 Eintritt kostenlos</span>
+            <span>Rafting · Kajak · Flussspaziergang</span>
+          </div>
+          <p>Der Tama-Fluss hier oben ist eine der wenigen Stellen in Japan, an der Wildwasser-Kajak und Rafting betrieben werden. Geführte Rafting-Touren kosten ca. 4.000–6.000 Yen pro Person. Wer lieber trockenen Fußes bleibt, spaziert entlang des Flussufers – die Stromschnellen zuzuschauen ist gratis und fast genauso unterhaltsam.</p>
+          <p class="esc-tip">→ Stand-Up-Paddling auf ruhigeren Abschnitten für alle, die es etwas gemächlicher mögen.</p>
+        </div>
+
+        <div class="escape-card">
+          <h3>6. Sagami-See (相模湖) – Bootfahren und Camping</h3>
+          <div class="esc-meta">
+            <span>🚃 ca. 1 Std. ab Shinjuku</span>
+            <span>💴 Eintritt kostenlos</span>
+            <span>Bootfahren · Angeln · Camping · Familien</span>
+          </div>
+          <p>Einer der beliebtesten Naherholungsorte westlich von Tokio. Im Sommer kann man hier Tretboot fahren, angeln, am Ufer grillen oder in einem Campingplatz übernachten. Der nahe gelegene <strong>Tsukui-See</strong> ist ruhiger und weniger besucht – ideal für alle, die Erholung ohne Massen suchen.</p>
+        </div>
+
+        <div class="escape-card">
+          <h3>7. Nikko (日光) – Wasserfälle und Kühle</h3>
+          <div class="esc-meta">
+            <span>🚃 ca. 2 Std. ab Asakusa</span>
+            <span>💴 Eintritt variiert</span>
+            <span>Wasserfälle · Tempel · Berglandschaft</span>
+          </div>
+          <p>Nikko liegt auf ca. 600 Metern Höhe – das allein macht einen deutlichen Unterschied. Der <strong>Kegon-Wasserfall</strong> (97 m) ist einer der schönsten Japans; der Sprühnebel am Fuß kühlt bei jedem Wetter. Der <strong>Chūzenji-See</strong> auf der Hochebene (ca. 1.270 m) ist selbst an heißen Tagen angenehm temperiert.</p>
+          <p class="esc-tip">→ Tipp: Fahr mit dem Bus auf die Iroha-Zaka-Bergstraße (48 Kurven!) hoch zum See – die Fahrt ist selbst schon ein Erlebnis.</p>
+        </div>
+
+        <div class="escape-card">
+          <h3>8. Enoshima und Kamakura-Küste – Ans Meer</h3>
+          <div class="esc-meta">
+            <span>🚃 ca. 1 Std. ab Shinjuku</span>
+            <span>💴 Strand kostenlos</span>
+            <span>Strand · Meeresfrüchte · Surfen</span>
+          </div>
+          <p><strong>Enoshima</strong> ist eine kleine Insel, über eine Brücke verbunden, mit Schreinen, Meeresfrüchterestaurants und schönem Aussichtspunkt. Der Strand <strong>Katase-Higashihama</strong> davor ist im Sommer voll – aber das gehört dazu. <strong>Zushi und Hayama</strong> etwas weiter südlich bieten ruhigere, sauberere Strandabschnitte.</p>
+          <p class="esc-tip">→ Tipp: Komm früh oder an Wochentagen – an Sommerwochenenden ist die gesamte Küste gut besucht.</p>
+        </div>
+
+        <h2>Praktische Tipps für alle Ausflüge</h2>
+
+        <div class="tips-grid">
+          <div class="tip-item">
+            <strong>Wasser &amp; Snacks</strong>
+            Mindestens 2 Liter Wasser (in den Bergen nicht immer Läden). Onigiri vom Konbini halten ca. 4–6 Stunden.
+          </div>
+          <div class="tip-item">
+            <strong>Kleidung</strong>
+            Wechselkleidung + Handtuch beim Flussschwimmen. Wasserfeste Sandalen oder alte Turnschuhe für das Wasser.
+          </div>
+          <div class="tip-item">
+            <strong>Sonnenschutz</strong>
+            Sonnencreme und Sonnenhut – auch im Wald. Insektenspray gegen Bergmücken.
+          </div>
+          <div class="tip-item">
+            <strong>Wetter</strong>
+            Regenponcho einpacken – Sommerschauer kommen schnell. Nach Taifun-Regen können Flüsse gefährlich sein.
+          </div>
+          <div class="tip-item">
+            <strong>Beste Reisezeiten</strong>
+            Wochentags > Wochenende (deutlich ruhiger). Früher Start (7–8 Uhr) – Hitzespitze gegen 13–15 Uhr meiden.
+          </div>
+          <div class="tip-item">
+            <strong>Transport</strong>
+            Suica-Karte reicht für alle Ziele. JR Pass kann sich für Nikko lohnen, nicht für Okutama/Mitake.
+          </div>
+        </div>
+
+        <h2>Schnelle Übersicht: Welcher Ausflug passt zu dir?</h2>
+
+        <table class="overview-table">
+          <thead>
+            <tr><th>Ziel</th><th>Fahrzeit</th><th>Highlight</th><th>Für wen</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Okutama</td><td>2 Std.</td><td>Flussschwimmen, Höhle</td><td>Alle</td></tr>
+            <tr><td>Hatonosu</td><td>1:45 Std.</td><td>Ruhige Schlucht, Wandern</td><td>Wanderer, Paare</td></tr>
+            <tr><td>Nakagawa (Kanagawa)</td><td>2 Std.</td><td>Canyoning, Naturpool</td><td>Abenteurer</td></tr>
+            <tr><td>Tanzawa-Ōyama</td><td>1:30 Std.</td><td>Bergluft, Tofu, Wasserfall</td><td>Wanderer, Familien</td></tr>
+            <tr><td>Mitake-Tal</td><td>1:30 Std.</td><td>Rafting, Kajak</td><td>Aktive</td></tr>
+            <tr><td>Sagami-See</td><td>1 Std.</td><td>Bootfahren, Camping</td><td>Familien</td></tr>
+            <tr><td>Nikko</td><td>2 Std.</td><td>Kühle, Wasserfall, Tempel</td><td>Kulturreisende</td></tr>
+            <tr><td>Enoshima/Kamakura</td><td>1 Std.</td><td>Strand, Meeresfrüchte</td><td>Strandliebhaber</td></tr>
+          </tbody>
+        </table>
+
+        <div class="highlight-box">
+          <p>Ein Tokioter Sommer muss kein Überlebenstraining sein. Mit dem richtigen Ausflug tauschst du den Betonkessel gegen Bergluft, glitzerndes Flusswasser und den Klang von Zikaden. Genau das ist das Schöne an dieser Stadt: Sie bringt dich dorthin.</p>
+        </div>
+
+      </div>
+
+      <!-- ENGLISH -->
+      <div class="i18n-en" hidden>
+
+        <p>A Tokyo summer is no joke. I mean that seriously. 35 degrees, 90% humidity, asphalt radiating heat back at you, trains packed with people – even the locals flee. And that's exactly the plan: out of the city, into the green. River swimming, mountain air, forests, cool water – all within 1–2 hours of Tokyo.</p>
+
+        <div class="escape-card">
+          <h3>1. Okutama (奥多摩) – The Green Heart of Tokyo</h3>
+          <div class="esc-meta">
+            <span>🚃 approx. 2 hrs from Shinjuku</span>
+            <span>💴 Free entry</span>
+            <span>Swimming · Hiking · Nature</span>
+          </div>
+          <p>Okutama is my absolute summer favourite. This valley in the far west of Tokyo – yes, technically still within the city limits – feels like a different world. Deep gorges, rushing rivers, dense forest, clean mountain air. And the best part: the <strong>Tama River</strong> up here is crystal clear and cold.</p>
+          <ul>
+            <li><strong>Swimming in the Tama River:</strong> Official swimming spots along the river in summer. The water comes straight from the mountains and stays pleasantly cool even in the hottest August.</li>
+            <li><strong>Okutama Lake walk:</strong> Surrounded by forested mountain slopes – manageable for children too.</li>
+            <li><strong>Nishizawa Cave (日原鍾乳洞):</strong> A short bus ride from the station. Inside the cave it's around 11°C year-round – nature's own air conditioning.</li>
+            <li><strong>Kayaking &amp; stand-up paddleboarding</strong> on the calm Okutama Lake – no experience necessary.</li>
+          </ul>
+          <p class="esc-tip">→ Tip: Rent a bike at Okutama Station and follow the river downstream – hidden swimming spots away from the tourist areas are waiting for you.</p>
+        </div>
+
+        <div class="escape-card">
+          <h3>2. Hatonosu (鳩ノ巣) – The Forgotten River Valley</h3>
+          <div class="esc-meta">
+            <span>🚃 approx. 1 hr 45 min from Shinjuku</span>
+            <span>💴 Free entry</span>
+            <span>Hiking · River swimming</span>
+          </div>
+          <p>Hatonosu is Okutama's little sibling – less well known, even quieter and in my opinion even more beautiful. A short walk downhill leads to a stunning river gorge where the Tama River rushes between enormous boulders. Wooden bridges span the river, moss-covered rocks line the path.</p>
+          <p><strong>Hidden gem:</strong> Walk upstream from Hatonosu to Okutama (approx. 2.5–3 hours), entirely through forest and alongside the river. Take the train back.</p>
+          <p class="esc-tip">→ Tip: Pack a change of clothes and waterproof sandals – the path sometimes goes right through the water.</p>
+        </div>
+
+        <div class="escape-card">
+          <h3>3. Nakagawa Gorge (中津川) – Kanagawa</h3>
+          <div class="esc-meta">
+            <span>🚃 approx. 2 hrs from Shinjuku</span>
+            <span>💴 Free entry</span>
+            <span>Canyoning · Natural pools · Families</span>
+          </div>
+          <p>The Nakagawa Gorge in the mountains of Kanagawa Prefecture is one of the best swimming spots in the region – and barely known to foreign visitors. The river forms natural pools and small waterfalls. The water stays refreshingly cold even in August.</p>
+          <p>The current is swift and the rocks are slippery – in some spots you can jump from small cliffs into the water. <strong>Canyoning tours</strong> with wetsuits, helmets and a guide offer an unforgettable experience for the adventurous.</p>
+          <p class="esc-tip">→ Tip: Arrive early (before 9am) – it can get crowded in the afternoon, especially on weekends.</p>
+        </div>
+
+        <div class="escape-card">
+          <h3>4. Tanzawa-Ōyama (丹沢大山) – Mountain Air and Waterfall</h3>
+          <div class="esc-meta">
+            <span>🚃 approx. 1.5 hrs from Shinjuku</span>
+            <span>💴 Free (cable car extra)</span>
+            <span>Hiking · Mountain air · Temple</span>
+          </div>
+          <p>The Tanzawa mountain range is the major hiking area southwest of Tokyo – and in summer, a much-needed temperature buffer. At the summit of Ōyama (1,252m) it's often 10–12 degrees cooler than in the city.</p>
+          <ul>
+            <li><strong>Ōyama Fudo-ji Waterfall:</strong> Buddhist monks traditionally meditate under the cold water here (misogi).</li>
+            <li><strong>Summit panorama:</strong> On clear days you can see the entire Kanto Plain, Tokyo Bay and Mt. Fuji.</li>
+            <li><strong>Tofu restaurants:</strong> The village of Ōyama is famous for handmade tofu – small restaurants line the path up to the shrine.</li>
+          </ul>
+        </div>
+
+        <div class="escape-card">
+          <h3>5. Mitake Valley (御岳渓谷) – Kayaking and Rapids</h3>
+          <div class="esc-meta">
+            <span>🚃 approx. 1.5 hrs from Shinjuku</span>
+            <span>💴 Free entry</span>
+            <span>Rafting · Kayaking · River walk</span>
+          </div>
+          <p>The Tama River up here is one of the few places in Japan where white-water kayaking and rafting operate. Guided rafting tours cost approx. ¥4,000–6,000 per person. Those who'd rather stay dry can stroll along the riverbank – watching the rapids is free and almost as entertaining.</p>
+          <p class="esc-tip">→ Stand-up paddleboarding on calmer stretches for those who prefer a gentler pace.</p>
+        </div>
+
+        <div class="escape-card">
+          <h3>6. Lake Sagami (相模湖) – Boating and Camping</h3>
+          <div class="esc-meta">
+            <span>🚃 approx. 1 hr from Shinjuku</span>
+            <span>💴 Free entry</span>
+            <span>Boating · Fishing · Camping · Families</span>
+          </div>
+          <p>One of the most popular recreational spots west of Tokyo. In summer you can rent a pedalo, fish, barbecue on the shore or stay overnight at a campsite. The nearby <strong>Lake Tsukui</strong> is quieter and less visited – ideal for anyone seeking relaxation away from the crowds.</p>
+        </div>
+
+        <div class="escape-card">
+          <h3>7. Nikko (日光) – Waterfalls and Cool Air</h3>
+          <div class="esc-meta">
+            <span>🚃 approx. 2 hrs from Asakusa</span>
+            <span>💴 Entry varies</span>
+            <span>Waterfalls · Temples · Mountain scenery</span>
+          </div>
+          <p>Nikko sits at around 600 metres above sea level – that alone makes a noticeable difference. The <strong>Kegon Waterfall</strong> (97m) is one of Japan's most beautiful; the spray at its base cools you down in any weather. <strong>Lake Chūzenji</strong> on the plateau (approx. 1,270m) is pleasantly cool even on hot days.</p>
+          <p class="esc-tip">→ Tip: Take the bus up the Iroha-zaka mountain road (48 hairpin bends!) to the lake – the drive itself is an experience.</p>
+        </div>
+
+        <div class="escape-card">
+          <h3>8. Enoshima and the Kamakura Coast – To the Sea</h3>
+          <div class="esc-meta">
+            <span>🚃 approx. 1 hr from Shinjuku</span>
+            <span>💴 Beach free</span>
+            <span>Beach · Seafood · Surfing</span>
+          </div>
+          <p><strong>Enoshima</strong> is a small island connected by a bridge, with shrines, seafood restaurants and a lovely viewpoint. The beach <strong>Katase-Higashihama</strong> in front of it gets busy in summer – but that's part of the experience. <strong>Zushi and Hayama</strong> a little further south offer quieter, cleaner stretches of beach.</p>
+          <p class="esc-tip">→ Tip: Come early or on weekdays – the entire coastline gets packed on summer weekends.</p>
+        </div>
+
+        <h2>Practical Tips for All Day Trips</h2>
+
+        <div class="tips-grid">
+          <div class="tip-item">
+            <strong>Water &amp; Snacks</strong>
+            At least 2 litres of water (shops aren't always available in the mountains). Konbini onigiri keep for 4–6 hours.
+          </div>
+          <div class="tip-item">
+            <strong>Clothing</strong>
+            Change of clothes + towel for river swimming. Waterproof sandals or old trainers for the water.
+          </div>
+          <div class="tip-item">
+            <strong>Sun protection</strong>
+            Sunscreen and a hat – even in the forest. Insect repellent for mountain mosquitoes.
+          </div>
+          <div class="tip-item">
+            <strong>Weather</strong>
+            Pack a rain poncho – summer showers arrive fast. After typhoon rain, river water levels can be dangerously high.
+          </div>
+          <div class="tip-item">
+            <strong>Best times</strong>
+            Weekdays &gt; weekends (noticeably quieter). Early start (7–8am) – avoid peak heat around 1–3pm.
+          </div>
+          <div class="tip-item">
+            <strong>Transport</strong>
+            A Suica card covers all destinations. JR Pass may be worth it for Nikko, not for Okutama/Mitake.
+          </div>
+        </div>
+
+        <h2>Quick Overview: Which Day Trip Suits You?</h2>
+
+        <table class="overview-table">
+          <thead>
+            <tr><th>Destination</th><th>Journey</th><th>Highlight</th><th>Best for</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Okutama</td><td>2 hrs</td><td>River swimming, cave</td><td>Everyone</td></tr>
+            <tr><td>Hatonosu</td><td>1:45 hrs</td><td>Quiet gorge, hiking</td><td>Hikers, couples</td></tr>
+            <tr><td>Nakagawa (Kanagawa)</td><td>2 hrs</td><td>Canyoning, natural pool</td><td>Adventurers</td></tr>
+            <tr><td>Tanzawa-Ōyama</td><td>1:30 hrs</td><td>Mountain air, tofu, waterfall</td><td>Hikers, families</td></tr>
+            <tr><td>Mitake Valley</td><td>1:30 hrs</td><td>Rafting, kayaking</td><td>Active travellers</td></tr>
+            <tr><td>Lake Sagami</td><td>1 hr</td><td>Boating, camping</td><td>Families</td></tr>
+            <tr><td>Nikko</td><td>2 hrs</td><td>Cool air, waterfall, temples</td><td>Culture lovers</td></tr>
+            <tr><td>Enoshima/Kamakura</td><td>1 hr</td><td>Beach, seafood</td><td>Beach lovers</td></tr>
+          </tbody>
+        </table>
+
+        <div class="highlight-box">
+          <p>A Tokyo summer doesn't have to be a survival exercise. With the right day trip you trade the concrete heat trap for mountain air, glittering river water and the sound of cicadas. That's the beauty of this city: it gets you there.</p>
+        </div>
+
+      </div>
+
+      <div class="blog-cta-box">
+        <h2 class="i18n-de">Ausflug mit einem lokalen Guide?</h2>
+        <h2 class="i18n-en" hidden>Day trip with a local guide?</h2>
+        <p class="i18n-de">Ich kenn alle diese Spots persönlich – und weiß, wann es ruhig ist, wo man am besten schwimmt und welche Strecke sich wirklich lohnt. Auf einer privaten Tour mit mir sparst du Recherche und erlebst mehr.</p>
+        <p class="i18n-en" hidden>I know all these spots personally – when they're quiet, where the best swimming is, and which route is really worth it. On a private tour with me you save the research and experience more.</p>
+        <a href="../#kontakt" class="btn btn-primary" data-de="Tour anfragen" data-en="Request a Tour">Tour anfragen</a>
+      </div>
+
+    </div>
+  </article>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="nav-logo footer-logo-text">
+          <span class="logo-main">Unentdecktes</span>
+          <span class="logo-sub">Tokio</span>
+        </div>
+        <p class="footer-tagline" data-de="Deutschsprachige Privattouren in Japan" data-en="Private Tours in Japan with a German-speaking Guide">Deutschsprachige Privattouren in Japan</p>
+        <a href="https://www.instagram.com/unentdecktes_tokio" class="footer-social" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+          <span>@unentdecktes_tokio</span>
+        </a>
+      </div>
+      <nav class="footer-links" aria-label="Footer Navigation">
+        <a href="../#touren" data-de="Touren" data-en="Tours">Touren</a>
+        <a href="../#ueber-mich" data-de="Über mich" data-en="About">Über mich</a>
+        <a href="../#warum-ich" data-de="Warum ich?" data-en="Why me?">Warum ich?</a>
+        <a href="../#blog" data-de="Blog" data-en="Blog">Blog</a>
+        <a href="../#kontakt" data-de="Kontakt" data-en="Contact">Kontakt</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p data-de="© 2025 Unentdecktes Tokio. Alle Rechte vorbehalten." data-en="© 2025 Unentdecktes Tokio. All rights reserved.">© 2025 Unentdecktes Tokio. Alle Rechte vorbehalten.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
