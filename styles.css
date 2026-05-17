@@ -1506,6 +1506,158 @@ h1, h2, h3 {
   justify-content: center;
 }
 
+/* ── Compare section ──────────────────────────────────────── */
+.compare { background: var(--beige); }
+[data-theme="dark"] .compare { background: var(--bg); }
+
+.compare-table {
+  display: grid;
+  grid-template-columns: 190px 1fr 1fr;
+  margin-top: 2.5rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--beige-dark);
+}
+
+.compare-head-spacer {
+  background: var(--surface);
+  border-bottom: 1px solid var(--beige-dark);
+}
+
+.compare-head {
+  padding: 0.9rem 1.5rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--beige-dark);
+  border-left: 1px solid var(--beige-dark);
+}
+.compare-head--other {
+  background: rgba(192, 57, 43, 0.07);
+  color: var(--stone);
+}
+.compare-head--me {
+  background: rgba(38, 78, 140, 0.07);
+  color: var(--forest);
+}
+
+.compare-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 1.5rem 0.9rem;
+  text-align: center;
+  background: var(--surface);
+  border-top: 1px solid var(--beige-dark);
+}
+.compare-icon { font-size: 1.55rem; line-height: 1; }
+.compare-label strong {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--heading);
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+}
+
+.compare-cell {
+  display: flex;
+  gap: 0.8rem;
+  padding: 1.4rem 1.4rem;
+  align-items: flex-start;
+  border-top: 1px solid var(--beige-dark);
+  border-left: 1px solid var(--beige-dark);
+}
+.compare-cell > div { flex: 1; }
+.compare-cell--other { background: rgba(192, 57, 43, 0.03); }
+.compare-cell--me    { background: rgba(38, 78, 140, 0.035); }
+
+.compare-mark {
+  flex-shrink: 0;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.68rem;
+  font-weight: 800;
+  margin-top: 0.15rem;
+}
+.compare-mark--no  { background: rgba(192, 57, 43, 0.12); color: #c0392b; }
+.compare-mark--yes { background: rgba(38, 78, 140, 0.12);  color: var(--forest); }
+
+.compare-cell p {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--text);
+  margin: 0;
+}
+.compare-cell--other p { color: var(--text-muted); }
+
+/* Mobile column labels — hidden on desktop */
+.compare-cell-head { display: none; }
+
+/* ── Compare responsive ───────────────────────────────────── */
+@media (max-width: 860px) {
+  .compare-table {
+    grid-template-columns: 1fr;
+    border-radius: var(--radius-sm);
+  }
+  .compare-head-spacer { display: none; }
+  .compare-head {
+    border-left: none;
+    border-bottom: none;
+    border-top: 1px solid var(--beige-dark);
+    padding: 0.7rem 1.1rem;
+    text-align: left;
+  }
+  .compare-head--other { border-top: 1px solid var(--beige-dark); }
+
+  .compare-label {
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 0.9rem 1.1rem;
+    gap: 0.55rem;
+    background: var(--beige);
+    border-top: 2px solid var(--beige-dark);
+  }
+  [data-theme="dark"] .compare-label { background: rgba(255,255,255,0.04); }
+  .compare-icon { font-size: 1.2rem; }
+  .compare-label strong { font-size: 0.88rem; }
+
+  .compare-cell {
+    border-left: none;
+    padding: 1rem 1.1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .compare-cell > div { display: flex; flex-direction: column; gap: 0.35rem; }
+
+  /* Show mobile column labels */
+  .compare-cell-head {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .compare-cell-head--other { color: #c0392b; }
+  .compare-cell-head--me    { color: var(--forest); }
+
+  /* Mark floats left beside label */
+  .compare-cell {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
 /* ── prefers-reduced-motion — accessibility ───────────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
