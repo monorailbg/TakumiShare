@@ -1325,13 +1325,13 @@ h1, h2, h3 {
   background-image: url('https://images.pexels.com/photos/2506923/pexels-photo-2506923.jpeg?auto=compress&cs=tinysrgb&w=900');
 }
 .blog-card-img--8 {
-  background-image: url('https://images.pexels.com/photos/315191/pexels-photo-315191.jpeg?auto=compress&cs=tinysrgb&w=900');
+  background-image: url('images/jahreszeiten1.png');
 }
 .blog-card-img--9 {
-  background-image: url('https://images.pexels.com/photos/1128318/pexels-photo-1128318.jpeg?auto=compress&cs=tinysrgb&w=900');
+  background-image: url('images/kinder.jpg');
 }
 .blog-card-img--10 {
-  background-image: url('https://images.pexels.com/photos/572688/pexels-photo-572688.jpeg?auto=compress&cs=tinysrgb&w=900');
+  background-image: url('images/summer-getaway1.JPEG');
 }
 
 .blog-card-body {
