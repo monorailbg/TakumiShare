@@ -1318,16 +1318,16 @@ h1, h2, h3 {
 }
 .blog-card:hover .blog-card-img { transform: scale(1.04); }
 .blog-card-img--1 {
-  background-image: url('https://images.pexels.com/photos/3532924/pexels-photo-3532924.jpeg?auto=compress&cs=tinysrgb&w=900');
+  background-image: url('images/sakura_roppongi.webp');
 }
 .blog-card-img--2 {
   background-image: url('images/weg-von-den-massen.webp');
 }
 .blog-card-img--3 {
-  background-image: url('https://images.pexels.com/photos/1108701/pexels-photo-1108701.jpeg?auto=compress&cs=tinysrgb&w=700');
+  background-image: url('images/onoyama.webp');
 }
 .blog-card-img--4 {
-  background-image: url('https://images.pexels.com/photos/30936434/pexels-photo-30936434.jpeg?auto=compress&cs=tinysrgb&w=700');
+  background-image: url('images/tokyo.webp');
 }
 .blog-card-img--5 {
   background-image: url('images/tokio-von-oben.webp');
