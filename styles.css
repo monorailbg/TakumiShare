@@ -681,7 +681,7 @@ h1, h2, h3 {
   overflow: hidden;
   background:
     linear-gradient(to bottom, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.38) 100%),
-    url('images/about.svg') center / cover no-repeat;
+    url('images/about.webp') center / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1325,13 +1325,13 @@ h1, h2, h3 {
   background-image: url('https://images.pexels.com/photos/2506923/pexels-photo-2506923.jpeg?auto=compress&cs=tinysrgb&w=900');
 }
 .blog-card-img--8 {
-  background-image: url('images/jahreszeiten1.png');
+  background-image: url('images/jahreszeiten1.webp');
 }
 .blog-card-img--9 {
-  background-image: url('images/kinder.jpg');
+  background-image: url('images/kinder.webp');
 }
 .blog-card-img--10 {
-  background-image: url('images/summer-getaway1.JPEG');
+  background-image: url('images/summer-getaway1.webp');
 }
 
 .blog-card-body {
