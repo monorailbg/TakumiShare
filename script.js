@@ -133,10 +133,23 @@
         }
       });
     },
-    { threshold: 0.12 }
+    { threshold: 0.06, rootMargin: '0px 0px -40px 0px' }
   );
 
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // ── Pause Three.js hero render when scrolled past hero ───────
+  const heroSection = document.querySelector('.hero');
+  if (heroSection) {
+    const heroObserver = new IntersectionObserver(
+      ([entry]) => {
+        window.__heroVisible = entry.isIntersecting;
+      },
+      { threshold: 0 }
+    );
+    heroObserver.observe(heroSection);
+  }
+  window.__heroVisible = true;
 
   // ── Contact form ─────────────────────────────────────────────
   // Submission is handled by Formspree via data-fs-* attributes.

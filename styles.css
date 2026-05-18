@@ -561,19 +561,19 @@ h1, h2, h3 {
 .tour-img--tokyo {
   background:
     linear-gradient(to bottom, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.56) 100%),
-    url('images/tokio-tempel.webp') center / cover no-repeat;
+    url('image/tokio-tempel.webp') center / cover no-repeat;
 }
 
 .tour-img--kamakura {
   background:
     linear-gradient(to bottom, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.38) 100%),
-    url('images/kamakura-buddha.webp') center / cover no-repeat;
+    url('image/kamakura-buddha.webp') center / cover no-repeat;
 }
 
 .tour-img--mountains {
   background:
     linear-gradient(to bottom, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.46) 100%),
-    url('images/shojiko.webp') center / cover no-repeat;
+    url('image/shojiko.webp') center / cover no-repeat;
 }
 
 /* Decorative horizontal line accent */
@@ -681,7 +681,7 @@ h1, h2, h3 {
   overflow: hidden;
   background:
     linear-gradient(to bottom, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.38) 100%),
-    url('images/about.webp') center / cover no-repeat;
+    url('image/about.webp') center / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1158,8 +1158,10 @@ h1, h2, h3 {
    ============================================================ */
 .fade-in {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.65s ease, transform 0.65s ease;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
 }
 .fade-in.visible {
   opacity: 1;
@@ -1176,6 +1178,12 @@ h1, h2, h3 {
 .testimonials-grid .testimonial-card:nth-child(3) { transition-delay: 0.24s; }
 .testimonials-grid .testimonial-card:nth-child(4) { transition-delay: 0.1s; }
 .testimonials-grid .testimonial-card:nth-child(5) { transition-delay: 0.2s; }
+
+/* Compare rows stagger */
+.compare-row:nth-child(2)  { transition-delay: 0.08s; }
+.compare-row:nth-child(3)  { transition-delay: 0.16s; }
+.compare-row:nth-child(4)  { transition-delay: 0.24s; }
+.compare-row:nth-child(5)  { transition-delay: 0.32s; }
 
 /* ============================================================
    Responsive — tablet
@@ -1307,7 +1315,7 @@ h1, h2, h3 {
   background-image: url('https://images.pexels.com/photos/3532924/pexels-photo-3532924.jpeg?auto=compress&cs=tinysrgb&w=900');
 }
 .blog-card-img--2 {
-  background-image: url('images/weg-von-den-massen.webp');
+  background-image: url('image/weg-von-den-massen.webp');
 }
 .blog-card-img--3 {
   background-image: url('https://images.pexels.com/photos/1108701/pexels-photo-1108701.jpeg?auto=compress&cs=tinysrgb&w=700');
@@ -1316,22 +1324,22 @@ h1, h2, h3 {
   background-image: url('https://images.pexels.com/photos/30936434/pexels-photo-30936434.jpeg?auto=compress&cs=tinysrgb&w=700');
 }
 .blog-card-img--5 {
-  background-image: url('images/tokio-von-oben.webp');
+  background-image: url('image/tokio-von-oben.webp');
 }
 .blog-card-img--6 {
-  background-image: url('images/ramen.webp');
+  background-image: url('image/ramen.webp');
 }
 .blog-card-img--7 {
-  background-image: url('images/30euro.webp');
+  background-image: url('image/30euro.webp');
 }
 .blog-card-img--8 {
-  background-image: url('images/jahreszeiten1.webp');
+  background-image: url('image/jahreszeiten1.webp');
 }
 .blog-card-img--9 {
-  background-image: url('images/kinder.webp');
+  background-image: url('image/kinder.webp');
 }
 .blog-card-img--10 {
-  background-image: url('images/hatanosu.webp');
+  background-image: url('image/hatanosu.webp');
 }
 
 .blog-card-body {

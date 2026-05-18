@@ -514,6 +514,7 @@ let t = 0, warnPhase = 0;
 
 function tick() {
   requestAnimationFrame(tick);
+  if (window.__heroVisible === false) return;
   t          += 0.012;
   warnPhase  += 0.018;
 
