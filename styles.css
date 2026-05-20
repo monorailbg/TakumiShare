@@ -1229,6 +1229,10 @@ h1, h2, h3 {
   .nav-links.open { display: flex; }
   .hamburger { display: flex; }
 
+  /* Hide logo text on mobile so nav-right buttons aren't squeezed off screen */
+  .logo-text { display: none; }
+  .logo-icon { width: 40px; height: 40px; }
+
   /* Hero */
   .hero-title { font-size: clamp(2.6rem, 12vw, 3.8rem); }
   .hero-sub   { font-size: 1rem; }
