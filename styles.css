@@ -1212,12 +1212,27 @@ h1, h2, h3 {
   /* Compact nav-right */
   .nav-right { gap: 4px; }
 
-  /* Theme toggle — pill icon only */
-  .theme-toggle {
-    padding: 4px 7px;
-    border-radius: 50px;
+  /* Force dark mode on mobile */
+  :root {
+    --bg:           #1C1815;
+    --surface:      #27231E;
+    --heading:      #F5E6D3;
+    --beige:        #252018;
+    --beige-dark:   #4A4540;
+    --text:         #C4AD94;
+    --text-muted:   #8A7A68;
+    --nav-scrolled: rgba(28, 24, 20, 0.97);
   }
-  .theme-toggle svg { width: 16px; height: 16px; }
+  .section-eyebrow { color: var(--forest-light); }
+  .btn-secondary { color: #5B82C7; border-color: #5B82C7; }
+  .contact-method-icon--wa { background: #0E4429; }
+  .theme-icon--sun  { display: block; }
+  .theme-icon--moon { display: none; }
+  .hl { background: linear-gradient(180deg, transparent 55%, rgba(58, 107, 190, 0.28) 55%); }
+  .compare { background: var(--bg); }
+
+  /* Hide theme toggle on mobile */
+  .theme-toggle { display: none; }
 
   /* Lang toggle — emoji only, very compact */
   .lang-toggle {
