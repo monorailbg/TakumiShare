@@ -390,7 +390,7 @@ h1, h2, h3 {
   align-items: center;
   justify-content: flex-start;
   overflow: hidden;
-  background: url('images/sakura_roppongi.webp') center / cover no-repeat;
+  background: #0d0c1a;
 }
 
 /* Text panel left-aligned so the 3D city shows on the right */
