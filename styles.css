@@ -1234,7 +1234,7 @@ h1, h2, h3 {
   /* Hide theme toggle on mobile */
   .theme-toggle { display: none; }
 
-  /* Lang toggle — emoji only, very compact */
+  /* Lang toggle — emoji only on mobile */
   .lang-toggle {
     padding: 2px;
     gap: 0;
@@ -1246,6 +1246,7 @@ h1, h2, h3 {
     letter-spacing: 0;
     line-height: 1;
   }
+  .lang-label { display: none; }
 
   /* Dropdown menu */
   .nav-links {
