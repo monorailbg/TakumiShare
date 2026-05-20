@@ -384,12 +384,13 @@ h1, h2, h3 {
    ============================================================ */
 .hero {
   position: relative;
+  z-index: 1;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   overflow: hidden;
-  background: url('images/hero-bg.webp') center / cover no-repeat;
+  background: url('images/sakura_roppongi.webp') center / cover no-repeat;
 }
 
 /* Text panel left-aligned so the 3D city shows on the right */
@@ -1205,53 +1206,75 @@ h1, h2, h3 {
 @media (max-width: 768px) {
   .section { padding: 68px 0; }
 
-  /* Nav bar — tighter height */
-  .nav { height: 60px; }
+  /* Nav bar */
+  .nav { height: 56px; }
 
   /* Compact nav-right */
-  .nav-right { gap: 6px; }
+  .nav-right { gap: 4px; }
 
-  /* Theme toggle — smaller */
-  .theme-toggle { padding: 5px 8px; }
+  /* Theme toggle — pill icon only */
+  .theme-toggle {
+    padding: 4px 7px;
+    border-radius: 50px;
+  }
+  .theme-toggle svg { width: 16px; height: 16px; }
 
-  /* Lang toggle — emoji only, compact */
-  .lang-toggle { padding: 2px; gap: 1px; }
-  .lang-btn { padding: 4px 8px; font-size: 1.15rem; letter-spacing: 0; }
+  /* Lang toggle — emoji only, very compact */
+  .lang-toggle {
+    padding: 2px;
+    gap: 0;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  .lang-btn {
+    padding: 3px 6px;
+    font-size: 1rem;
+    letter-spacing: 0;
+    line-height: 1;
+  }
 
   /* Dropdown menu */
   .nav-links {
     display: none;
     position: fixed;
-    top: 60px;
+    top: 56px;
     left: 0;
     right: 0;
     z-index: 199;
     flex-direction: column;
     background: var(--surface);
-    padding: 12px 20px 24px;
-    gap: 4px;
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
+    padding: 8px 16px 20px;
+    gap: 2px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
     border-top: 1px solid var(--beige-dark);
+    border-radius: 0 0 16px 16px;
   }
   .nav-links.open { display: flex; }
   .nav-link {
     color: var(--text);
-    padding: 11px 16px;
+    padding: 13px 16px;
     border-radius: var(--radius-sm);
-    font-size: 0.88rem;
+    font-size: 0.9rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
   }
   .nav-link:hover { background: var(--beige); color: var(--forest); }
   .btn-nav {
-    margin-top: 8px;
+    margin-top: 10px;
     text-align: center;
-    padding: 12px 20px !important;
+    padding: 13px 20px !important;
+    border-radius: 50px !important;
+    min-height: 44px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
   }
 
   .hamburger { display: flex; }
 
-  /* Hide logo text on mobile so nav-right buttons aren't squeezed off screen */
-  .logo-text { display: none; }
-  .logo-icon { width: 38px; height: 38px; }
+  /* Hide logo text on mobile */
+  .logo-text { display: none !important; }
+  .logo-icon { width: 36px; height: 36px; }
 
   /* Hero */
   .hero-title { font-size: clamp(2.6rem, 12vw, 3.8rem); }
@@ -1369,7 +1392,8 @@ h1, h2, h3 {
   background-image: url('images/kinder.webp');
 }
 .blog-card-img--10 {
-  background-image: url('images/hatanosu.webp');
+  background-image: url('images/onoyama.webp');
+  background-position: center 65%;
 }
 
 .blog-card-body {
@@ -1476,7 +1500,15 @@ h1, h2, h3 {
   padding: 80px 52px 56px;
 }
 @media (max-width: 768px) {
-  .hero-content { padding: 80px 24px 40px; border-radius: 20px; }
+  .hero-content {
+    padding: 80px 24px 40px;
+    border-radius: 20px;
+    /* Remove backdrop-filter on mobile to avoid stacking context
+       issues where the glass panel overlaps the fixed nav */
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: rgba(8, 8, 22, 0.38);
+  }
   .hero .container { margin-left: auto; max-width: 100%; }
 }
 
