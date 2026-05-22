@@ -1288,9 +1288,11 @@ h1, h2, h3 {
 
   .hamburger { display: flex; }
 
-  /* Hide logo text on mobile */
-  .logo-text { display: none !important; }
-  .logo-icon { width: 36px; height: 36px; }
+  /* Compact logo text on mobile */
+  .logo-text { display: flex !important; }
+  .logo-main { font-size: 1.1rem; }
+  .logo-sub  { font-size: 0.85rem; }
+  .logo-icon { width: 32px; height: 32px; }
 
   /* Hero */
   .hero-title { font-size: clamp(2.6rem, 12vw, 3.8rem); }
