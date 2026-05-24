@@ -48,7 +48,7 @@
         "description": "Private deutschsprachige Stadtführung durch die versteckten Viertel Tokios – Yanaka, Shimokitazawa, Koenji und mehr.",
         "provider": {"@id": "https://www.unentdecktes-tokio.com/#business"},
         "touristType": "Deutschsprachige Reisende",
-        "offers": {"@type": "Offer", "price": "120", "priceCurrency": "EUR", "availability": "https://schema.org/InStock"}
+        "offers": {"@type": "Offer", "price": "135", "priceCurrency": "EUR", "priceSpecification": {"@type": "UnitPriceSpecification", "price": "45", "priceCurrency": "EUR", "unitCode": "HUR", "description": "pro Person / Stunde, Mindestbuchung 3 Stunden"}, "availability": "https://schema.org/InStock"}
       },
       {
         "@type": "TouristTrip",
@@ -56,11 +56,34 @@
         "description": "Tagesausflug nach Kamakura mit dem Großen Buddha, versteckten Bambushainen und dem Blick auf den Fuji vom Strand Shichirigahama.",
         "provider": {"@id": "https://www.unentdecktes-tokio.com/#business"},
         "touristType": "Deutschsprachige Reisende",
-        "offers": {"@type": "Offer", "price": "140", "priceCurrency": "EUR", "availability": "https://schema.org/InStock"}
+        "offers": {"@type": "Offer", "price": "135", "priceCurrency": "EUR", "availability": "https://schema.org/InStock"}
+      },
+      {
+        "@type": "TouristTrip",
+        "name": "Raus aus Tokio: Die Berge Kanagawas",
+        "description": "Tagesausflug in die Berge rund um Tokio – Oyama, Tanzawa und umliegende Regionen mit Wanderungen für jeden Fitnesslevel.",
+        "provider": {"@id": "https://www.unentdecktes-tokio.com/#business"},
+        "touristType": "Deutschsprachige Reisende",
+        "offers": {"@type": "Offer", "price": "135", "priceCurrency": "EUR", "availability": "https://schema.org/InStock"}
       },
       {
         "@type": "FAQPage",
         "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Sind die Preise pro Person oder pro Gruppe?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Die Preise sind immer pro Gruppe, nicht pro Person. Der Preis pro Person sinkt, je mehr Personen teilnehmen."}
+          },
+          {
+            "@type": "Question",
+            "name": "Was ist die Mindestbuchungsdauer?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Die Mindestbuchungsdauer beträgt 3 Stunden. Für 1 Person bedeutet das ab €135 pro Gruppe."}
+          },
+          {
+            "@type": "Question",
+            "name": "Was ist in den Touren enthalten?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Inklusive: Persönliche Planung im Voraus, deutschsprachige Führung, Insider-Tipps & Empfehlungen, flexible Tour-Gestaltung. Nicht inklusive: Transport (Suica/Pasmo), Eintrittsgelder, Essen & Getränke."}
+          },
           {
             "@type": "Question",
             "name": "Wie viele Personen können an einer Tour teilnehmen?",
@@ -98,6 +121,7 @@
         <li><a href="#touren" class="nav-link" data-de="Touren" data-en="Tours">Touren</a></li>
         <li><a href="#ueber-mich" class="nav-link" data-de="Über mich" data-en="About">Über mich</a></li>
         <li><a href="#warum-ich" class="nav-link" data-de="Warum ich?" data-en="Why me?">Warum ich?</a></li>
+        <li><a href="#preise" class="nav-link" data-de="Preise" data-en="Pricing">Preise</a></li>
         <li><a href="#blog" class="nav-link" data-de="Blog" data-en="Blog">Blog</a></li>
         <li><a href="#kontakt" class="nav-link btn-nav" data-de="Jetzt anfragen" data-en="Book a Tour">Jetzt anfragen</a></li>
       </ul>
@@ -222,7 +246,7 @@
               <li data-de="Lokale Essenstipps &amp; Streetfood" data-en="Local food tips &amp; street food">Lokale Essenstipps &amp; Streetfood</li>
               <li data-de="Kleine Gruppen (max. 6 Personen)" data-en="Small groups (max. 6 people)">Kleine Gruppen (max. 6 Personen)</li>
             </ul>
-            <span class="tour-price" data-de="ab €120 / Gruppe" data-en="from €120 / group">ab €120 / Gruppe</span>
+            <p class="tour-price" data-de="ab €135 für 3h (1 Person) — pro Gruppe" data-en="from €135 for 3h (1 person) — per group">ab <strong>€135</strong> für 3h (1 Person) — pro Gruppe</p>
             <a href="#kontakt" class="btn btn-secondary" data-de="Anfragen" data-en="Request">Anfragen</a>
           </div>
         </div>
@@ -242,7 +266,7 @@
               <li data-de="Geheime Wanderpfade &amp; Tempel" data-en="Secret hiking trails &amp; temples">Geheime Wanderpfade &amp; Tempel</li>
               <li data-de="Shichirigahama – Blick auf den Fuji" data-en="Shichirigahama – view of Mt. Fuji">Shichirigahama – Blick auf den Fuji</li>
             </ul>
-            <span class="tour-price" data-de="ab €140 / Gruppe" data-en="from €140 / group">ab €140 / Gruppe</span>
+            <p class="tour-price" data-de="ab €135 für 3h (1 Person) — pro Gruppe" data-en="from €135 for 3h (1 person) — per group">ab <strong>€135</strong> für 3h (1 Person) — pro Gruppe</p>
             <a href="#kontakt" class="btn btn-primary" data-de="Anfragen" data-en="Request">Anfragen</a>
           </div>
         </div>
@@ -261,7 +285,7 @@
               <li data-de="Wanderungen für alle Fitnesslevel" data-en="Hikes for all fitness levels">Wanderungen für alle Fitnesslevel</li>
               <li data-de="Atemberaubende Aussichtspunkte" data-en="Breathtaking viewpoints">Atemberaubende Aussichtspunkte</li>
             </ul>
-            <span class="tour-price" data-de="ab €130 / Gruppe" data-en="from €130 / group">ab €130 / Gruppe</span>
+            <p class="tour-price" data-de="ab €135 für 3h (1 Person) — pro Gruppe" data-en="from €135 for 3h (1 person) — per group">ab <strong>€135</strong> für 3h (1 Person) — pro Gruppe</p>
             <a href="#kontakt" class="btn btn-secondary" data-de="Anfragen" data-en="Request">Anfragen</a>
           </div>
         </div>
@@ -269,6 +293,98 @@
       </div>
 
       <p class="tours-note" data-de="Alle Touren sind flexibel – sag mir einfach, was dich interessiert, und wir bauen was Passendes zusammen." data-en="All tours are flexible – just tell me what interests you and we'll put something great together.">Alle Touren sind flexibel – sag mir einfach, was dich interessiert, und wir bauen was Passendes zusammen.</p>
+    </div>
+  </section>
+
+  <!-- ===== PRICING ===== -->
+  <section class="pricing section" id="preise">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow" data-de="Transparent &amp; fair" data-en="Transparent &amp; fair">Transparent &amp; fair</p>
+        <h2 class="section-title" data-de="Preise" data-en="Pricing">Preise</h2>
+        <p class="section-sub" data-de="Alle Preise pro Gruppe, nicht pro Person. Mindestbuchung: 3 Stunden." data-en="All prices per group, not per person. Minimum booking: 3 hours.">Alle Preise pro Gruppe, nicht pro Person. Mindestbuchung: 3 Stunden.</p>
+      </div>
+
+      <div class="pricing-grid">
+
+        <div class="pricing-card fade-in">
+          <div class="pricing-persons" aria-label="1 Person">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div class="pricing-label" data-de="1 Person" data-en="1 person">1 Person</div>
+          <div class="pricing-rate"><strong>€45</strong> <span data-de="pro Person / Stunde" data-en="per person / hour">pro Person / Stunde</span></div>
+          <div class="pricing-total i18n-de">Gruppe: €45 / Stunde</div>
+          <div class="pricing-total i18n-en" hidden>Group: €45 / hour</div>
+          <div class="pricing-example i18n-de">Beispiel: 4h = <strong>€180</strong> gesamt</div>
+          <div class="pricing-example i18n-en" hidden>Example: 4h = <strong>€180</strong> total</div>
+        </div>
+
+        <div class="pricing-card pricing-card--featured fade-in">
+          <span class="pricing-badge" data-de="Beliebt" data-en="Popular">Beliebt</span>
+          <div class="pricing-persons" aria-label="2 Personen">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="pricing-label" data-de="2 Personen" data-en="2 persons">2 Personen</div>
+          <div class="pricing-rate"><strong>€28</strong> <span data-de="pro Person / Stunde" data-en="per person / hour">pro Person / Stunde</span></div>
+          <div class="pricing-total i18n-de">Gruppe: €56 / Stunde</div>
+          <div class="pricing-total i18n-en" hidden>Group: €56 / hour</div>
+          <div class="pricing-example i18n-de">Beispiel: 4h = <strong>€224</strong> gesamt</div>
+          <div class="pricing-example i18n-en" hidden>Example: 4h = <strong>€224</strong> total</div>
+        </div>
+
+        <div class="pricing-card fade-in">
+          <div class="pricing-persons" aria-label="3 Personen">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="pricing-label" data-de="3 Personen" data-en="3 persons">3 Personen</div>
+          <div class="pricing-rate"><strong>€22</strong> <span data-de="pro Person / Stunde" data-en="per person / hour">pro Person / Stunde</span></div>
+          <div class="pricing-total i18n-de">Gruppe: €66 / Stunde</div>
+          <div class="pricing-total i18n-en" hidden>Group: €66 / hour</div>
+          <div class="pricing-example i18n-de">Beispiel: 4h = <strong>€264</strong> gesamt</div>
+          <div class="pricing-example i18n-en" hidden>Example: 4h = <strong>€264</strong> total</div>
+        </div>
+
+        <div class="pricing-card fade-in">
+          <div class="pricing-persons" aria-label="4 Personen">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="pricing-label" data-de="4 Personen" data-en="4 persons">4 Personen</div>
+          <div class="pricing-rate"><strong>€19</strong> <span data-de="pro Person / Stunde" data-en="per person / hour">pro Person / Stunde</span></div>
+          <div class="pricing-total i18n-de">Gruppe: €76 / Stunde</div>
+          <div class="pricing-total i18n-en" hidden>Group: €76 / hour</div>
+          <div class="pricing-example i18n-de">Beispiel: 4h = <strong>€304</strong> gesamt</div>
+          <div class="pricing-example i18n-en" hidden>Example: 4h = <strong>€304</strong> total</div>
+        </div>
+
+      </div>
+
+      <p class="pricing-note i18n-de">5–6 Personen: €16 pro Person / Stunde (€80–96 / Stunde). Für größere Gruppen einfach anfragen.</p>
+      <p class="pricing-note i18n-en" hidden>5–6 persons: €16 per person / hour (€80–96 / hour). For larger groups just ask.</p>
+
+      <div class="pricing-includes fade-in">
+        <div class="pricing-includes-col pricing-includes-col--yes">
+          <h3 class="pricing-includes-title" data-de="Inklusive" data-en="Included">Inklusive</h3>
+          <ul>
+            <li data-de="Persönliche Planung im Voraus" data-en="Personal planning in advance">Persönliche Planung im Voraus</li>
+            <li data-de="Deutschsprachige Führung" data-en="German-language guidance">Deutschsprachige Führung</li>
+            <li data-de="Insider-Tipps &amp; Empfehlungen" data-en="Insider tips &amp; recommendations">Insider-Tipps &amp; Empfehlungen</li>
+            <li data-de="Flexible Tour-Gestaltung" data-en="Flexible tour design">Flexible Tour-Gestaltung</li>
+          </ul>
+        </div>
+        <div class="pricing-includes-col pricing-includes-col--no">
+          <h3 class="pricing-includes-title" data-de="Nicht inklusive" data-en="Not included">Nicht inklusive</h3>
+          <ul>
+            <li data-de="Transport (Suica / Pasmo)" data-en="Transport (Suica / Pasmo)">Transport (Suica / Pasmo)</li>
+            <li data-de="Eintrittsgelder" data-en="Entry fees">Eintrittsgelder</li>
+            <li data-de="Essen &amp; Getränke" data-en="Food &amp; drinks">Essen &amp; Getränke</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pricing-cta">
+        <a href="#kontakt" class="btn btn-primary" data-de="Jetzt anfragen" data-en="Book a Tour">Jetzt anfragen</a>
+      </div>
+
     </div>
   </section>
 
