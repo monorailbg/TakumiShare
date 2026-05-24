@@ -573,7 +573,7 @@ h1, h2, h3 {
   inset: 0;
   background:
     radial-gradient(ellipse at 20% 50%, rgba(38, 78, 140, 0.2) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 50%, rgba(192, 57, 43, 0.1) 0%, transparent 60%);
+    radial-gradient(ellipse at 80% 50%, rgba(38, 78, 140, 0.08) 0%, transparent 60%);
   pointer-events: none;
 }
 .stats-grid { position: relative; }
@@ -671,7 +671,7 @@ h1, h2, h3 {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(to right, var(--stone), transparent);
+  background: linear-gradient(to right, var(--beige-dark), transparent);
 }
 
 .tour-tag {
@@ -697,7 +697,7 @@ h1, h2, h3 {
   top: 16px;
   right: 16px;
   z-index: 1;
-  background: var(--stone);
+  background: var(--forest);
   color: var(--cream);
   font-size: 0.7rem;
   font-weight: 700;
@@ -729,7 +729,7 @@ h1, h2, h3 {
   line-height: 1.5;
 }
 .tour-price strong {
-  color: var(--forest);
+  color: var(--heading);
   font-size: 1rem;
 }
 
@@ -777,13 +777,21 @@ h1, h2, h3 {
   height: 500px;
   border-radius: var(--radius);
   overflow: hidden;
-  background:
-    linear-gradient(to bottom, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.38) 100%),
-    url('images/profile1x1.webp') center / cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
+}
+.about-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+.about-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.30) 100%);
+  pointer-events: none;
 }
 
 .about-img-deco {
@@ -893,24 +901,24 @@ h1, h2, h3 {
   width: 76px;
   height: 76px;
   border-radius: 50%;
-  background: var(--stone-light);
-  border: 1.5px solid rgba(192, 57, 43, 0.25);
+  background: rgba(38, 78, 140, 0.10);
+  border: 1.5px solid rgba(38, 78, 140, 0.22);
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 24px;
-  box-shadow: 0 6px 20px rgba(192, 57, 43, 0.15);
+  box-shadow: 0 6px 20px rgba(38, 78, 140, 0.12);
   transition: transform var(--ease), box-shadow var(--ease);
-  color: var(--stone);
+  color: var(--forest);
 }
 .why-card:hover .why-icon {
   transform: scale(1.08);
-  box-shadow: 0 8px 28px rgba(192, 57, 43, 0.25);
+  box-shadow: 0 8px 28px rgba(38, 78, 140, 0.22);
 }
 .why-icon svg {
   width: 34px;
   height: 34px;
-  stroke: var(--stone);
+  stroke: var(--forest);
   fill: none;
   stroke-width: 1.7;
   stroke-linecap: round;
@@ -972,7 +980,7 @@ h1, h2, h3 {
 }
 
 .testimonial-stars {
-  color: var(--stone);
+  color: #E8A000;
   font-size: 0.95rem;
   letter-spacing: 3px;
   margin-bottom: 18px;
@@ -1092,6 +1100,33 @@ h1, h2, h3 {
 }
 
 /* Form */
+.contact-promise {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.contact-promise-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.92rem;
+  color: var(--text);
+}
+.contact-promise-check {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(38, 78, 140, 0.12);
+  color: var(--forest);
+  font-weight: 700;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
 .contact-form {
   background: var(--surface);
   border-radius: var(--radius);
@@ -1225,7 +1260,7 @@ h1, h2, h3 {
   color: rgba(255, 255, 255, 0.5);
   transition: color var(--ease);
 }
-.footer-social:hover { color: var(--stone); }
+.footer-social:hover { color: var(--forest-light); }
 .footer-social svg { flex-shrink: 0; }
 
 .footer-links {
@@ -1244,12 +1279,28 @@ h1, h2, h3 {
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.09);
   padding: 24px 0;
-  text-align: center;
+}
+.footer-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 .footer-bottom p {
   font-size: 0.78rem;
   color: rgba(255, 255, 255, 0.35);
 }
+.footer-legal {
+  display: flex;
+  gap: 20px;
+}
+.footer-legal a {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.35);
+  transition: color var(--ease);
+}
+.footer-legal a:hover { color: rgba(255, 255, 255, 0.75); }
 
 /* ============================================================
    Fade-in animation (JS-driven)
@@ -1588,7 +1639,7 @@ h1, h2, h3 {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--cream);
-  background: var(--stone);
+  background: var(--forest);
   padding: 4px 12px;
   border-radius: 50px;
   align-self: flex-start;
@@ -1709,7 +1760,7 @@ h1, h2, h3 {
 
 /* ── Avatar gradient colors per initial ───────────────────── */
 .testimonial-avatar:nth-child(1) { background: #264E8C; }
-.testimonial-card:nth-child(2) .testimonial-avatar { background: #C0392B; }
+.testimonial-card:nth-child(2) .testimonial-avatar { background: #2E6B9E; }
 .testimonial-card:nth-child(3) .testimonial-avatar { background: #1D6348; }
 .testimonial-card:nth-child(4) .testimonial-avatar { background: #5D3A8A; }
 .testimonial-card:nth-child(5) .testimonial-avatar { background: #B8520A; }
@@ -1781,8 +1832,8 @@ h1, h2, h3 {
   border-left: 1px solid var(--beige-dark);
 }
 .compare-head--other {
-  background: rgba(192, 57, 43, 0.07);
-  color: var(--stone);
+  background: rgba(0, 0, 0, 0.04);
+  color: var(--text-muted);
 }
 .compare-head--me {
   background: rgba(38, 78, 140, 0.07);
@@ -1805,7 +1856,7 @@ h1, h2, h3 {
   height: 38px;
   flex-shrink: 0;
   border-radius: 10px;
-  background: var(--stone-light);
+  background: rgba(38, 78, 140, 0.10);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1813,7 +1864,7 @@ h1, h2, h3 {
 .compare-icon svg {
   width: 19px;
   height: 19px;
-  stroke: var(--stone);
+  stroke: var(--forest);
   fill: none;
   stroke-width: 1.8;
   stroke-linecap: round;
@@ -1837,7 +1888,7 @@ h1, h2, h3 {
   border-left: 1px solid var(--beige-dark);
 }
 .compare-cell > div { flex: 1; }
-.compare-cell--other { background: rgba(192, 57, 43, 0.03); }
+.compare-cell--other { background: rgba(0, 0, 0, 0.02); }
 .compare-cell--me    { background: rgba(38, 78, 140, 0.035); }
 
 .compare-mark {
@@ -1852,7 +1903,7 @@ h1, h2, h3 {
   font-weight: 800;
   margin-top: 0.15rem;
 }
-.compare-mark--no  { background: rgba(192, 57, 43, 0.12); color: #c0392b; }
+.compare-mark--no  { background: rgba(0, 0, 0, 0.07); color: var(--text-muted); }
 .compare-mark--yes { background: rgba(38, 78, 140, 0.12);  color: var(--forest); }
 
 .compare-cell p {
@@ -1912,7 +1963,7 @@ h1, h2, h3 {
     letter-spacing: 0.05em;
     text-transform: uppercase;
   }
-  .compare-cell-head--other { color: #c0392b; }
+  .compare-cell-head--other { color: var(--text-muted); }
   .compare-cell-head--me    { color: var(--forest); }
 
   /* Mark floats left beside label */
@@ -1969,20 +2020,20 @@ h1, h2, h3 {
 .pricing-card:hover::after { transform: translateX(-50%) scaleX(1); }
 
 .pricing-card--featured {
-  border-top-color: var(--stone);
+  border-top-color: var(--forest);
   box-shadow: var(--shadow-md);
 }
 .pricing-card--featured::after {
-  background: linear-gradient(to right, transparent, var(--stone), transparent);
+  background: linear-gradient(to right, transparent, var(--forest), transparent);
 }
-.pricing-card--featured:hover { border-top-color: var(--stone); }
+.pricing-card--featured:hover { border-top-color: var(--forest); }
 
 /* ── Badge ────────────────────────────────────────────────── */
 .pricing-badge {
   position: absolute;
   top: -1px;
   right: 20px;
-  background: var(--stone);
+  background: var(--forest);
   color: var(--white);
   font-size: 0.64rem;
   font-weight: 700;
@@ -1998,24 +2049,24 @@ h1, h2, h3 {
   width: 76px;
   height: 76px;
   border-radius: 50%;
-  background: var(--stone-light);
-  border: 1.5px solid rgba(192, 57, 43, 0.25);
+  background: rgba(38, 78, 140, 0.10);
+  border: 1.5px solid rgba(38, 78, 140, 0.22);
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 22px;
-  box-shadow: 0 6px 20px rgba(192, 57, 43, 0.12);
+  box-shadow: 0 6px 20px rgba(38, 78, 140, 0.12);
   transition: transform var(--ease), box-shadow var(--ease);
   flex-shrink: 0;
 }
 .pricing-card:hover .pricing-persons {
   transform: scale(1.08);
-  box-shadow: 0 8px 28px rgba(192, 57, 43, 0.22);
+  box-shadow: 0 8px 28px rgba(38, 78, 140, 0.22);
 }
 .pricing-persons svg {
   width: 30px;
   height: 30px;
-  stroke: var(--stone);
+  stroke: var(--forest);
   fill: none;
   stroke-width: 1.7;
   stroke-linecap: round;
