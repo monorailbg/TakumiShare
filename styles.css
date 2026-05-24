@@ -294,17 +294,18 @@ h1, h2, h3 {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
 }
 
 .nav-link {
-  padding: 7px 15px;
-  font-size: 0.92rem;
+  padding: 7px 11px;
+  font-size: 0.88rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   color: rgba(245, 230, 211, 0.85);
   border-radius: 50px;
+  white-space: nowrap;
   transition: background var(--ease), color var(--ease);
 }
 .nav-link:hover { background: rgba(255,255,255,0.12); color: var(--white); }
@@ -313,7 +314,9 @@ h1, h2, h3 {
   background: var(--forest) !important;
   color: var(--white) !important;
   border-radius: 50px;
-  padding: 7px 20px !important;
+  padding: 7px 16px !important;
+  font-size: 0.88rem;
+  white-space: nowrap;
 }
 .btn-nav:hover { background: var(--forest-dark) !important; }
 
@@ -1296,9 +1299,9 @@ h1, h2, h3 {
 }
 
 /* ============================================================
-   Nav hamburger — tablet & below (1060px)
+   Nav hamburger — tablet & below (1200px)
    ============================================================ */
-@media (max-width: 1060px) {
+@media (max-width: 1200px) {
   /* Collapse nav links into hamburger dropdown */
   .nav-links {
     display: none;
@@ -1320,25 +1323,28 @@ h1, h2, h3 {
     color: var(--text);
     padding: 13px 16px;
     border-radius: var(--radius-sm);
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    font-weight: 600;
     min-height: 44px;
     display: flex;
     align-items: center;
-    letter-spacing: 0.04em;
+    letter-spacing: 0;
     text-transform: none;
+    white-space: normal;
   }
   .nav-link:hover { background: var(--beige); color: var(--forest); }
   .btn-nav {
     margin-top: 10px;
     text-align: center;
-    padding: 13px 20px !important;
+    padding: 14px 20px !important;
+    font-size: 0.95rem !important;
     border-radius: 50px !important;
     min-height: 44px;
     display: flex !important;
     align-items: center;
     justify-content: center;
-    text-transform: none;
-    letter-spacing: 0.04em;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
   }
   .hamburger { display: flex; }
 }
@@ -1349,9 +1355,8 @@ h1, h2, h3 {
 @media (max-width: 768px) {
   .section { padding: 68px 0; }
 
-  /* Nav bar */
+  /* Nav bar — shrink height, re-anchor dropdown */
   .nav { height: 56px; }
-  /* At mobile height, dropdown anchors from 56px */
   .nav-links { top: 56px; }
 
   /* Compact nav-right */
@@ -1392,9 +1397,6 @@ h1, h2, h3 {
     line-height: 1;
   }
   .lang-label { display: none; }
-
-  /* Inherited from 1060px block; only fix dropdown top offset for 56px nav */
-  .nav-links { top: 56px; }
 
   /* Compact logo text on mobile */
   .logo-text { display: flex !important; }
