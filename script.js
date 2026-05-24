@@ -80,6 +80,45 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll(); // run once on load
 
+  // ── Mobile CTA bar — hide on scroll down, show on scroll up ──
+  const mobileCTABar = document.getElementById('mobile-cta-bar');
+  if (mobileCTABar) {
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const current = window.scrollY;
+          if (current > lastScrollY + 4 && current > 120) {
+            mobileCTABar.classList.add('hidden');
+          } else if (current < lastScrollY - 4) {
+            mobileCTABar.classList.remove('hidden');
+          }
+          lastScrollY = current;
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+  }
+
+  // ── Blog carousel prev/next ───────────────────────────────────
+  const blogCarousel = document.getElementById('blog-carousel');
+  const blogPrev     = document.getElementById('blog-prev');
+  const blogNext     = document.getElementById('blog-next');
+
+  if (blogCarousel && blogPrev && blogNext) {
+    const scrollAmount = () => blogCarousel.offsetWidth * 0.85;
+
+    blogPrev.addEventListener('click', () => {
+      blogCarousel.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
+    });
+    blogNext.addEventListener('click', () => {
+      blogCarousel.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+    });
+  }
+
   // ── Mobile hamburger ─────────────────────────────────────────
   const hamburger = document.getElementById('hamburger');
   const navLinks  = document.getElementById('nav-links');

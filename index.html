@@ -11,6 +11,76 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <script type="importmap">{"imports":{"three":"./three.module.min.js"}}</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://www.unentdecktes-tokio.com/#business",
+        "name": "Unentdecktes Tokio",
+        "description": "Deutschsprachige Privattouren in Tokio, Kamakura und den Bergen Kanagawas. Erlebt Japan jenseits der ausgetretenen Touristenpfade.",
+        "url": "https://www.unentdecktes-tokio.com",
+        "telephone": "+818044065815",
+        "email": "unentdecktestokio@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Tokyo",
+          "addressCountry": "JP"
+        },
+        "priceRange": "€€",
+        "image": "https://www.unentdecktes-tokio.com/images/profile1x1.webp",
+        "sameAs": ["https://www.instagram.com/unentdecktes_tokio"]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.unentdecktes-tokio.com/#guide",
+        "name": "Immanuel Höhne",
+        "jobTitle": "Deutschsprachiger Tour Guide",
+        "worksFor": {"@id": "https://www.unentdecktes-tokio.com/#business"},
+        "image": "https://www.unentdecktes-tokio.com/images/profile1x1.webp",
+        "sameAs": ["https://www.instagram.com/unentdecktes_tokio"]
+      },
+      {
+        "@type": "TouristTrip",
+        "name": "Mein Tokio: abseits der Touristenpfade",
+        "description": "Private deutschsprachige Stadtführung durch die versteckten Viertel Tokios – Yanaka, Shimokitazawa, Koenji und mehr.",
+        "provider": {"@id": "https://www.unentdecktes-tokio.com/#business"},
+        "touristType": "Deutschsprachige Reisende",
+        "offers": {"@type": "Offer", "price": "120", "priceCurrency": "EUR", "availability": "https://schema.org/InStock"}
+      },
+      {
+        "@type": "TouristTrip",
+        "name": "Kamakura – Buddhas & verborgene Tempel",
+        "description": "Tagesausflug nach Kamakura mit dem Großen Buddha, versteckten Bambushainen und dem Blick auf den Fuji vom Strand Shichirigahama.",
+        "provider": {"@id": "https://www.unentdecktes-tokio.com/#business"},
+        "touristType": "Deutschsprachige Reisende",
+        "offers": {"@type": "Offer", "price": "140", "priceCurrency": "EUR", "availability": "https://schema.org/InStock"}
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Wie viele Personen können an einer Tour teilnehmen?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Maximal 6 Personen pro Tour – für eine persönliche und flexible Erfahrung."}
+          },
+          {
+            "@type": "Question",
+            "name": "In welcher Sprache werden die Touren durchgeführt?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Alle Touren werden auf Deutsch durchgeführt. Immanuel ist Muttersprachler und spricht fließend Japanisch."}
+          },
+          {
+            "@type": "Question",
+            "name": "Wie kann ich eine Tour anfragen?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Am einfachsten per WhatsApp (+81 80 4406 5815) oder über das Kontaktformular auf der Website."}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -71,7 +141,10 @@
   <section class="hero">
     <div class="hero-overlay"></div>
     <div class="container hero-content">
-      <p class="hero-eyebrow" data-de="Dein deutschsprachiger Guide in Tokio" data-en="Your private guide in Tokyo">Dein deutschsprachiger Guide in Tokio</p>
+      <div class="hero-founder-chip">
+        <img src="images/profile1x1.webp" alt="Immanuel" class="hero-founder-avatar" width="44" height="44">
+        <span data-de="Hi, ich bin Immanuel — seit 2+ Jahren in Tokio" data-en="Hi, I'm Immanuel — living in Tokyo for 2+ years">Hi, ich bin Immanuel — seit 2+ Jahren in Tokio</span>
+      </div>
       <h1 class="hero-title">
         <span data-de="Das verborgene" data-en="Discover the">Das verborgene</span><br>
         <em data-de="Tokio erleben" data-en="hidden Tokyo">Tokio erleben</em>
@@ -79,11 +152,20 @@
       <p class="hero-sub i18n-de">Ich bin Immanuel – 21 Jahre alt, Student in Tokio und dein <span class="hl">Insider für alles</span>, was kein Reiseführer zeigt.</p>
       <p class="hero-sub i18n-en" hidden>I'm Immanuel – 21, studying in Tokyo and your <span class="hl">insider for everything</span> no travel guide shows you.</p>
       <div class="hero-ctas">
-        <a href="#touren" class="btn btn-primary" data-de="Touren entdecken" data-en="Explore Tours">Touren entdecken</a>
-        <a href="https://wa.me/818044065815" class="btn btn-outline btn-wa" target="_blank" rel="noopener noreferrer">
+        <a href="https://wa.me/818044065815" class="btn btn-vermilion" target="_blank" rel="noopener noreferrer">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           <span data-de="Tour anfragen" data-en="Request a Tour">Tour anfragen</span>
         </a>
+        <a href="#touren" class="btn btn-outline" data-de="Touren entdecken" data-en="Explore Tours">Touren entdecken</a>
+      </div>
+      <div class="hero-testimonial-strip">
+        <span class="hero-tstrip-stars" aria-hidden="true">★★★★★</span>
+        <span class="hero-tstrip-rating">4,9</span>
+        <span class="hero-tstrip-sep" aria-hidden="true">—</span>
+        <span class="hero-tstrip-quote i18n-de">„Route perfekt angepasst — der Tag wurde unvergesslich"</span>
+        <span class="hero-tstrip-quote i18n-en" hidden>"Route perfectly tailored — the day was unforgettable"</span>
+        <span class="hero-tstrip-source i18n-de">Familie Faber, Kamakura</span>
+        <span class="hero-tstrip-source i18n-en" hidden>Family Faber, Kamakura</span>
       </div>
     </div>
     <div class="hero-scroll" aria-hidden="true">
@@ -140,6 +222,7 @@
               <li data-de="Lokale Essenstipps &amp; Streetfood" data-en="Local food tips &amp; street food">Lokale Essenstipps &amp; Streetfood</li>
               <li data-de="Kleine Gruppen (max. 6 Personen)" data-en="Small groups (max. 6 people)">Kleine Gruppen (max. 6 Personen)</li>
             </ul>
+            <span class="tour-price" data-de="ab €120 / Gruppe" data-en="from €120 / group">ab €120 / Gruppe</span>
             <a href="#kontakt" class="btn btn-secondary" data-de="Anfragen" data-en="Request">Anfragen</a>
           </div>
         </div>
@@ -159,6 +242,7 @@
               <li data-de="Geheime Wanderpfade &amp; Tempel" data-en="Secret hiking trails &amp; temples">Geheime Wanderpfade &amp; Tempel</li>
               <li data-de="Shichirigahama – Blick auf den Fuji" data-en="Shichirigahama – view of Mt. Fuji">Shichirigahama – Blick auf den Fuji</li>
             </ul>
+            <span class="tour-price" data-de="ab €140 / Gruppe" data-en="from €140 / group">ab €140 / Gruppe</span>
             <a href="#kontakt" class="btn btn-primary" data-de="Anfragen" data-en="Request">Anfragen</a>
           </div>
         </div>
@@ -177,6 +261,7 @@
               <li data-de="Wanderungen für alle Fitnesslevel" data-en="Hikes for all fitness levels">Wanderungen für alle Fitnesslevel</li>
               <li data-de="Atemberaubende Aussichtspunkte" data-en="Breathtaking viewpoints">Atemberaubende Aussichtspunkte</li>
             </ul>
+            <span class="tour-price" data-de="ab €130 / Gruppe" data-en="from €130 / group">ab €130 / Gruppe</span>
             <a href="#kontakt" class="btn btn-secondary" data-de="Anfragen" data-en="Request">Anfragen</a>
           </div>
         </div>
@@ -198,8 +283,8 @@
       <div class="about-content fade-in">
         <p class="section-eyebrow" data-de="Über mich" data-en="About Me">Über mich</p>
         <h2 class="section-title" data-de="Hallo – ich bin Immanuel, dein Insider für authentisches Tokio" data-en="Hey – I'm Immanuel, your insider for authentic Tokyo">Hallo – ich bin Immanuel, dein Insider für authentisches Tokio</h2>
-        <p class="i18n-de">Ich bin 21 Jahre alt, komme aus Deutschland und studiere gerade an einer japanischen Uni hier in Tokio. <span class="hl">Japanisch lerne ich seit über vier Jahren</span> – und in dieser Zeit hab ich wirklich viel erlebt: Ich hab in verschiedenen Teilen Japans gearbeitet und gelebt, von Tokio über Izu bis Kyoto, und kenne das Land, die Kultur und die Menschen wirklich gut.</p>
-        <p class="i18n-en" hidden>I'm 21 years old, from Germany and currently studying at a Japanese university here in Tokyo. <span class="hl">I've been learning Japanese for over four years</span> – and in that time I've genuinely experienced a lot: I've worked and lived in different parts of Japan, from Tokyo to Izu to Kyoto, and I know the country, the culture and the people really well.</p>
+        <p class="i18n-de">Vor zwei Jahren bin ich nach Tokio gezogen – und seitdem lebe ich hier wirklich, nicht als Tourist. Mit 21 bin ich vielleicht <span class="hl">der jüngste deutschsprachige Tour Guide Tokios</span>, aber genau das ist mein Vorteil: Ich kenne die Stadt so, wie sie gerade ist – die Viertel, die Szene, die Läden, die noch niemand kennt. <span class="hl">Japanisch lerne ich seit über vier Jahren</span>, und ich hab in verschiedenen Teilen Japans gearbeitet und gelebt, von Tokio über Izu bis Kyoto.</p>
+        <p class="i18n-en" hidden>Two years ago I moved to Tokyo – and since then I've been living here for real, not as a tourist. At 21, I might be <span class="hl">the youngest German-speaking tour guide in Tokyo</span>, but that's exactly my advantage: I know the city as it is right now – the neighbourhoods, the scene, the spots nobody's heard of yet. <span class="hl">I've been learning Japanese for over four years</span> and have worked and lived in different parts of Japan, from Tokyo to Izu to Kyoto.</p>
         <p class="i18n-de">Auf meinen Touren nehm ich dich einfach <span class="hl">mit in mein Japan</span>. Ich zeig dir die Orte, an denen ich selbst essen gehe, die Viertel, die mich immer wieder überraschen, und all die kleinen Dinge, die Japan so besonders machen. <span class="hl">Kein Skript, kein Abarbeiten von Sehenswürdigkeiten</span> – nur ein echter Tag in meinem Tokio.</p>
         <p class="i18n-en" hidden>On my tours I simply <span class="hl">take you into my Japan</span>. I show you the places where I eat myself, the neighbourhoods that keep surprising me, and all the small things that make Japan so special. <span class="hl">No script, no ticking off sights</span> – just a real day in my Tokyo.</p>
         <a href="https://www.instagram.com/unentdecktes_tokio" class="about-instagram" target="_blank" rel="noopener noreferrer">
@@ -461,7 +546,8 @@
         <h2 class="section-title" data-de="Aus meinem Tokio-Alltag" data-en="From My Tokyo Life">Aus meinem Tokio-Alltag</h2>
         <p class="section-sub" data-de="Einblicke, Tipps und echte Erfahrungen – direkt aus Tokio." data-en="Insights, tips and real experiences – straight from Tokyo.">Einblicke, Tipps und echte Erfahrungen – direkt aus Tokio.</p>
       </div>
-      <div class="blog-list">
+      <div class="blog-carousel-wrap">
+      <div class="blog-list" id="blog-carousel">
         <article class="blog-card blog-card--featured fade-in">
           <div class="blog-card-img blog-card-img--1"></div>
           <div class="blog-card-body">
@@ -552,6 +638,15 @@
             <a href="blog/sommer-ausfluege.html" class="btn btn-secondary" data-de="Weiterlesen" data-en="Read more">Weiterlesen</a>
           </div>
         </article>
+      </div>
+      <nav class="blog-carousel-nav" aria-label="Blog navigation">
+        <button class="blog-carousel-btn" id="blog-prev" aria-label="Previous">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="blog-carousel-btn" id="blog-next" aria-label="Next">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </nav>
       </div>
     </div>
   </section>
@@ -686,6 +781,15 @@
       </div>
     </div>
   </footer>
+
+  <!-- Sticky mobile CTA bar -->
+  <div class="mobile-cta-bar" id="mobile-cta-bar" aria-label="Schnellkontakt">
+    <a href="https://wa.me/818044065815" class="mobile-cta-wa" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp
+    </a>
+    <a href="#kontakt" class="mobile-cta-book" data-de="Tour anfragen" data-en="Request a Tour">Tour anfragen</a>
+  </div>
 
   <script src="script.js"></script>
   <script>
