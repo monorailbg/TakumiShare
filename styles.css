@@ -2275,7 +2275,7 @@ h1, h2, h3 {
     color: #0a2e0a;
   }
   .mobile-cta-book {
-    background: var(--stone-cta);
+    background: var(--forest);
     color: var(--white);
   }
 
