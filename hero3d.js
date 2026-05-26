@@ -69,14 +69,14 @@ const tempC = new THREE.Color();
 const C0 = new THREE.Color(0x020305);
 const C1 = new THREE.Color(0x060d25);
 const C2 = new THREE.Color(0x112048);
-const C3 = new THREE.Color(0x8B2635);
+const C3 = new THREE.Color(0x5C1A1B);
 
 // ── Torii Gate Materials ───────────────────────────────────────
 const matRed = new THREE.MeshStandardMaterial({
   color: 0x6b1010,
   roughness: 0.60,
   metalness: 0.08,
-  emissive: new THREE.Color(0x8B2635),
+  emissive: new THREE.Color(0x5C1A1B),
   emissiveIntensity: 0.75,
 });
 const matBlack = new THREE.MeshStandardMaterial({

@@ -5,8 +5,9 @@
   --cream:        #F5E6D3;   /* keep — used for text on dark bg */
   --beige:        #EDD9C0;   /* light: alternate section bg */
   --beige-dark:   #C8A882;   /* light: border */
-  --stone:        #8B2635;   /* vermilion — rare accent, decorative borders, icons */
-  --stone-light:  rgba(139, 38, 53, 0.12);   /* light vermilion tint */
+  --stone:        #5C1A1B;   /* oxblood — accents, badges, borders, italic headline */
+  --stone-cta:    #7A2425;   /* oxblood lifted for filled CTAs on dark backgrounds */
+  --stone-light:  rgba(92, 26, 27, 0.12);   /* light oxblood tint */
   --brown:        #5D4037;   /* chestnut */
   --forest:       #264E8C;   /* indigo — primary CTA, buttons, active links */
   --forest-dark:  #1D3D70;   /* dark indigo — hover */
@@ -193,11 +194,11 @@ h1, h2, h3 {
   gap: 8px;
 }
 
-/* Vermilion (stone) CTA — used as hero primary */
+/* Oxblood CTA — hero WhatsApp button; uses --stone-cta for visibility on dark bg */
 .btn-vermilion {
-  background: var(--stone);
+  background: var(--stone-cta);
   color: var(--white);
-  border-color: var(--stone);
+  border-color: var(--stone-cta);
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -217,10 +218,10 @@ h1, h2, h3 {
   pointer-events: none;
 }
 .btn-vermilion:hover {
-  background: #6e1d29;
-  border-color: #6e1d29;
+  background: var(--stone);
+  border-color: var(--stone);
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(139, 38, 53, 0.38);
+  box-shadow: 0 8px 28px rgba(92, 26, 27, 0.45);
 }
 
 /* ============================================================
@@ -1188,9 +1189,9 @@ h1, h2, h3 {
 }
 
 .form-error {
-  background: rgba(139, 38, 53, 0.1);
+  background: rgba(92, 26, 27, 0.1);
   color: var(--stone);
-  border: 1px solid rgba(139, 38, 53, 0.3);
+  border: 1px solid rgba(92, 26, 27, 0.3);
   border-radius: 10px;
   padding: 14px 18px;
   margin-bottom: 20px;
@@ -2223,7 +2224,7 @@ h1, h2, h3 {
     color: #0a2e0a;
   }
   .mobile-cta-book {
-    background: var(--stone);
+    background: var(--stone-cta);
     color: var(--white);
   }
 
