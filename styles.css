@@ -5,8 +5,8 @@
   --cream:        #F5E6D3;   /* keep — used for text on dark bg */
   --beige:        #EDD9C0;   /* light: alternate section bg */
   --beige-dark:   #C8A882;   /* light: border */
-  --stone:        #C0392B;   /* vermilion — rare accent, decorative borders, icons */
-  --stone-light:  rgba(192, 57, 43, 0.12);   /* light vermilion tint */
+  --stone:        #8B2635;   /* vermilion — rare accent, decorative borders, icons */
+  --stone-light:  rgba(139, 38, 53, 0.12);   /* light vermilion tint */
   --brown:        #5D4037;   /* chestnut */
   --forest:       #264E8C;   /* indigo — primary CTA, buttons, active links */
   --forest-dark:  #1D3D70;   /* dark indigo — hover */
@@ -217,10 +217,10 @@ h1, h2, h3 {
   pointer-events: none;
 }
 .btn-vermilion:hover {
-  background: #a93226;
-  border-color: #a93226;
+  background: #6e1d29;
+  border-color: #6e1d29;
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(192, 57, 43, 0.38);
+  box-shadow: 0 8px 28px rgba(139, 38, 53, 0.38);
 }
 
 /* ============================================================
@@ -1188,9 +1188,9 @@ h1, h2, h3 {
 }
 
 .form-error {
-  background: rgba(192, 57, 43, 0.1);
+  background: rgba(139, 38, 53, 0.1);
   color: var(--stone);
-  border: 1px solid rgba(192, 57, 43, 0.3);
+  border: 1px solid rgba(139, 38, 53, 0.3);
   border-radius: 10px;
   padding: 14px 18px;
   margin-bottom: 20px;
