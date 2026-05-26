@@ -1,26 +1,44 @@
 /* ============================================================
-   Design tokens — Traditional Japan palette
+   Design tokens — Parchment & navy palette
    ============================================================ */
 :root {
-  --cream:        #F5E6D3;   /* keep — used for text on dark bg */
-  --beige:        #EDD9C0;   /* light: alternate section bg */
-  --beige-dark:   #C8A882;   /* light: border */
-  --stone:        #5C1A1B;   /* oxblood — accents, badges, borders, italic headline */
-  --stone-cta:    #7A2425;   /* oxblood lifted for filled CTAs on dark backgrounds */
-  --stone-light:  rgba(92, 26, 27, 0.12);   /* light oxblood tint */
-  --brown:        #5D4037;   /* chestnut */
-  --forest:       #264E8C;   /* indigo — primary CTA, buttons, active links */
-  --forest-dark:  #1D3D70;   /* dark indigo — hover */
-  --forest-light: #3A6BBE;   /* light indigo */
-  --dark:         #1A1A2E;   /* midnight ink — nav, hero, footer */
-  --text:         #5D4037;   /* light: body copy — chestnut */
-  --text-muted:   #8D6E63;   /* light: muted warm */
-  --white:        #FFFFFF;
+  /* === Surfaces === */
+  --cream:        #F5EDE0;   /* dominant bg — parchment */
+  --cream-warm:   #F8F0E3;   /* warmer surface */
+  --cream-deep:   #EDE3D2;   /* dividers, subtle section bgs */
+  --paper:        #FAF4E8;   /* lightest surface for cards */
 
-  --bg:           #F5E6D3;   /* light: cream body bg */
-  --surface:      #FFFFFF;   /* light: card surfaces */
-  --heading:      #1A1A2E;   /* light: heading text */
-  --nav-scrolled: rgba(245, 230, 211, 0.96);  /* light: scrolled nav bg */
+  /* === Ink — deep navy === */
+  --ink:          #1f3a5f;
+  --ink-light:    #2d4a70;
+  --ink-muted:    #5a6b85;
+
+  /* === Accent — warm brown (light mode) === */
+  --stone:        #8B6F47;   /* warm brown — eyebrows, featured borders, highlights */
+  --stone-cta:    #8B6F47;
+  --stone-light:  rgba(139, 111, 71, 0.12);
+  --stone-hover:  #6F5836;
+
+  /* === Text === */
+  --text:         #2a3548;
+  --text-muted:   #5a6b85;
+  --heading:      #1f3a5f;
+
+  /* === Utility === */
+  --white:        #FAF4E8;
+  --black:        #1a1f2e;
+  --beige-dark:   #d4c9b0;
+
+  /* === Legacy mappings — referenced extensively in component CSS, keep these === */
+  --forest:       #1f3a5f;
+  --forest-dark:  #2d4a70;
+  --forest-light: #5a6b85;
+  --brown:        var(--stone);
+  --dark:         #1f3a5f;
+  --beige:        var(--cream-deep);
+  --bg:           var(--cream);
+  --surface:      var(--paper);
+  --nav-scrolled: rgba(245, 237, 224, 0.96);
 
   --font-heading: 'Playfair Display', Georgia, serif;
   --font-body:    'Inter', system-ui, -apple-system, sans-serif;
@@ -35,19 +53,39 @@
 }
 
 [data-theme="dark"] {
-  --bg:           #1C1815;
-  --surface:      #27231E;
-  --heading:      #F5E6D3;
-  --beige:        #252018;
-  --beige-dark:   #4A4540;
-  --text:         #C4AD94;
-  --text-muted:   #8A7A68;
-  --nav-scrolled: rgba(28, 24, 20, 0.97);
+  --cream:        #1a2030;
+  --cream-warm:   #232a3d;
+  --cream-deep:   #2c3548;
+  --paper:        #1f2638;
+
+  --ink:          #F5EDE0;
+  --ink-light:    #FAF4E8;
+  --ink-muted:    #b8c0d0;
+
+  --stone:        #D4AF7A;   /* warm gold in dark mode */
+  --stone-cta:    #D4AF7A;
+  --stone-light:  rgba(212, 175, 122, 0.16);
+  --stone-hover:  #E8C28E;
+
+  --text:         #E8DFD3;
+  --text-muted:   #a8b0c0;
+  --heading:      #F5EDE0;
+
+  --white:        #F5EDE0;
+  --beige-dark:   #3a4258;
+
+  --forest:       #D4AF7A;   /* gold CTAs/buttons in dark */
+  --forest-dark:  #E8C28E;
+  --forest-light: #D4AF7A;
+  --dark:         #232a3d;   /* footer/stats stays dark */
+  --beige:        var(--cream-deep);
+  --bg:           var(--cream);
+  --surface:      var(--paper);
+  --nav-scrolled: rgba(26, 32, 48, 0.97);
 }
-[data-theme="dark"] .section-eyebrow { color: var(--forest-light); }
-/* Slightly lighter blue for secondary buttons on dark cards */
-[data-theme="dark"] .btn-secondary { color: #5B82C7; border-color: #5B82C7; }
-[data-theme="dark"] .btn-secondary:hover { background: #5B82C7; border-color: #5B82C7; color: var(--white); }
+[data-theme="dark"] .section-eyebrow { color: var(--stone); }
+[data-theme="dark"] .btn-secondary { color: var(--stone); border-color: var(--stone); }
+[data-theme="dark"] .btn-secondary:hover { background: var(--stone); border-color: var(--stone); color: var(--cream); }
 
 /* WhatsApp contact method: dark green tile, brand-green label */
 [data-theme="dark"] .contact-method-icon--wa { background: #0E4429; }
@@ -94,7 +132,7 @@ h1, h2, h3 {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  color: var(--forest);
+  color: var(--stone);
   margin-bottom: 14px;
 }
 
@@ -162,7 +200,7 @@ h1, h2, h3 {
   background: var(--forest-dark);
   border-color: var(--forest-dark);
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(38, 78, 140, 0.28);
+  box-shadow: 0 8px 28px rgba(31, 58, 95, 0.28);
 }
 
 .btn-secondary {
@@ -194,11 +232,11 @@ h1, h2, h3 {
   gap: 8px;
 }
 
-/* Oxblood CTA — hero WhatsApp button; uses --stone-cta for visibility on dark bg */
+/* Navy CTA — hero WhatsApp button */
 .btn-vermilion {
-  background: var(--stone-cta);
+  background: var(--forest);
   color: var(--white);
-  border-color: var(--stone-cta);
+  border-color: var(--forest);
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -218,10 +256,10 @@ h1, h2, h3 {
   pointer-events: none;
 }
 .btn-vermilion:hover {
-  background: var(--stone);
-  border-color: var(--stone);
+  background: var(--forest-dark);
+  border-color: var(--forest-dark);
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(92, 26, 27, 0.45);
+  box-shadow: 0 8px 28px rgba(31, 58, 95, 0.35);
 }
 
 /* ============================================================
@@ -498,7 +536,7 @@ h1, h2, h3 {
 }
 .hero-title em {
   font-style: italic;
-  color: var(--stone);
+  color: #D4AF7A;
 }
 
 .hero-sub {
@@ -548,7 +586,7 @@ h1, h2, h3 {
    Stats bar
    ============================================================ */
 .stats {
-  background: linear-gradient(135deg, #0d0c1a 0%, #1a1a2e 50%, #0e1520 100%);
+  background: linear-gradient(135deg, #0a1628 0%, #1f3a5f 50%, #0d1f35 100%);
   padding: 44px 0;
   position: relative;
   overflow: hidden;
@@ -558,8 +596,8 @@ h1, h2, h3 {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 20% 50%, rgba(38, 78, 140, 0.2) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 50%, rgba(38, 78, 140, 0.08) 0%, transparent 60%);
+    radial-gradient(ellipse at 20% 50%, rgba(31, 58, 95, 0.2) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 50%, rgba(31, 58, 95, 0.08) 0%, transparent 60%);
   pointer-events: none;
 }
 .stats-grid { position: relative; }
@@ -618,8 +656,8 @@ h1, h2, h3 {
 }
 .tour-card--featured:hover { transform: translateY(-20px); }
 @keyframes featured-glow {
-  0%, 100% { box-shadow: 0 0 0 2px var(--forest), 0 20px 60px rgba(38, 78, 140, 0.25); }
-  50%       { box-shadow: 0 0 0 2px var(--forest-light), 0 20px 60px rgba(58, 107, 190, 0.35); }
+  0%, 100% { box-shadow: 0 0 0 2px var(--forest), 0 20px 60px rgba(31, 58, 95, 0.25); }
+  50%       { box-shadow: 0 0 0 2px var(--forest-light), 0 20px 60px rgba(45, 74, 112, 0.35); }
 }
 
 /* Tour image areas */
@@ -836,7 +874,7 @@ h1, h2, h3 {
 .about-instagram:hover {
   border-color: var(--forest);
   color: var(--forest);
-  background: rgba(38, 78, 140, 0.05);
+  background: rgba(31, 58, 95, 0.05);
 }
 .about-instagram-handle {
   font-weight: 600;
@@ -1153,7 +1191,7 @@ h1, h2, h3 {
 .form-group select:focus,
 .form-group textarea:focus {
   border-color: var(--forest);
-  box-shadow: 0 0 0 3px rgba(38, 78, 140, 0.12);
+  box-shadow: 0 0 0 3px rgba(31, 58, 95, 0.12);
 }
 
 .form-group select {
@@ -1189,9 +1227,9 @@ h1, h2, h3 {
 }
 
 .form-error {
-  background: rgba(92, 26, 27, 0.1);
+  background: rgba(139, 111, 71, 0.10);
   color: var(--stone);
-  border: 1px solid rgba(92, 26, 27, 0.3);
+  border: 1px solid rgba(139, 111, 71, 0.30);
   border-radius: 10px;
   padding: 14px 18px;
   margin-bottom: 20px;
@@ -1396,21 +1434,34 @@ h1, h2, h3 {
 
   /* Force dark mode on mobile */
   :root {
-    --bg:           #1C1815;
-    --surface:      #27231E;
-    --heading:      #F5E6D3;
-    --beige:        #252018;
-    --beige-dark:   #4A4540;
-    --text:         #C4AD94;
-    --text-muted:   #8A7A68;
-    --nav-scrolled: rgba(28, 24, 20, 0.97);
+    --cream:        #1a2030;
+    --cream-deep:   #2c3548;
+    --paper:        #1f2638;
+    --ink:          #F5EDE0;
+    --ink-muted:    #b8c0d0;
+    --stone:        #D4AF7A;
+    --stone-cta:    #D4AF7A;
+    --stone-light:  rgba(212, 175, 122, 0.16);
+    --text:         #E8DFD3;
+    --text-muted:   #a8b0c0;
+    --heading:      #F5EDE0;
+    --white:        #F5EDE0;
+    --beige-dark:   #3a4258;
+    --forest:       #D4AF7A;
+    --forest-dark:  #E8C28E;
+    --forest-light: #D4AF7A;
+    --dark:         #232a3d;
+    --beige:        var(--cream-deep);
+    --bg:           var(--cream);
+    --surface:      var(--paper);
+    --nav-scrolled: rgba(26, 32, 48, 0.97);
   }
-  .section-eyebrow { color: var(--forest-light); }
-  .btn-secondary { color: #5B82C7; border-color: #5B82C7; }
+  .section-eyebrow { color: var(--stone); }
+  .btn-secondary { color: var(--stone); border-color: var(--stone); }
   .contact-method-icon--wa { background: #0E4429; }
   .theme-icon--sun  { display: block; }
   .theme-icon--moon { display: none; }
-  .hl { background: linear-gradient(180deg, transparent 55%, rgba(58, 107, 190, 0.28) 55%); }
+  .hl { background: linear-gradient(180deg, transparent 55%, rgba(212, 175, 122, 0.28) 55%); }
   .compare { background: var(--bg); }
 
   /* Hide theme toggle on mobile */
@@ -1475,7 +1526,7 @@ h1, h2, h3 {
 
 /* Highlight spans — highlighter-pen effect */
 .hl {
-  background: linear-gradient(180deg, transparent 55%, rgba(38, 78, 140, 0.2) 55%);
+  background: linear-gradient(180deg, transparent 55%, rgba(139, 111, 71, 0.22) 55%);
   font-weight: 600;
   padding-bottom: 1px;
 }
@@ -1721,7 +1772,7 @@ h1, h2, h3 {
 
 /* ── Stat numbers — subtle count-up feel with gradient ────── */
 .stat-number {
-  background: linear-gradient(135deg, var(--white) 40%, rgba(245, 230, 211, 0.7) 100%);
+  background: linear-gradient(135deg, var(--white) 40%, rgba(245, 237, 224, 0.7) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1740,11 +1791,11 @@ h1, h2, h3 {
 .blog-card--featured:hover .blog-card-img { transform: scale(1.04); }
 
 /* ── Avatar gradient colors per initial ───────────────────── */
-.testimonial-avatar:nth-child(1) { background: #264E8C; }
-.testimonial-card:nth-child(2) .testimonial-avatar { background: #2E6B9E; }
+.testimonial-avatar:nth-child(1) { background: #1f3a5f; }
+.testimonial-card:nth-child(2) .testimonial-avatar { background: #2d4a70; }
 .testimonial-card:nth-child(3) .testimonial-avatar { background: #1D6348; }
-.testimonial-card:nth-child(4) .testimonial-avatar { background: #5D3A8A; }
-.testimonial-card:nth-child(5) .testimonial-avatar { background: #B8520A; }
+.testimonial-card:nth-child(4) .testimonial-avatar { background: #4a5568; }
+.testimonial-card:nth-child(5) .testimonial-avatar { background: #8B6F47; }
 
 /* ── Section divider shimmer line ─────────────────────────── */
 .tours::before,
@@ -1773,7 +1824,7 @@ h1, h2, h3 {
 
 /* ── Highlight spans — stronger in dark mode ──────────────── */
 [data-theme="dark"] .hl {
-  background: linear-gradient(180deg, transparent 55%, rgba(58, 107, 190, 0.28) 55%);
+  background: linear-gradient(180deg, transparent 55%, rgba(212, 175, 122, 0.30) 55%);
 }
 
 /* ── Scroll indicator arrow ────────────────────────────────── */
@@ -1817,7 +1868,7 @@ h1, h2, h3 {
   color: var(--text-muted);
 }
 .compare-head--me {
-  background: rgba(38, 78, 140, 0.07);
+  background: rgba(31, 58, 95, 0.07);
   color: var(--forest);
 }
 
@@ -1870,7 +1921,7 @@ h1, h2, h3 {
 }
 .compare-cell > div { flex: 1; }
 .compare-cell--other { background: rgba(0, 0, 0, 0.02); }
-.compare-cell--me    { background: rgba(38, 78, 140, 0.035); }
+.compare-cell--me    { background: rgba(31, 58, 95, 0.035); }
 
 .compare-mark {
   flex-shrink: 0;
@@ -1885,7 +1936,7 @@ h1, h2, h3 {
   margin-top: 0.15rem;
 }
 .compare-mark--no  { background: rgba(0, 0, 0, 0.07); color: var(--text-muted); }
-.compare-mark--yes { background: rgba(38, 78, 140, 0.12);  color: var(--forest); }
+.compare-mark--yes { background: rgba(31, 58, 95, 0.12);  color: var(--forest); }
 
 .compare-cell p {
   font-size: 0.9rem;
@@ -2196,7 +2247,7 @@ h1, h2, h3 {
     right: 0;
     z-index: 250;
     padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
-    background: rgba(18, 14, 10, 0.97);
+    background: rgba(31, 58, 95, 0.97);
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     gap: 10px;
     transition: transform 0.3s ease;
