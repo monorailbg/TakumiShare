@@ -1546,10 +1546,12 @@ h1, h2, h3 {
   display: flex;
   gap: 22px;
   overflow-x: auto;
+  overflow-y: hidden;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
   -ms-overflow-style: none;
   padding-bottom: 6px;
+  touch-action: pan-x;
 }
 .blog-list::-webkit-scrollbar { display: none; }
 
