@@ -2099,11 +2099,13 @@ h1, h2, h3 {
 
 .pricing-rate {
   font-family: var(--font-heading);
-  font-size: 2.4rem;
-  font-weight: 700;
+  font-size: clamp(3.4rem, 5vw, 4.2rem);
+  font-weight: 600;
+  font-style: italic;
   color: var(--pricing-text);
   line-height: 1;
-  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+  margin-bottom: 14px;
 }
 
 .pricing-context {
@@ -2211,7 +2213,7 @@ h1, h2, h3 {
 @media (max-width: 480px) {
   .pricing-grid { gap: 14px; }
   .pricing-card { padding: 30px 16px 24px; }
-  .pricing-rate { font-size: 2rem; }
+  .pricing-rate { font-size: 2.6rem; }
   .pricing-persons { width: 48px; height: 48px; margin-bottom: 12px; }
   .pricing-includes-col { padding: 24px 22px; }
 }
