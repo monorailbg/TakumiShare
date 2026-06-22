@@ -583,51 +583,6 @@ h1, h2, h3 {
 }
 
 /* ============================================================
-   Stats bar
-   ============================================================ */
-.stats {
-  background: linear-gradient(135deg, #0a1628 0%, #1f3a5f 50%, #0d1f35 100%);
-  padding: 44px 0;
-  position: relative;
-  overflow: hidden;
-}
-.stats::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse at 20% 50%, rgba(31, 58, 95, 0.2) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 50%, rgba(31, 58, 95, 0.08) 0%, transparent 60%);
-  pointer-events: none;
-}
-.stats-grid { position: relative; }
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  text-align: center;
-}
-
-.stat-number {
-  display: block;
-  font-family: var(--font-heading);
-  font-size: 2.6rem;
-  font-weight: 700;
-  color: var(--white);
-  line-height: 1;
-}
-.stat-label {
-  display: block;
-  margin-top: 6px;
-  font-size: 0.78rem;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.65);
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-}
-
-/* ============================================================
    Tours section
    ============================================================ */
 .tours { background: var(--beige); }
@@ -1491,9 +1446,6 @@ h1, h2, h3 {
   .hero-title { font-size: clamp(2.6rem, 12vw, 3.8rem); }
   .hero-sub   { font-size: 1rem; }
 
-  /* Stats */
-  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
-
   /* Tours */
   .tours-grid { grid-template-columns: 1fr; }
 
@@ -1770,14 +1722,6 @@ h1, h2, h3 {
     background: rgba(8, 8, 22, 0.38);
   }
   .hero .container { margin-left: auto; max-width: 100%; }
-}
-
-/* ── Stat numbers — subtle count-up feel with gradient ────── */
-.stat-number {
-  background: linear-gradient(135deg, var(--white) 40%, rgba(245, 237, 224, 0.7) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 /* ── Why cards — full border glow on hover ────────────────── */
