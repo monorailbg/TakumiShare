@@ -316,16 +316,19 @@ h1, h2, h3 {
 .logo-main {
   font-family: var(--font-heading);
   font-size: 1.45rem;
-  font-weight: 700;
-  color: var(--cream);
+  font-weight: 600;
+  color: #ffffff;
   letter-spacing: -0.01em;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
   transition: color var(--ease);
 }
 .logo-sub {
   font-family: var(--font-heading);
   font-size: 1.1rem;
   font-style: italic;
-  color: rgba(245, 230, 211, 0.75);
+  font-weight: 600;
+  color: #E5C088;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
   transition: color var(--ease);
 }
 
