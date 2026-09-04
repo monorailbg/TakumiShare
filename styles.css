@@ -3,42 +3,42 @@
    ============================================================ */
 :root {
   /* === Surfaces === */
-  --cream:        #F5EDE0;   /* dominant bg — parchment */
-  --cream-warm:   #F8F0E3;   /* warmer surface */
-  --cream-deep:   #EDE3D2;   /* dividers, subtle section bgs */
-  --paper:        #FAF4E8;   /* lightest surface for cards */
+  --cream:        #EAE0C8;   /* dominant bg — deeper parchment, more saturated */
+  --cream-warm:   #F1E7D0;   /* warmer surface, slightly lighter than bg */
+  --cream-deep:   #D9C89C;   /* dividers, alt-section bands — real contrast now */
+  --paper:        #F6EEDD;   /* lightest surface for cards */
 
   /* === Ink — deep navy === */
-  --ink:          #1f3a5f;
-  --ink-light:    #2d4a70;
-  --ink-muted:    #5a6b85;
+  --ink:          #16283F;
+  --ink-light:    #24405F;
+  --ink-muted:    #4C5C76;
 
   /* === Accent — warm brown (light mode) === */
-  --stone:        #8B6F47;   /* warm brown — eyebrows, featured borders, highlights */
-  --stone-cta:    #8B6F47;
-  --stone-light:  rgba(139, 111, 71, 0.12);
-  --stone-hover:  #6F5836;
+  --stone:        #7A5C39;   /* warm brown — eyebrows, featured borders, highlights */
+  --stone-cta:    #7A5C39;
+  --stone-light:  rgba(122, 92, 57, 0.14);
+  --stone-hover:  #5E4527;
 
   /* === Text === */
-  --text:         #2a3548;
-  --text-muted:   #5a6b85;
-  --heading:      #1f3a5f;
+  --text:         #232C3D;
+  --text-muted:   #4C5C76;
+  --heading:      #16283F;
 
   /* === Utility === */
-  --white:        #FAF4E8;
-  --black:        #1a1f2e;
-  --beige-dark:   #d4c9b0;
+  --white:        #F6EEDD;
+  --black:        #14181F;
+  --beige-dark:   #C2AB7E;
 
   /* === Legacy mappings — referenced extensively in component CSS, keep these === */
-  --forest:       #1f3a5f;
-  --forest-dark:  #2d4a70;
-  --forest-light: #5a6b85;
+  --forest:       #16283F;
+  --forest-dark:  #24405F;
+  --forest-light: #4C5C76;
   --brown:        var(--stone);
-  --dark:         #1f3a5f;
+  --dark:         #16283F;
   --beige:        var(--cream-deep);
   --bg:           var(--cream);
   --surface:      var(--paper);
-  --nav-scrolled: rgba(245, 237, 224, 0.96);
+  --nav-scrolled: rgba(234, 224, 200, 0.96);
 
   --font-heading: 'Playfair Display', Georgia, serif;
   --font-body:    'Inter', system-ui, -apple-system, sans-serif;
