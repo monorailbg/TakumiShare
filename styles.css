@@ -461,6 +461,8 @@ h1, h2, h3 {
   position: relative;
   z-index: 1;
   min-height: 100vh;
+  padding-top: 74px;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -1763,6 +1765,9 @@ h1, h2, h3 {
   padding: 80px 52px 56px;
 }
 @media (max-width: 768px) {
+  .hero {
+    padding-top: 56px;
+  }
   .hero-content {
     padding: 80px 24px 40px;
     border-radius: 20px;
