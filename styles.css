@@ -278,8 +278,8 @@ h1, h2, h3 {
   -webkit-backdrop-filter: blur(14px);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.07);
 }
-.header.scrolled .logo-main { color: var(--heading); }
-.header.scrolled .logo-sub  { color: var(--forest); }
+.header.scrolled .logo-main { color: var(--heading); font-weight: 600; text-shadow: none; }
+.header.scrolled .logo-sub  { color: var(--forest); font-weight: 600; text-shadow: none; }
 .header.scrolled .nav-link  { color: var(--text); }
 .header.scrolled .nav-link:hover { background: var(--beige); color: var(--forest); }
 .header.scrolled .lang-toggle { background: var(--beige); }
