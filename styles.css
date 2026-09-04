@@ -460,9 +460,8 @@ h1, h2, h3 {
 .hero {
   position: relative;
   z-index: 1;
-  min-height: 100vh;
+  min-height: calc(100vh + 74px);
   padding-top: 74px;
-  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -1766,6 +1765,7 @@ h1, h2, h3 {
 }
 @media (max-width: 768px) {
   .hero {
+    min-height: calc(100vh + 56px);
     padding-top: 56px;
   }
   .hero-content {
