@@ -116,7 +116,7 @@ ul  { list-style: none; }
   padding: 0 28px;
 }
 
-.section { padding: 100px 0; }
+.section { padding: 64px 0; }
 
 /* ── Seigaiha wave pattern — every section but the hero ───── */
 .section, .footer {
@@ -1513,7 +1513,7 @@ h1, h2, h3 {
    Responsive — mobile
    ============================================================ */
 @media (max-width: 768px) {
-  .section { padding: 68px 0; }
+  .section { padding: 44px 0; }
 
   /* Nav bar — shrink height, re-anchor dropdown */
   .nav { height: 56px; }
