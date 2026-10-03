@@ -1047,6 +1047,47 @@ h1, h2, h3 {
 }
 
 /* ============================================================
+   Guest gallery
+   ============================================================ */
+.guests { background: var(--beige); }
+
+.guests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+.guest-card {
+  background: var(--paper);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.guest-card img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+}
+.guest-card-caption {
+  padding: 12px 14px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+.guest-card-caption strong {
+  display: block;
+  color: var(--heading);
+  font-size: 0.92rem;
+  margin-bottom: 2px;
+}
+
+.guests-empty {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+/* ============================================================
    Contact section
    ============================================================ */
 .contact { background: var(--beige); }

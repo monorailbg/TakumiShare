@@ -194,4 +194,11 @@
   // Submission is handled by Formspree via data-fs-* attributes.
   // The success/error messages use data-de/data-en for i18n.
 
+  // ── Guest gallery empty-state ───────────────────────────────
+  const guestsGrid  = document.getElementById('guests-grid');
+  const guestsEmpty = document.getElementById('guests-empty');
+  if (guestsGrid && guestsEmpty && guestsGrid.children.length > 0) {
+    guestsEmpty.hidden = true;
+  }
+
 })();
