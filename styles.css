@@ -1059,8 +1059,24 @@ h1, h2, h3 {
   line-height: 1.8;
   font-style: italic;
   flex: 1;
-  margin-bottom: 28px;
+  margin-bottom: 10px;
 }
+
+.testimonial-toggle {
+  display: inline-block;
+  background: none;
+  border: none;
+  padding: 0;
+  margin-bottom: 20px;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--forest);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.testimonial-toggle:hover { color: var(--forest-dark); }
 
 .testimonial-author {
   display: flex;

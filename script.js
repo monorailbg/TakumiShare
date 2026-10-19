@@ -67,8 +67,33 @@
   }
 
   langButtons.forEach(btn =>
-    btn.addEventListener('click', () => applyLanguage(btn.dataset.lang))
+    btn.addEventListener('click', () => {
+      applyLanguage(btn.dataset.lang);
+      refreshTestimonialLabels();
+    })
   );
+
+  // ── Testimonial expand/collapse ───────────────────────────────
+  function refreshTestimonialLabels() {
+    document.querySelectorAll('.testimonial-toggle').forEach(btn => {
+      const card = btn.closest('.testimonial-card');
+      const expanded = card.classList.contains('is-expanded');
+      const key = (expanded ? 'less' : 'more') + currentLang.charAt(0).toUpperCase() + currentLang.slice(1);
+      btn.textContent = btn.dataset[key];
+    });
+  }
+
+  document.querySelectorAll('.testimonial-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const card = btn.closest('.testimonial-card');
+      const excerpt = card.querySelector('.testimonial-excerpt');
+      const full = card.querySelector('.testimonial-full');
+      const expanded = card.classList.toggle('is-expanded');
+      excerpt.hidden = expanded;
+      full.hidden = !expanded;
+      refreshTestimonialLabels();
+    });
+  });
 
   // ── Sticky header ─────────────────────────────────────────────
   const header = document.getElementById('header');
