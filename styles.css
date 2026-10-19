@@ -1960,11 +1960,11 @@ h1, h2, h3 {
   border-left: 1px solid var(--beige-dark);
 }
 .compare-head--other {
-  background: rgba(0, 0, 0, 0.04);
+  background: linear-gradient(rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.04)), var(--surface);
   color: var(--text-muted);
 }
 .compare-head--me {
-  background: rgba(31, 58, 95, 0.07);
+  background: linear-gradient(rgba(31, 58, 95, 0.1), rgba(31, 58, 95, 0.1)), var(--surface);
   color: var(--forest);
 }
 
