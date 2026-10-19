@@ -2016,8 +2016,8 @@ h1, h2, h3 {
   border-left: 1px solid var(--beige-dark);
 }
 .compare-cell > div { flex: 1; }
-.compare-cell--other { background: rgba(0, 0, 0, 0.02); }
-.compare-cell--me    { background: rgba(31, 58, 95, 0.035); }
+.compare-cell--other { background: linear-gradient(rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.03)), var(--surface); }
+.compare-cell--me    { background: linear-gradient(rgba(31, 58, 95, 0.09), rgba(31, 58, 95, 0.09)), var(--surface); }
 
 .compare-mark {
   flex-shrink: 0;
