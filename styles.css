@@ -676,7 +676,7 @@ h1, h2, h3 {
 }
 .tour-card:hover {
   transform: translateY(-6px);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 0 0 2px var(--forest), var(--shadow-md);
 }
 .tour-card--featured {
   transform: translateY(-14px);
