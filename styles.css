@@ -672,17 +672,17 @@ h1, h2, h3 {
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
-  transition: transform var(--ease), box-shadow var(--ease);
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .tour-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-6px) scale(1.03);
   box-shadow: 0 0 0 2px var(--forest), var(--shadow-md);
 }
 .tour-card--featured {
   transform: translateY(-14px);
   animation: featured-glow 4s ease-in-out infinite;
 }
-.tour-card--featured:hover { transform: translateY(-20px); }
+.tour-card--featured:hover { transform: translateY(-20px) scale(1.03); }
 @keyframes featured-glow {
   0%, 100% { box-shadow: 0 0 0 2px var(--forest), 0 20px 60px rgba(31, 58, 95, 0.25); }
   50%       { box-shadow: 0 0 0 2px var(--forest-light), 0 20px 60px rgba(45, 74, 112, 0.35); }
@@ -1486,7 +1486,7 @@ h1, h2, h3 {
 @media (max-width: 1024px) {
   .tours-grid { grid-template-columns: repeat(2, 1fr); }
   .tour-card--featured { transform: none; }
-  .tour-card--featured:hover { transform: translateY(-6px); }
+  .tour-card--featured:hover { transform: translateY(-6px) scale(1.03); }
 
   .why-grid { grid-template-columns: repeat(2, 1fr); }
   .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
