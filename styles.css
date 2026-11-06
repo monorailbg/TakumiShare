@@ -1650,6 +1650,10 @@ h1, h2, h3 {
   .hero-ctas { flex-direction: column; }
   .hero-ctas .btn { text-align: center; }
   .why-grid { grid-template-columns: 1fr; }
+  .why-card { padding: 30px 24px 26px; }
+  .why-icon { width: 60px; height: 60px; margin-bottom: 16px; }
+  .why-icon svg { width: 26px; height: 26px; }
+  .why-card h3 { margin-bottom: 10px; }
 }
 
 /* Highlight spans — highlighter-pen effect */
