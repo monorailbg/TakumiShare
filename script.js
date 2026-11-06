@@ -44,6 +44,8 @@
         el.textContent = text;
       } else if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
         el.placeholder = text;
+      } else if (el.tagName === 'META') {
+        el.setAttribute('content', text);
       } else {
         el.textContent = text;
       }
