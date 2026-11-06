@@ -892,6 +892,13 @@ h1, h2, h3 {
   right: -24px;
 }
 
+.about-content {
+  background: var(--surface);
+  border: 1px solid var(--beige-dark);
+  border-radius: var(--radius);
+  padding: 44px 40px;
+  box-shadow: var(--shadow);
+}
 .about-content .section-title { margin-bottom: 24px; }
 .about-content p {
   font-size: 1.03rem;
@@ -1621,6 +1628,7 @@ h1, h2, h3 {
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
   .about-img  { height: 300px; }
   .about-img-accent { display: none; }
+  .about-content { padding: 32px 24px; }
 
   /* Why */
   .why-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
