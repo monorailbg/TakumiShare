@@ -2254,7 +2254,7 @@ h1, h2, h3 {
 .pricing-rate strong {
   display: block;
   font-family: var(--font-heading);
-  font-size: 3.4rem;
+  font-size: 3rem;
   font-weight: 700;
   color: var(--heading);
   line-height: 1;
@@ -2367,7 +2367,7 @@ h1, h2, h3 {
 @media (max-width: 480px) {
   .pricing-grid { gap: 14px; }
   .pricing-card { padding: 28px 16px; }
-  .pricing-rate strong { font-size: 2.1rem; }
+  .pricing-rate strong { font-size: 1.85rem; }
   .pricing-includes-col { padding: 24px 22px; }
 }
 
