@@ -785,6 +785,12 @@ h1, h2, h3 {
   font-size: 1rem;
 }
 
+/* Any displayed price (tours, pricing cards, FAQ, etc.) */
+.price-figure {
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
 .tour-features { margin-bottom: 28px; }
 
 .tour-features li {
