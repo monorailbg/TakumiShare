@@ -786,7 +786,7 @@ h1, h2, h3 {
 }
 
 /* Any displayed price (tours, pricing cards, FAQ, etc.) */
-.price-figure {
+.price-figure.price-figure {
   font-weight: 700;
   font-size: 1.2em;
 }
@@ -2367,7 +2367,7 @@ h1, h2, h3 {
 @media (max-width: 480px) {
   .pricing-grid { gap: 14px; }
   .pricing-card { padding: 28px 16px; }
-  .pricing-rate strong { font-size: 2.6rem; }
+  .pricing-rate strong { font-size: 2.1rem; }
   .pricing-includes-col { padding: 24px 22px; }
 }
 
