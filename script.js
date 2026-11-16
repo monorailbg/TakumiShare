@@ -75,6 +75,29 @@
     })
   );
 
+  // ── Currency toggle ────────────────────────────────────────────
+  const currencyButtons = document.querySelectorAll('.currency-btn');
+  const savedCurrency   = localStorage.getItem('ut-currency') || 'jpy';
+
+  function applyCurrency(currency) {
+    localStorage.setItem('ut-currency', currency);
+
+    currencyButtons.forEach(btn =>
+      btn.classList.toggle('active', btn.dataset.currency === currency)
+    );
+
+    document.querySelectorAll('.price-figure').forEach(el => {
+      const value = el.dataset[currency];
+      if (value) el.textContent = value;
+    });
+  }
+
+  currencyButtons.forEach(btn =>
+    btn.addEventListener('click', () => applyCurrency(btn.dataset.currency))
+  );
+
+  applyCurrency(savedCurrency);
+
   // ── Testimonial expand/collapse ───────────────────────────────
   function refreshTestimonialLabels() {
     document.querySelectorAll('.testimonial-toggle').forEach(btn => {
